@@ -1,0 +1,174 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.header {
+    background-color: grey;
+    height: 10vh;
+    width: 100%;
+    display : flex;
+    text-align: center;
+    justify-content: space-between;
+    padding: 0px;
+    margin: 0px;
+}
+
+.header-logo {
+    background-color: yellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 15%;
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+
+.header-logo img {
+    width : 50px;
+    height: auto;
+    background-color: blue;
+    margin-left: 10px;
+}
+
+.header-logo span {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    background-color: white;
+}
+
+.header-nav {
+    background-color: blue;
+    justify-content: center;
+    display: flex;
+    flex-basis: 70%;
+    flex-shrink: 0;
+    flex-grow: 0;
+
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    list-style: none;
+    flex-basis: 70%;
+    flex-shrink: 0;
+    flex-grow: 0;
+    
+}
+
+.nav-item {
+    background-color: yellow;
+}
+
+.nav-item a{
+    background-color: black;
+    justify-content: center;
+    margin: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+.header-snslogo {
+    background-color: yellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    flex-basis: 15%;
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+
+.header-snslogo img {
+    width : 50px;
+    height: auto;
+    background-color: blue;
+    margin: 10px;
+}
+
+.main {
+    background-color: black;
+}
+
+.bg-video{
+    height: 90vh;
+    width: 100%;
+    display: flex;   
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    z-index: 1;
+}
+
+.bg-video-content {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.intro-overlay {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    z-index: 2; 
+}
+
+.intro {
+    font-size: 30px;
+    height: 10vh;
+    margin: 10px;
+}
+
+.sub-intro {
+    margin-bottom: 20px;
+}
+
+.aboutme {
+    height: 6vh;
+}
+
+.section02 {
+    background-color: green;
+    height: 100vh;
+    display: flex;
+}
+
+.section03 {
+    background-color: white;
+    height: 100vh;
+}
+
+.footer {
+    background-color: grey;
+    height : 100px;
+}
+
+.aboutme {
+    font-size: 16px;
+    border: none; 
+    padding: 15px 32px;
+    border-radius: 20px;    
+    cursor: pointer;  
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
