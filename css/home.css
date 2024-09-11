@@ -172,3 +172,7 @@ body {
     text-decoration: none;
 }
 
+.video-stop-btn {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
