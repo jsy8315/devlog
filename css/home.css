@@ -174,5 +174,8 @@ body {
 
 .video-stop-btn {
     background-color: rgba(0, 0, 0, 0.5);
+    font-size: 14px;
+    width: 10px;
+    height: 10px;
 }
 
