@@ -172,10 +172,19 @@ body {
     text-decoration: none;
 }
 
-.video-stop-btn {
-    background-color: rgba(0, 0, 0, 0.4);
-    font-size: 14px;
-    width: 10px;
-    height: 10px;
+.bg-video-pause-btn {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    top: 170px;
+    left: 670px;
+
+}
+
+.bg-video-pause-btn img {
+    width: 40px;
+    height: 40px;
 }
 
