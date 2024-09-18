@@ -172,7 +172,7 @@ body {
     text-decoration: none;
 }
 
-.bg-video-pause-btn {
+.bg-video-pause {
     background-color: rgba(0, 0, 0, 0);
     border: none;
     position: relative;
@@ -180,11 +180,33 @@ body {
     height: 40px;
     top: 170px;
     left: 670px;
-
 }
 
-.bg-video-pause-btn img {
+.bg-video-pause-btn {
     width: 40px;
     height: 40px;
+    display: block;
+}
+
+.bg-video-play-btn {
+    width: 40px;
+    height: 40px;
+    display: none;
+}
+
+.show-bg-video-pause-btn {
+    display: block;
+}
+
+.show-bg-video-play-btn {
+    display: block;
+}
+
+.hide-bg-video-pause-btn {
+    display: none;
+}
+
+.hide-bg-video-play-btn {
+    display: none;
 }
 
