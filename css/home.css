@@ -224,6 +224,11 @@ body {
     display: none !important;
 }
 
+.testBtn {
+    height: 6vh;
+    background-color: white;
+}
+
 .section02 {
     background-color: green;
     height: 100vh;
