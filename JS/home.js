@@ -56,8 +56,7 @@ document.getElementsByClassName('footer')[0].addEventListener('click', function(
 // sub-intro 
 
 setTimeout(function(){
-    document.getElementsByClassName("home-hi")[0].style.fontSize = "40px";
-
+    document.getElementsByClassName("home-hi")[0].classList.add("show-home-hi");
 }, 800);
 
 setTimeout(function(){
