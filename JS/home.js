@@ -56,5 +56,14 @@ document.getElementsByClassName('footer')[0].addEventListener('click', function(
 // sub-intro 
 
 setTimeout(function(){
-    document.getElementsByClassName("home-hi")[0].style.fontSize = "50px";
+    document.getElementsByClassName("home-hi")[0].style.fontSize = "40px";
+
 }, 1000);
+
+setTimeout(function(){
+    document.getElementsByClassName("home-role")[0].classList.add("show-home-name");
+}, 1500);
+
+setTimeout(function(){
+    document.getElementsByClassName("home-name")[0].classList.add("show-home-role");
+}, 1700);
