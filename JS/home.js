@@ -58,7 +58,7 @@ document.getElementsByClassName('footer')[0].addEventListener('click', function(
 setTimeout(function(){
     document.getElementsByClassName("home-hi")[0].style.fontSize = "40px";
 
-}, 1000);
+}, 800);
 
 setTimeout(function(){
     document.getElementsByClassName("home-role")[0].classList.add("show-home-name");
@@ -67,3 +67,11 @@ setTimeout(function(){
 setTimeout(function(){
     document.getElementsByClassName("home-name")[0].classList.add("show-home-role");
 }, 1700);
+
+setTimeout(function(){
+    document.getElementsByClassName("sub-intro")[0].classList.add("show-sub-intro");
+}, 2000);
+
+setTimeout(function(){
+    document.getElementsByClassName("aboutme")[0].classList.add("show-aboutme");
+}, 2000);
