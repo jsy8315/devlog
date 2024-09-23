@@ -74,3 +74,31 @@ setTimeout(function(){
 setTimeout(function(){
     document.getElementsByClassName("aboutme")[0].classList.add("show-aboutme");
 }, 2000);
+
+// "000를 좋아하는" 타이핑 효과(반복),  000 > 프론트엔드(기본), Javascript, React
+
+const preferTechWords = ["Javascript", "React", "UIUX", "프론트엔드"];
+// 고려 사항 : preferTechWords에 추후 단어가 추가되거나 빠질 수 있음을 고려
+
+const typingSpeed = 100;
+const deleteSpeed = 100;
+const pauseTime = 2000;
+
+let originHomeRole  = document.getElementsByClassName("home-role")[0].innerHTML;
+
+// 글자가 한글자씩 지워지고 > 
+// 다 지워진것 확인되면 (6글자, "를 좋아하는") > 
+// 한글자씩 타이핑 > 
+// 타이핑 완료
+// 2초간 보여주가
+// 위 과정 반복
+
+function typingEffect() {
+    
+}
+
+// setInterval(typingEffect, 2000); setInterval을 쓸 이유가 없음
+
+
+
+
