@@ -81,7 +81,7 @@ const preferTechWords = ["자바스크립트", "리액트", "UIUX", "프론트�
 // 고려 사항 : preferTechWords에 추후 단어가 추가되거나 빠질 수 있음을 고려
 
 const typingSpeed = 100;
-const deleteSpeed = 1000;
+const deleteSpeed = 100;
 const pauseTime = 2000;
 
 const originHomeRole  = document.getElementsByClassName("home-role")[0].innerHTML;
@@ -99,19 +99,19 @@ const homeRole = document.getElementsByClassName('home-role')[0];
 // 위 과정 반복 > while문 써야할듯, preferTechWords에서 무한반복해야되니...
 
 
+function deleteEffect(word) {
+    if (word.length > 0) {
+        word = word.slice(0, -1);
+        console.log(word);
+        homeRole.textContent = word + baseWord;
+        setTimeout(() =>  deleteEffect(word), deleteSpeed);
+    }
+}
 
 function typingEffect() {
-    // for문으로 무한반복을 돌릴까? >> 마지막일떄 i = 0으로 처리하니 과부하가 걸리는디
-    for( let i = 0; i < preferTechWords.length; i++) {
-        if (preferTechWords[i] != targetWord) {
-            targetWord = targetWord.slice(0, -1);
-            setTimeout(()=>
-                homeRole.textContent = targetWord + baseWord, deleteSpeed); // 프론트엔
-            
-            console.log(targetWord);
-            console.log(baseWord);
-        } 
-    }
+    if (targetWord.length > 0) {
+        setTimeout(() =>  deleteEffect(targetWord), deleteSpeed);
+    } 
 }
 
 setTimeout(typingEffect, 2500);
