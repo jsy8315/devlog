@@ -77,8 +77,10 @@ setTimeout(function(){
 
 // "000를 좋아하는" 타이핑 효과(반복),  000 > 프론트엔드(기본), Javascript, React
 
-const preferTechWords = ["자바스크립트", "리액트", "UIUX", "프론트엔드"];
+const preferTechWords = ["프론트엔드", "자바스크립트", "리액트", "UIUX"];
 // 고려 사항 : preferTechWords에 추후 단어가 추가되거나 빠질 수 있음을 고려
+
+let currentPreferTechWordsIndex = 0;
 
 const typingSpeed = 100;
 const deleteSpeed = 100;
@@ -90,31 +92,38 @@ let baseWord = originHomeRole.slice(-6); // 를 좋아하는
 
 const homeRole = document.getElementsByClassName('home-role')[0];
 
-
-// 글자가 한글자씩 지워지고 > 
-// 다 지워진것 확인되면 (6글자, "를 좋아하는") > (앞에와 뒤에를 구분하면 편할 듯)
-// 한글자씩 타이핑 > 
-// 타이핑 완료
-// 2초간 보여주가
-// 위 과정 반복 > while문 써야할듯, preferTechWords에서 무한반복해야되니...
-
-
 function deleteEffect(word) {
     if (word.length > 0) {
         word = word.slice(0, -1);
-        console.log(word);
         homeRole.textContent = word + baseWord;
-        setTimeout(() =>  deleteEffect(word), deleteSpeed);
+        setTimeout(() => deleteEffect(word), deleteSpeed);
+    } else {
+        currentPreferTechWordsIndex++;
+        setTimeout(typingEffect, 500);
     }
 }
 
 function typingEffect() {
-    if (targetWord.length > 0) {
-        setTimeout(() =>  deleteEffect(targetWord), deleteSpeed);
-    } 
+    targetWord = preferTechWords[currentPreferTechWordsIndex];
+    let typedWord = "";
+
+    function letterEffect() {
+        if (typedWord.length < targetWord.length) {
+            typedWord += targetWord[typedWord.length];
+            homeRole.textContent = typedWord + baseWord;
+            setTimeout(letterEffect, typingSpeed);
+        } else {
+            setTimeout(() => deleteEffect(targetWord), 3000);
+
+        }
+    }
+
+    letterEffect();
+
 }
 
-setTimeout(typingEffect, 2500);
+let startWord = "프론트엔드";
+setTimeout(() => deleteEffect(startWord), 3000);
 
 
 
