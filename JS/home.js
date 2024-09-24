@@ -99,6 +99,9 @@ function deleteEffect(word) {
         setTimeout(() => deleteEffect(word), deleteSpeed);
     } else {
         currentPreferTechWordsIndex++;
+        if (currentPreferTechWordsIndex == 4) {
+            currentPreferTechWordsIndex = 0;
+        }
         setTimeout(typingEffect, 500);
     }
 }
