@@ -76,7 +76,7 @@ body {
 }
 
 .header {
-    background-color: grey;
+    background-color: black;
     height: 10vh;
     width: 100%;
     display : flex;
@@ -84,14 +84,15 @@ body {
     justify-content: space-between;
     padding: 0px;
     margin: 0px;
+    border-color: grey;
 }
 
 .header-logo {
-    background-color: yellow;
+    /* background-color: yellow; */
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-basis: 15%;
+    flex-basis: 30%;
     flex-shrink: 0;
     flex-grow: 0;
 }
@@ -99,19 +100,19 @@ body {
 .header-logo img {
     width : 50px;
     height: auto;
-    background-color: blue;
+    /* background-color: purple; */
     margin-left: 10px;
 }
 
 .header-logo span {
     font-size: 24px;
     font-weight: bold;
-    color: black;
-    background-color: white;
+    color: white;
+    /* background-color: white; */
 }
 
 .header-nav {
-    background-color: blue;
+    /* background-color: blue; */
     justify-content: center;
     display: flex;
     flex-basis: 70%;
@@ -124,7 +125,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: white;
+    /* background-color: white; */
     list-style: none;
     flex-basis: 70%;
     flex-shrink: 0;
@@ -133,7 +134,7 @@ body {
 }
 
 .nav-item {
-    background-color: yellow;
+    /* background-color: yellow; */
 }
 
 .nav-item a{
@@ -142,24 +143,6 @@ body {
     margin: 10px;
     text-decoration: none;
     color: white;
-}
-
-.header-snslogo {
-    background-color: yellow;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 10vh;
-    flex-basis: 15%;
-    flex-shrink: 0;
-    flex-grow: 0;
-}
-
-.header-snslogo img {
-    width : 50px;
-    height: auto;
-    background-color: blue;
-    margin: 10px;
 }
 
 .main {
