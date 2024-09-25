@@ -163,7 +163,6 @@ body {
 }
 
 .main {
-    background-color: black;
     cursor: default;
 }
 
@@ -209,7 +208,6 @@ body {
 }
 
 .home-role {
- background-color: black;
  font-size : 100px;
  font-weight: 700;
 
@@ -219,7 +217,6 @@ body {
 }
 
 .home-name {
- background-color: black;
  font-size : 100px;
  font-weight: 700;
 
@@ -239,7 +236,6 @@ body {
 }
 
 .sub-intro {
-    background-color: black;
     padding: 10px;
     font-size: 20px;
     margin: 30px;
@@ -279,11 +275,16 @@ body {
     height: 100vh;
 }
 
-.footer {
-    background-color: grey;
-    height : 100px;
-    cursor: default;
+.section04 {
+    background-color: yellow;
+    height: 100vh;
 }
+
+.section05 {
+    background-color: blue;
+    height: 100vh;
+}
+
 
 .aboutme {
     font-size: 16px;

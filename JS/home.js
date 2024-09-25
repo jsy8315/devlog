@@ -46,9 +46,7 @@ document.getElementsByClassName('main')[0].addEventListener('click', function(e)
     e.preventDefault();
 });
 
-document.getElementsByClassName('footer')[0].addEventListener('click', function(e) {
-    e.preventDefault();
-});
+
 
 // home-hi 큰 글자 > 작은 글자로 setTimeout 활용해서
 // 1초 지나면 
