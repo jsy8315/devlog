@@ -126,5 +126,16 @@ function typingEffect() {
 let startWord = "프론트엔드";
 setTimeout(() => deleteEffect(startWord), 3000);
 
-
+// section02로 화면이 내려가면(스크롤이 내려가면) header 색상 반전주기
+window.addEventListener('scroll', function() {
+    if (this.window.scrollY >= 700) {
+        this.document.getElementsByClassName('header')[0].classList.add("header-white");
+        this.document.getElementsByClassName('header-logo-span')[0].classList.add("header-logo-span-black");
+        this.document.getElementsByClassName('header-nav')[0].classList.add("header-black");
+    } else {
+        this.document.getElementsByClassName('header')[0].classList.remove("header-white");
+        this.document.getElementsByClassName('header-logo-span')[0].classList.remove("header-logo-span-black");
+        this.document.getElementsByClassName('header-nav')[0].classList.remove("header-black");        
+    }
+})
 
