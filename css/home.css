@@ -85,12 +85,14 @@ body {
     justify-content: center;
     padding: 0;
     margin: 0;
-    border-bottom: 2px solid grey;
+    border-bottom: 1px solid grey;
     z-index: 3;
 }
 
 .header-white {
     background-color: rgba(255, 255, 255, 0.5);
+    border-bottom: none;
+    box-shadow: 1px 1px 3px grey;
 }
 
 .header-inner {
@@ -270,11 +272,77 @@ body {
 
 .section02 {
     background-color: white;
-    height: 100vh;
-    display: flex;
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+}
+
+.aboutmeSpan {
+    border: 1px solid red;
+}
+
+.aboutmeMain {
+    border: 1px solid red;
+
+    background-color: black;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px grey;
+}
+
+.aboutmeMainName {
+    border: 1px solid red;
+
+}
+
+.aboutmeMainNameSpan {
+    border: 1px solid red;
+    
+}
+.aboutmeMainNameName {
+    border: 1px solid red;
+
+}
+
+.aboutmeMainContact {
+    border: 1px solid red;
+
+}
+
+.aboutmeMainContactSpan {
+    border: 1px solid red;
+
+}
+
+.aboutmeMainContactMail {
+    border: 1px solid red;
+
+}
+
+.aboutmeGithub {
+    border: 1px solid red;
+
+    background-color: black;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px grey;
+}
+
+.aboutmeBlog {
+    border: 1px solid red;
+
+    background-color: black;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px grey;
+}
+
+.aboutmeResume {
+    border: 1px solid red;
+
+    background-color: black;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px grey;
 }
 
 .section03 {
+    
     background-color: green;
     height: 100vh;
 }
