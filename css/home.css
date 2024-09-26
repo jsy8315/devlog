@@ -273,53 +273,90 @@ body {
 .section02 {
     background-color: white;
     display: grid;
-    grid-template-columns: 200px 200px 200px;
+    grid-template-areas: 
+        ". . . . ."
+        ". header header header ."
+        ". aboutme aboutme aboutme ."
+        ". aboutmeGithub aboutmeBlog aboutmeResume .";
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr 1fr 2fr 2fr 1fr;
+    grid-gap: 20px;
 }
 
 .aboutmeSpan {
-    border: 1px solid red;
+    font-size : 100px;
+    font-weight: 700;
+    grid-area: header;
+    align-self: center;
+    justify-self: center;
 }
 
 .aboutmeMain {
-    border: 1px solid red;
-
-    background-color: black;
+    grid-area: aboutme;
+    background-color: Gainsboro;
     border-radius: 5px;
     box-shadow: 1px 1px 3px grey;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+
 }
 
 .aboutmeMainName {
-    border: 1px solid red;
-
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    align-self: center;
+    justify-self: center;
 }
 
 .aboutmeMainNameSpan {
-    border: 1px solid red;
+    align-self: center;
+    justify-self: center;
     
 }
 .aboutmeMainNameName {
-    border: 1px solid red;
+    align-self: center;
+    justify-self: center;
+}
+.aboutmeMainAddr {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    align-self: center;
+    justify-self: center;
+}
 
+.aboutmeMainAddrSpan {
+    align-self: center;
+    justify-self: center;
+}
+
+.aboutmeMainAddrGm {
+    align-self: center;
+    justify-self: center;
 }
 
 .aboutmeMainContact {
-    border: 1px solid red;
-
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    align-self: center;
+    justify-self: center;
 }
 
 .aboutmeMainContactSpan {
-    border: 1px solid red;
-
+    align-self: center;
+    justify-self: center;
 }
 
 .aboutmeMainContactMail {
-    border: 1px solid red;
-
+    align-self: center;
+    justify-self: center;
 }
 
 .aboutmeGithub {
     border: 1px solid red;
 
+    grid-area: aboutmeGithub;
     background-color: black;
     border-radius: 5px;
     box-shadow: 1px 1px 3px grey;
@@ -328,6 +365,7 @@ body {
 .aboutmeBlog {
     border: 1px solid red;
 
+    grid-area: aboutmeBlog;
     background-color: black;
     border-radius: 5px;
     box-shadow: 1px 1px 3px grey;
@@ -336,6 +374,7 @@ body {
 .aboutmeResume {
     border: 1px solid red;
 
+    grid-area: aboutmeResume;
     background-color: black;
     border-radius: 5px;
     box-shadow: 1px 1px 3px grey;
