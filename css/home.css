@@ -280,7 +280,7 @@ body {
         ". aboutmeGithub aboutmeBlog aboutmeResume .";
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: 1fr 1fr 2fr 2fr 1fr;
-    grid-gap: 20px;
+    grid-gap: 50px;
 }
 a {
     text-decoration-line: none;
@@ -385,7 +385,19 @@ a {
     border-radius: 5px;
     box-shadow: 1px 1px 3px grey;
     padding: 20px;
-    border: 0.5px solid grey;
+    border: 0.5px solid black;
+
+    display: grid;
+    grid-template-rows: 2fr 3fr;
+}
+
+.aboutmeGithub-logo {
+    border: 1px solid red;
+}
+
+.aboutmeGithub-content {
+    border: 1px solid red;
+    align-self: center;
 }
 
 .aboutmeGithub img {
@@ -403,6 +415,12 @@ a {
     border: 0.5px solid grey;
 }
 
+.aboutmeBlog img {
+    height: 60px;
+    object-fit: cover; 
+    border: 1px solid red;
+}
+
 .aboutmeResume {
     grid-area: aboutmeResume;
     background-color: white;
@@ -410,6 +428,12 @@ a {
     box-shadow: 1px 1px 3px grey;
     padding: 20px;
     border: 0.5px solid grey;
+}
+
+.aboutmeResume img {
+    height: 60px;
+    object-fit: cover; 
+    border: 1px solid red;
 }
 
 .section03 {
