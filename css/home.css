@@ -387,28 +387,34 @@ a {
     box-shadow: 1px 1px 3px grey;
     padding: 15px;
     border: 0.5px solid black;
+    align-self: center;
 
     display: grid;
     grid-template-areas: 
     "aboutmeGithub-logo aboutmeGithub-logo aboutmeGithub-logo"
     "aboutmeGithub-subtitle aboutmeGithub-subtitle aboutmeGithub-subtitle"
     "aboutmeGithub-content aboutmeGithub-content aboutmeGithub-content";
+
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr;
     grid-gap: 0px;
 }
 
 .aboutmeGithub-logo {
+    align-self: center;
     grid-area: aboutmeGithub-logo;
     border: 1px solid red;
 }
 
 .aboutmeGithub-subtitle {
     grid-area: aboutmeGithub-subtitle;
+    align-self: center;
     border: 1px solid green;
 }
 
 .aboutmeGithub-content {
+    font-size: 14px;
+
     grid-area: aboutmeGithub-content;
     border: 1px solid red;
     align-self: center;
@@ -443,6 +449,7 @@ a {
     box-shadow: 1px 1px 3px grey;
     padding: 15px;
     border: 0.5px solid grey;
+    align-self: center;
 
     display: grid;
     grid-template-areas: 
@@ -450,32 +457,40 @@ a {
     "aboutmeBlog-subtitle aboutmeBlog-subtitle aboutmeBlog-subtitle"
     "aboutmeBlog-content aboutmeBlog-content aboutmeBlog-content";
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr;
     grid-gap: 0px;
 }
 
 .aboutmeBlog-logo {
+    align-self: center;
+
     grid-area: aboutmeBlog-logo;
     border: 1px solid red;
 }
 
 .aboutmeBlog-title {
+    align-self: center;
     grid-area: aboutmeBlog-title;
     border: 1px solid blue;
 }
 
 .aboutmeBlog-subtitle {
     grid-area: aboutmeBlog-subtitle;
+    align-self: center;
+
     border: 1px solid green;
 }
 
 .aboutmeBlog-content {
+    font-size: 14px;
+
     grid-area: aboutmeBlog-content;
     border: 1px solid red;
     align-self: center;
 }
 
 .aboutmeBlog img {
+    align-self: center;
     height: 60px;
     object-fit: cover; 
     border: 1px solid red;
@@ -488,6 +503,7 @@ a {
     box-shadow: 1px 1px 3px grey;
     padding: 15px;
     border: 0.5px solid grey;
+    align-self: center;
 
     display: grid;
     grid-template-areas: 
@@ -495,26 +511,32 @@ a {
     "aboutmeResume-subtitle aboutmeResume-subtitle aboutmeResume-subtitle"
     "aboutmeResume-content aboutmeResume-content aboutmeResume-content";
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr;
     grid-gap: 0px;
 }
 
 .aboutmeResume-logo {
+    align-self: center;
     grid-area: aboutmeResume-logo;
     border: 1px solid red;
 }
 
 .aboutmeResume-title {
+    align-self: center;
     grid-area: aboutmeResume-title;
     border: 1px solid blue;
 }
 
 .aboutmeResume-subtitle {
     grid-area: aboutmeResume-subtitle;
+    align-self: center;
+
     border: 1px solid green;
 }
 
 .aboutmeResume-content {
+    font-size: 14px;
+    list-style: square;
     grid-area: aboutmeResume-content;
     border: 1px solid red;
     align-self: center;
