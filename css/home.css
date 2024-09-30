@@ -389,30 +389,49 @@ a {
     border: 0.5px solid black;
 
     display: grid;
+    grid-template-areas: 
+    "aboutmeGithub-logo aboutmeGithub-logo aboutmeGithub-logo"
+    "aboutmeGithub-subtitle aboutmeGithub-subtitle aboutmeGithub-subtitle"
+    "aboutmeGithub-content aboutmeGithub-content aboutmeGithub-content";
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 2fr;
+    grid-gap: 0px;
 }
 
 .aboutmeGithub-logo {
+    grid-area: aboutmeGithub-logo;
     border: 1px solid red;
 }
 
 .aboutmeGithub-subtitle {
+    grid-area: aboutmeGithub-subtitle;
     border: 1px solid green;
 }
 
 .aboutmeGithub-content {
+    grid-area: aboutmeGithub-content;
     border: 1px solid red;
     align-self: center;
 }
 
 .aboutmeGithub img {
-    width: 80%;
+    /* width: 80% */
     object-fit: cover; 
     border: 1px solid black;
     height: 60px;
 }
 
 .aboutmeGithub a {
+    text-decoration-line: none;
+    color: blue; 
+}
+
+.aboutmeBlog a {
+    text-decoration-line: none;
+    color: blue; 
+}
+
+.aboutmeResume a {
     text-decoration-line: none;
     color: blue; 
 }
