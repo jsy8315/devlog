@@ -388,11 +388,17 @@ a {
     border: 0.5px solid black;
 
     display: grid;
-    grid-template-rows: 2fr 3fr;
+    grid-template-rows: 2fr 2fr 3fr;
 }
 
 .aboutmeGithub-logo {
     border: 1px solid red;
+    height: 60px;
+}
+
+.aboutmeGithub-subtitle {
+    border: 1px solid green;
+    height: 60px;
 }
 
 .aboutmeGithub-content {
@@ -403,7 +409,13 @@ a {
 .aboutmeGithub img {
     width: 80%;
     object-fit: cover; 
-    border: 1px solid red;
+    border: 1px solid black;
+    height: 60px;
+}
+
+.aboutmeGithub a {
+    text-decoration-line: none;
+    color: blue; 
 }
 
 .aboutmeBlog {
@@ -413,6 +425,8 @@ a {
     box-shadow: 1px 1px 3px grey;
     padding: 20px;
     border: 0.5px solid grey;
+    /* display: grid;
+    grid-template-rows: 2fr 3fr; */
 }
 
 .aboutmeBlog img {
