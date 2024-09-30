@@ -282,6 +282,7 @@ body {
     grid-template-rows: 1fr 1fr 2fr 2fr 1fr;
     grid-gap: 50px;
 }
+
 a {
     text-decoration-line: none;
     color: black;
@@ -384,21 +385,19 @@ a {
     background-color: white;
     border-radius: 5px;
     box-shadow: 1px 1px 3px grey;
-    padding: 20px;
+    padding: 15px;
     border: 0.5px solid black;
 
     display: grid;
-    grid-template-rows: 2fr 2fr 3fr;
+    grid-template-rows: 1fr 1fr 2fr;
 }
 
 .aboutmeGithub-logo {
     border: 1px solid red;
-    height: 60px;
 }
 
 .aboutmeGithub-subtitle {
     border: 1px solid green;
-    height: 60px;
 }
 
 .aboutmeGithub-content {
@@ -423,10 +422,38 @@ a {
     background-color: white;
     border-radius: 5px;
     box-shadow: 1px 1px 3px grey;
-    padding: 20px;
+    padding: 15px;
     border: 0.5px solid grey;
-    /* display: grid;
-    grid-template-rows: 2fr 3fr; */
+
+    display: grid;
+    grid-template-areas: 
+    "aboutmeBlog-logo aboutmeBlog-title aboutmeBlog-title"
+    "aboutmeBlog-subtitle aboutmeBlog-subtitle aboutmeBlog-subtitle"
+    "aboutmeBlog-content aboutmeBlog-content aboutmeBlog-content";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 2fr;
+    grid-gap: 0px;
+}
+
+.aboutmeBlog-logo {
+    grid-area: aboutmeBlog-logo;
+    border: 1px solid red;
+}
+
+.aboutmeBlog-title {
+    grid-area: aboutmeBlog-title;
+    border: 1px solid blue;
+}
+
+.aboutmeBlog-subtitle {
+    grid-area: aboutmeBlog-subtitle;
+    border: 1px solid green;
+}
+
+.aboutmeBlog-content {
+    grid-area: aboutmeBlog-content;
+    border: 1px solid red;
+    align-self: center;
 }
 
 .aboutmeBlog img {
@@ -440,8 +467,38 @@ a {
     background-color: white;
     border-radius: 5px;
     box-shadow: 1px 1px 3px grey;
-    padding: 20px;
+    padding: 15px;
     border: 0.5px solid grey;
+
+    display: grid;
+    grid-template-areas: 
+    "aboutmeResume-logo aboutmeResume-title aboutmeResume-title"
+    "aboutmeResume-subtitle aboutmeResume-subtitle aboutmeResume-subtitle"
+    "aboutmeResume-content aboutmeResume-content aboutmeResume-content";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 2fr;
+    grid-gap: 0px;
+}
+
+.aboutmeResume-logo {
+    grid-area: aboutmeResume-logo;
+    border: 1px solid red;
+}
+
+.aboutmeResume-title {
+    grid-area: aboutmeResume-title;
+    border: 1px solid blue;
+}
+
+.aboutmeResume-subtitle {
+    grid-area: aboutmeResume-subtitle;
+    border: 1px solid green;
+}
+
+.aboutmeResume-content {
+    grid-area: aboutmeResume-content;
+    border: 1px solid red;
+    align-self: center;
 }
 
 .aboutmeResume img {
