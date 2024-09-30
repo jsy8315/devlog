@@ -283,10 +283,10 @@ body {
     grid-gap: 50px;
 }
 
-a {
+/* a {
     text-decoration-line: none;
     color: black;
-}
+} */
 
 .aboutmeSpan {
     font-size : 90px;
@@ -403,27 +403,27 @@ a {
 .aboutmeGithub-logo {
     align-self: center;
     grid-area: aboutmeGithub-logo;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .aboutmeGithub-subtitle {
     grid-area: aboutmeGithub-subtitle;
     align-self: center;
-    border: 1px solid green;
+    /* border: 1px solid green; */
 }
 
 .aboutmeGithub-content {
     font-size: 14px;
 
     grid-area: aboutmeGithub-content;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     align-self: center;
 }
 
 .aboutmeGithub img {
     /* width: 80% */
     object-fit: cover; 
-    border: 1px solid black;
+    /* border: 1px solid black; */
     height: 60px;
 }
 
@@ -434,12 +434,12 @@ a {
 
 .aboutmeBlog a {
     text-decoration-line: none;
-    color: blue; 
+    /* color: blue;  */
 }
 
 .aboutmeResume a {
     text-decoration-line: none;
-    color: blue; 
+    /* color: blue;  */
 }
 
 .aboutmeBlog {
@@ -465,27 +465,29 @@ a {
     align-self: center;
 
     grid-area: aboutmeBlog-logo;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .aboutmeBlog-title {
     align-self: center;
     grid-area: aboutmeBlog-title;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
+    font-size: 25px;
+    font-weight: 600;
 }
 
 .aboutmeBlog-subtitle {
     grid-area: aboutmeBlog-subtitle;
     align-self: center;
 
-    border: 1px solid green;
+    /* border: 1px solid green; */
 }
 
 .aboutmeBlog-content {
     font-size: 14px;
 
     grid-area: aboutmeBlog-content;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     align-self: center;
 }
 
@@ -493,7 +495,7 @@ a {
     align-self: center;
     height: 60px;
     object-fit: cover; 
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .aboutmeResume {
@@ -518,34 +520,36 @@ a {
 .aboutmeResume-logo {
     align-self: center;
     grid-area: aboutmeResume-logo;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .aboutmeResume-title {
     align-self: center;
     grid-area: aboutmeResume-title;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
+    font-size: 25px;
+    font-weight: 600;
 }
 
 .aboutmeResume-subtitle {
     grid-area: aboutmeResume-subtitle;
     align-self: center;
 
-    border: 1px solid green;
+    /* border: 1px solid green; */
 }
 
 .aboutmeResume-content {
     font-size: 14px;
     list-style: square;
     grid-area: aboutmeResume-content;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     align-self: center;
 }
 
 .aboutmeResume img {
     height: 60px;
     object-fit: cover; 
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .section03 {

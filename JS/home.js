@@ -42,9 +42,9 @@ document.getElementsByClassName('testBtn')[1].addEventListener('click', function
     }
 });
 
-document.getElementsByClassName('main')[0].addEventListener('click', function(e) {
-    e.preventDefault();
-});
+// document.getElementsByClassName('main')[0].addEventListener('click', function(e) {
+//     e.preventDefault();
+// });
 
 
 
