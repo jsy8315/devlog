@@ -42,6 +42,7 @@ document.getElementsByClassName('testBtn')[1].addEventListener('click', function
     }
 });
 
+// a태그 제대로 닫아서 필요 없으므로 주석처리
 // document.getElementsByClassName('main')[0].addEventListener('click', function(e) {
 //     e.preventDefault();
 // });
