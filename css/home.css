@@ -386,7 +386,7 @@ body {
     border-radius: 5px;
     box-shadow: 1px 1px 3px grey;
     padding: 15px;
-    border: 0.5px solid black;
+    border: 0.5px solid grey;
     align-self: center;
 
     display: grid;
@@ -398,6 +398,12 @@ body {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-gap: 0px;
+
+    transition: all 0.2s linear;
+}
+
+.aboutmeGithub:hover {
+    transform: scale(1.2);
 }
 
 .aboutmeGithub-logo {
@@ -459,6 +465,12 @@ body {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-gap: 0px;
+
+    transition: all 0.2s linear;
+}
+
+.aboutmeBlog:hover {
+    transform: scale(1.2);
 }
 
 .aboutmeBlog-logo {
@@ -515,6 +527,12 @@ body {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-gap: 0px;
+
+    transition: all 0.2s linear;
+}
+
+.aboutmeResume:hover {
+    transform: scale(1.2);
 }
 
 .aboutmeResume-logo {
