@@ -277,7 +277,7 @@ body {
         ". . . . ."
         ". header header header ."
         ". aboutme aboutme aboutme ."
-        ". aboutmeGithub aboutmeBlog aboutmeResume .";
+        ". aboutmeCards aboutmeCards aboutmeCards .";
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: 1fr 1fr 2fr 2fr 1fr;
     grid-gap: 50px;
@@ -380,8 +380,14 @@ body {
     font-weight: 500;
 }
 
+.aboutmeCards {
+    grid-area: aboutmeCards;
+    grid-template-columns: 1fr 1fr 1fr; 
+    display: grid;
+    grid-gap: 50px;
+}
+
 .aboutmeGithub {
-    grid-area: aboutmeGithub;
     background-color: white;
     border-radius: 5px;
     box-shadow: 1px 1px 3px grey;
@@ -449,7 +455,6 @@ body {
 }
 
 .aboutmeBlog {
-    grid-area: aboutmeBlog;
     background-color: white;
     border-radius: 5px;
     box-shadow: 1px 1px 3px grey;
@@ -511,7 +516,6 @@ body {
 }
 
 .aboutmeResume {
-    grid-area: aboutmeResume;
     background-color: white;
     border-radius: 5px;
     box-shadow: 1px 1px 3px grey;
