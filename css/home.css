@@ -90,7 +90,7 @@ body {
 }
 
 .header-white {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.8);
     border-bottom: none;
     box-shadow: 1px 1px 3px grey;
 }

@@ -140,3 +140,8 @@ window.addEventListener('scroll', function() {
     }
 })
 
+// section02 요소 이동, 360부터 효과 시작 1230에 종료
+// aboutmeMain(왼 > 오), aboutmeGithub, aboutmeBlog, aboutmeResume (오 > 왼)
+window.addEventListener('scroll', function() {
+    console.log(this.scrollY)
+})
