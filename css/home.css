@@ -622,5 +622,28 @@ body {
     display: none;
 }
 
+.topBtn {
+    background-color: rgba(0, 0, 0, 0);
+
+    border: none;
+    position: fixed;
+    width: 40px;
+    height: 40px;
+
+    bottom: 20px;
+    right: 30px;
+}
+
+.topBtn-img {
+    width: 40px;
+    height: 40px;
+    display: block;
+}
+
+.show-topBtn-img {
+    width: 40px;
+    height: 40px;
+    display: block;
+}
 
 
