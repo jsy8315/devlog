@@ -633,7 +633,7 @@ body {
     bottom: 20px;
     right: 30px;
 
-    transition: all 0.5s;
+    cursor: pointer;
 }
 
 .topBtn-img {

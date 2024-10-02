@@ -151,6 +151,15 @@ window.addEventListener('scroll', function() {
     }
 })
 
+// Top버튼 클릭 시 페이지 상단으로 한번에 이동
+document.getElementsByClassName('topBtn')[0].addEventListener('click', function(){
+    window.scrollTo({
+        left: 0,
+        top: 0,
+        behavior: "smooth"
+    })
+})
+
 // section02 요소 이동, 360부터 효과 시작 1230에 종료
 // aboutmeMain(왼 > 오), aboutmeGithub, aboutmeBlog, aboutmeResume (오 > 왼)
 window.addEventListener('scroll', function() {
