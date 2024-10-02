@@ -632,12 +632,14 @@ body {
 
     bottom: 20px;
     right: 30px;
+
+    transition: all 0.5s;
 }
 
 .topBtn-img {
     width: 40px;
     height: 40px;
-    display: block;
+    display: none;
 }
 
 .show-topBtn-img {
@@ -646,4 +648,9 @@ body {
     display: block;
 }
 
+.hide-topBtn-img {
+    width: 40px;
+    height: 40px;
+    display: none;
+}
 

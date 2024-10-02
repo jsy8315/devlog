@@ -140,6 +140,17 @@ window.addEventListener('scroll', function() {
     }
 })
 
+// Top버튼 스크롤시 나타나는 효과
+window.addEventListener('scroll', function() {
+    if (this.window.scrollY >= 100) {
+        this.document.getElementsByClassName('topBtn-img')[0].classList.add("show-topBtn-img");
+        this.document.getElementsByClassName('topBtn-img')[0].classList.remove("hide-topBtn-img");
+    } else {
+        this.document.getElementsByClassName('topBtn-img')[0].classList.remove("show-topBtn-img");
+        this.document.getElementsByClassName('topBtn-img')[0].classList.add("hide-topBtn-img");
+    }
+})
+
 // section02 요소 이동, 360부터 효과 시작 1230에 종료
 // aboutmeMain(왼 > 오), aboutmeGithub, aboutmeBlog, aboutmeResume (오 > 왼)
 window.addEventListener('scroll', function() {
