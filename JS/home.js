@@ -160,8 +160,23 @@ document.getElementsByClassName('topBtn')[0].addEventListener('click', function(
     })
 })
 
-// section02 요소 이동, 360부터 효과 시작 1230에 종료
+// section02 요소 이동, 300부터 효과 시작 900에 종료
 // aboutmeMain(왼 > 오), aboutmeGithub, aboutmeBlog, aboutmeResume (오 > 왼)
+// 300부터 시작, 900까지 내려오면 완료
 window.addEventListener('scroll', function() {
-    console.log(this.scrollY)
+    let currentScrollY = this.window.scrollY;
+    console.log("currentScrollY : " + currentScrollY);
+
+    let aboutmeMainX = -(1000 / 300) * currentScrollY + 2000;
+    let aboutmeCardsX = -(1000 / 300) * currentScrollY + 2000;
+    
+    if (currentScrollY >= 300) {
+        document.getElementsByClassName("aboutmeMain")[0].style.right = aboutmeMainX + "px";
+        document.getElementsByClassName("aboutmeCards")[0].style.left = aboutmeCardsX + "px";
+    } else {
+
+    }
+
+    console.log("aboutmeMainX : " + aboutmeMainX);
+
 })
