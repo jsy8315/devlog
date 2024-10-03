@@ -756,9 +756,12 @@ body {
 .JavascriptTitle {
     background-color: #007aff;
     border: 5px solid white;
+    box-shadow: 1px 1px 3px grey; 
+    border-radius: 5px;
     width: 160px;
     font-size: 30px;
-    align-self: center;
+    text-align: center;
+    color: white;
     
 
     position: relative;
@@ -767,22 +770,70 @@ body {
 }
 
 .JavascriptContent {
+    padding: 0px 20px 20px 20px;
     font-size: 20px;
 }
 
 .ReactTitle {
     background-color: #007aff;
-    border: 0.5px solid white;
+    border: 5px solid white;
+    box-shadow: 1px 1px 3px grey; 
+    border-radius: 5px;
+    width: 110px;
+    font-size: 30px;
+    text-align: center;
+    color: white;
+    
 
+    position: relative;
+    bottom: 30px;
+    right: 30px;
+
+}
+
+.ReactContent {
+    padding: 0px 20px 20px 20px;
+    font-size: 20px;
 }
 
 .HTMLTitle {
     background-color: #007aff;
-    border: 0.5px solid white;
+    border: 5px solid white;
+    box-shadow: 1px 1px 3px grey; 
+    border-radius: 5px;
+    width: 160px;
+    font-size: 30px;
+    text-align: center;
+    color: white;
+    
 
+    position: relative;
+    bottom: 30px;
+    right: 30px;
+}
+
+.HTMLContent {
+    padding: 0px 20px 20px 20px;
+    font-size: 20px;
 }
 
 .TypescriptTitle {
     background-color: #007aff;
-    border: 0.5px solid white;
+    border: 5px solid white;
+    box-shadow: 1px 1px 3px grey; 
+    border-radius: 5px;
+    width: 160px;
+    font-size: 30px;
+    text-align: center;
+    color: white;
+    
+
+    position: relative;
+    bottom: 30px;
+    right: 30px;
+}
+
+.TypescriptContent {
+    padding: 0px 20px 20px 20px;
+    font-size: 20px;
 }
