@@ -162,19 +162,29 @@ document.getElementsByClassName('topBtn')[0].addEventListener('click', function(
 
 // section02 요소 이동, 300부터 효과 시작 900에 종료
 // aboutmeMain(왼 > 오), aboutmeGithub, aboutmeBlog, aboutmeResume (오 > 왼)
-// 300부터 시작, 900까지 내려오면 완료
+// 300부터 시작, 800까지 내려오면 완료
 window.addEventListener('scroll', function() {
     let currentScrollY = this.window.scrollY;
     console.log("currentScrollY : " + currentScrollY);
 
     let aboutmeMainX = -(1000 / 300) * currentScrollY + 2000;
-    let aboutmeCardsX = -(1000 / 300) * currentScrollY + 2000;
+    let aboutmeCardsX = -(1000 / 200) * currentScrollY + 4000;
     
-    if (currentScrollY >= 300) {
+    if (currentScrollY <= 300) {
+        // 둘다 안보이게 처리
+        document.getElementsByClassName("aboutmeMain")[0].style.right = 10000 + "px";
+        document.getElementsByClassName("aboutmeCards")[0].style.left = 10000 + "px";
+    } else if ( currentScrollY > 300 && currentScrollY <= 600 ) {
         document.getElementsByClassName("aboutmeMain")[0].style.right = aboutmeMainX + "px";
+        document.getElementsByClassName("aboutmeCards")[0].style.left = 10000 + "px";
+    } else if ( currentScrollY > 600 && currentScrollY <= 800 ) {
+        // main은 right : 0으로 고정
+        document.getElementsByClassName("aboutmeMain")[0].style.right = 0 + "px";
         document.getElementsByClassName("aboutmeCards")[0].style.left = aboutmeCardsX + "px";
-    } else {
-
+    } else  {
+        // 900이상
+        document.getElementsByClassName("aboutmeMain")[0].style.right = 0 + "px";
+        document.getElementsByClassName("aboutmeCards")[0].style.left = 0 + "px";
     }
 
     console.log("aboutmeMainX : " + aboutmeMainX);
