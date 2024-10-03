@@ -720,7 +720,11 @@ body {
     border-radius: 5px;
     box-shadow: 1px 1px 3px grey;
     padding: 15px;
-    /* border: 0.5px solid grey; */
+    transition: all 0.2s linear;
+}
+
+.skillsJavascript:hover {
+    transform: scale(1.1);
 }
 
 .skillsReact {
@@ -730,7 +734,12 @@ body {
     border-radius: 5px;
     box-shadow: 1px 1px 3px grey;
     padding: 15px;
-    /* border: 0.5px solid grey; */
+    transition: all 0.2s linear;
+
+}
+
+.skillsReact:hover {
+    transform: scale(1.1);
 }
 
 .skillsHTML {
@@ -740,7 +749,12 @@ body {
     border-radius: 5px;
     box-shadow: 1px 1px 3px grey; 
     padding: 15px;
-    /* border: 0.5px solid grey; */
+    transition: all 0.2s linear;
+
+}
+
+.skillsHTML:hover {
+    transform: scale(1.1);
 }
 
 .skillsTypescript {
@@ -750,7 +764,12 @@ body {
     border-radius: 5px;
     box-shadow: 1px 1px 3px grey;
     padding: 15px;
-    /* border: 0.5px solid grey; */
+    transition: all 0.2s linear;
+
+}
+
+.skillsTypescript:hover {
+    transform: scale(1.1);
 }
 
 .JavascriptTitle {
