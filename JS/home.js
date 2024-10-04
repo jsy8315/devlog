@@ -28,26 +28,10 @@ document.getElementsByClassName("bg-video-pause")[0].addEventListener('click', f
     console.log(bgVideoBtnCount);
 })
 
-//클릭시 intro-overlay로 가는 것 방지
-// 클래스 내부 버튼에도 적용되는지 테스트
-document.getElementsByClassName('testBtn')[0].addEventListener('click', function(e) {
-    if (e.target == document.getElementsByClassName('testBtn')[0]) {
-        console.log("Hi01");
-    }
-});
-
-document.getElementsByClassName('testBtn')[1].addEventListener('click', function(e) {
-    if (e.target == document.getElementsByClassName('testBtn')[1]) {
-        console.log("Hi02");
-    }
-});
-
 // a태그 제대로 닫아서 필요 없으므로 주석처리
 // document.getElementsByClassName('main')[0].addEventListener('click', function(e) {
 //     e.preventDefault();
 // });
-
-
 
 // home-hi 큰 글자 > 작은 글자로 setTimeout 활용해서
 // 1초 지나면 
