@@ -693,8 +693,8 @@ body {
     grid-template-areas: 
     ". . . ."
     ". skillsSpan skillsSpan ."
-    ". skillsJavascript skillsReact ."
-    ". skillsHTML skillsTypescript .";
+    ". flipSkillsJavascript flipSkillsReact ."
+    ". flipSkillsHTML flipSkillsTypescript .";
     grid-template-columns: 1fr 2fr 2fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 40px;
@@ -713,62 +713,162 @@ body {
     list-style: none;
 }
 
-.skillsJavascript {
-    grid-area: skillsJavascript;
+.flipSkillsJavascript {
+    grid-area: flipSkillsJavascript;
 
     background-color: white;
     border-radius: 5px;
     box-shadow: 1px 1px 3px grey;
     padding: 15px;
     transition: all 0.2s linear;
+    perspective: 1000px;
+    transform-style: preserve-3d;
 }
 
-.skillsJavascript:hover {
+.cardSkillsJavascript {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: 0.4s;
+    transform-style: preserve-3d;
+}
+
+.skillsJavascriptFront, .skillsJavascriptBack {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.skillsJavascriptFront {
+    display: none;
+}
+
+.skillsJavascriptBack {
+    transform: rotateY(180deg);
+}
+
+.flipSkillsJavascript:hover {
     transform: scale(1.1);
 }
 
-.skillsReact {
-    grid-area: skillsReact;
+.flipSkillsReact:hover {
+    transform: scale(1.1);
+}
+
+.flipSkillsReact {
+    grid-area: flipSkillsReact;
 
     background-color: white;
     border-radius: 5px;
     box-shadow: 1px 1px 3px grey;
     padding: 15px;
     transition: all 0.2s linear;
-
+    perspective: 1000px;
+    transform-style: preserve-3d;
 }
 
-.skillsReact:hover {
-    transform: scale(1.1);
+.cardSkillsReact {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: 0.4s;
+    transform-style: preserve-3d;
 }
 
-.skillsHTML {
-    grid-area: skillsHTML;
-
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 1px 1px 3px grey; 
-    padding: 15px;
-    transition: all 0.2s linear;
-
+.skillsReactFront, .skillsReactBack {
+    /* position: absolute; */
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
 }
 
-.skillsHTML:hover {
-    transform: scale(1.1);
+.skillsReactFront {
+    display: none;
 }
 
-.skillsTypescript {
-    grid-area: skillsTypescript;
+.skillsReactBack {
+    transform: rotateY(180deg);
+}
+
+
+
+.flipSkillsHTML {
+    grid-area: flipSkillsHTML;
 
     background-color: white;
     border-radius: 5px;
     box-shadow: 1px 1px 3px grey;
     padding: 15px;
     transition: all 0.2s linear;
-
+    perspective: 1000px;
+    transform-style: preserve-3d;
 }
 
-.skillsTypescript:hover {
+.cardSkillsHTML {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: 0.4s;
+    transform-style: preserve-3d;
+}
+
+.skillsHTMLFront, .skillsHTMLBack {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.skillsHTMLFront {
+    display: none;
+}
+
+.skillsHTMLBack {
+    transform: rotateY(180deg);
+}
+
+.flipSkillsHTML:hover {
+    transform: scale(1.1);
+}
+
+
+.flipSkillsTypescript {
+    grid-area: flipSkillsTypescript;
+
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px grey;
+    padding: 15px;
+    transition: all 0.2s linear;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+.cardSkillsTypescript {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: 0.4s;
+    transform-style: preserve-3d;
+}
+
+.skillsTypescriptFront, .skillsTypescriptBack {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.skillsTypescriptFront {
+    display: none;
+}
+
+.skillsTypescriptBack {
+    transform: rotateY(180deg);
+}
+
+.flipSkillsTypescript:hover {
     transform: scale(1.1);
 }
 

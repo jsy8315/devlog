@@ -165,7 +165,7 @@ document.getElementsByClassName('topBtn')[0].addEventListener('click', function(
 // 300부터 시작, 800까지 내려오면 완료
 window.addEventListener('scroll', function() {
     let currentScrollY = this.window.scrollY;
-    console.log("currentScrollY : " + currentScrollY);
+    // console.log("currentScrollY : " + currentScrollY);
 
     let aboutmeMainX = -(1000 / 300) * currentScrollY + 2000;
     let aboutmeCardsX = -(1000 / 200) * currentScrollY + 4000;
@@ -187,6 +187,27 @@ window.addEventListener('scroll', function() {
         document.getElementsByClassName("aboutmeCards")[0].style.left = 0 + "px";
     }
 
-    console.log("aboutmeMainX : " + aboutmeMainX);
+    // console.log("aboutmeMainX : " + aboutmeMainX);
 
+})
+
+//Section03 스크롤에 따른 카드 뒤집기 효과
+window.addEventListener('scroll', function() {
+    let currentScrollYsection03 = this.window.scrollY;
+    
+    if (currentScrollYsection03 >= 1400) {
+        document.getElementsByClassName("flipSkillsJavascript")[0].style.transform = "rotateY(180deg)"
+        document.getElementsByClassName("flipSkillsReact")[0].style.transform = "rotateY(180deg)"
+    } else {
+        document.getElementsByClassName("flipSkillsJavascript")[0].style.transform = "rotateY(0deg)"
+        document.getElementsByClassName("flipSkillsReact")[0].style.transform = "rotateY(0deg)"
+    }
+
+    if (currentScrollYsection03 >= 1600) {
+        document.getElementsByClassName("flipSkillsHTML")[0].style.transform = "rotateY(180deg)"
+        document.getElementsByClassName("flipSkillsTypescript")[0].style.transform = "rotateY(180deg)"
+    } else {
+        document.getElementsByClassName("flipSkillsHTML")[0].style.transform = "rotateY(0deg)"
+        document.getElementsByClassName("flipSkillsTypescript")[0].style.transform = "rotateY(0deg)"
+    }
 })
