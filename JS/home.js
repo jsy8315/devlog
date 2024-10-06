@@ -195,3 +195,17 @@ window.addEventListener('scroll', function() {
         document.getElementsByClassName("flipSkillsTypescript")[0].style.transform = "rotateY(0deg)"
     }
 })
+
+// section04 스크롤에 따라 projects01, projects02 서서히 올라오기
+window.addEventListener('scroll', function() {
+    let currentScrollYsection04 = this.window.scrollY;
+
+    // 3120에 올라옴
+    if (currentScrollYsection04 >= 2420) {
+        this.document.getElementsByClassName("projects01")[0].classList.add("show-projects01");
+    } 
+    
+    if (currentScrollYsection04 >= 3220) {
+        this.document.getElementsByClassName("projects02")[0].classList.add("show-projects02");
+    }
+})

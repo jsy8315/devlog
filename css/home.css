@@ -955,7 +955,7 @@ body {
     ". projects02 ."
     ". . .";
 
-    grid-template-columns: 1fr 10fr 1fr;
+    grid-template-columns: 1fr 20fr 1fr;
     grid-template-rows: 1fr 1fr 6fr 6fr 1fr;
     grid-gap: 80px;
 }
@@ -989,6 +989,13 @@ body {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 0.6fr 0.4fr 2fr 1fr;
     grid-gap: 20px 50px;
+
+    opacity: 0;
+}
+
+.show-projects01 {
+    opacity: 1;
+    transition: opacity 1s;
 }
 
 .projects01Tilte {
@@ -1038,6 +1045,9 @@ body {
 
     font-size : 20px;
     font-weight: 400;
+
+    border-top: 1px solid lightgrey;
+    padding: 10px;
 }
 
 
@@ -1076,6 +1086,13 @@ body {
 
     background-color: white;
     border-radius: 30px;
+
+    opacity: 0;
+}
+
+.show-projects02 {
+    opacity: 1;
+    transition: opacity 1s;
 }
 
 .section05 {
