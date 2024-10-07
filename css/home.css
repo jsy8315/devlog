@@ -1140,39 +1140,16 @@ body {
     padding-right: 3px;
     cursor: pointer;
 
+    color: grey;
+}
+
+.projects01Dot01:first-child {
+    padding-left: 3px;
+    padding-right: 3px;
+    cursor: pointer;
+
     color: #ffd700;
-
 }
-
-.projects01Dot02 {
-    padding-left: 3px;
-    padding-right: 3px;
-    cursor: pointer;
-
-}
-
-.projects01Dot03 {
-    padding-left: 3px;
-    padding-right: 3px;
-    cursor: pointer;
-
-}
-
-.projects01Dot04 {
-    padding-left: 3px;
-    padding-right: 3px;
-    cursor: pointer;
-
-}
-
-.projects01Dot05 {
-    padding-left: 3px;
-    padding-right: 3px;
-    cursor: pointer;
-
-}
-
-
 
 .projects01Img-carousel {
     display: flex;

@@ -219,7 +219,11 @@ document.getElementsByClassName("projects01ImgLeft")[0].addEventListener('click'
     }
     slideIndex -= 1;
 
+    console.log(slideIndex);
+
     document.getElementsByClassName("projects01Img-carousel")[0].style.transform = `translate3d(-${500 * slideIndex}px, 0, 0)`;
+    document.getElementsByClassName("projects01Dot01")[slideIndex + 1].style.color = "grey";
+    document.getElementsByClassName("projects01Dot01")[slideIndex].style.color = "#ffd700";
 });
 
 document.getElementsByClassName("projects01ImgRight")[0].addEventListener('click', function() {
@@ -228,5 +232,10 @@ document.getElementsByClassName("projects01ImgRight")[0].addEventListener('click
     }
     slideIndex += 1;
 
+    console.log(slideIndex);
+
     document.getElementsByClassName("projects01Img-carousel")[0].style.transform = `translate3d(-${500 * slideIndex}px, 0, 0)`;
+    document.getElementsByClassName("projects01Dot01")[slideIndex - 1].style.color = "grey";
+    document.getElementsByClassName("projects01Dot01")[slideIndex].style.color = "#ffd700";
+
 });
