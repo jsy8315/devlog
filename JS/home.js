@@ -209,3 +209,24 @@ window.addEventListener('scroll', function() {
         this.document.getElementsByClassName("projects02")[0].classList.add("show-projects02");
     }
 })
+
+// section04 캐러셀 슬라이드
+let slideIndex = 0;
+
+document.getElementsByClassName("projects01ImgLeft")[0].addEventListener('click', function() {
+    if (slideIndex == 0) {
+        return;
+    }
+    slideIndex -= 1;
+
+    document.getElementsByClassName("projects01Img-carousel")[0].style.transform = `translate3d(-${500 * slideIndex}px, 0, 0)`;
+});
+
+document.getElementsByClassName("projects01ImgRight")[0].addEventListener('click', function() {
+    if (slideIndex == 4) {
+        return;
+    }
+    slideIndex += 1;
+
+    document.getElementsByClassName("projects01Img-carousel")[0].style.transform = `translate3d(-${500 * slideIndex}px, 0, 0)`;
+});
