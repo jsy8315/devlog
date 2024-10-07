@@ -1017,11 +1017,7 @@ body {
     justify-self: center;
 }
 
-.projects01Img {
-    grid-area: projects01Img;
-    background-color: red;
 
-}
 
 .projects01Content {
     grid-area: projects01Content;
@@ -1093,6 +1089,73 @@ body {
 .show-projects02 {
     opacity: 1;
     transition: opacity 1s;
+}
+
+.projects01Img {
+    grid-area: projects01Img;
+    background-color: wheat;
+    position: relative;
+}
+
+.projects01ImgLeft {
+    position: absolute;
+    font-size: 30px;
+    color: #ffd700;
+    top: 50%;
+    left: 1%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.projects01ImgRight {
+    position: absolute;
+    font-size: 30px;
+    color: #ffd700;
+    left: 96%;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+
+}
+
+.projects01Dot {
+    position: absolute;
+    font-size: 15px;
+    color: grey;
+    bottom: 2%;
+    left: 50%;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+    
+    display: flex;
+}
+
+.projects01Dot01 {
+    padding-left: 3px;
+    padding-right: 3px;
+    cursor: pointer;
+
+}
+
+.projects01Dot02 {
+    padding-left: 3px;
+    padding-right: 3px;
+    cursor: pointer;
+
+}
+
+.projects01Dot03 {
+    padding-left: 3px;
+    padding-right: 3px;
+    cursor: pointer;
+
+}
+
+.projects01Dot04 {
+    padding-left: 3px;
+    padding-right: 3px;
+    cursor: pointer;
+
 }
 
 .section05 {
