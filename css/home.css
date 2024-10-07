@@ -1154,7 +1154,7 @@ body {
 .projects01Img-carousel {
     display: flex;
     transform: translate3d( 0, 0, 0);
-    transition: transform 0.2s;
+    transition: transform 1s;
 }
 
 .projects01Img-carousel > img {

@@ -211,6 +211,7 @@ window.addEventListener('scroll', function() {
 })
 
 // section04 캐러셀 슬라이드
+// 좌우측 화살표 클릭시 이동 및 점 클릭 시 이동
 let slideIndex = 0;
 
 document.getElementsByClassName("projects01ImgLeft")[0].addEventListener('click', function() {
@@ -239,3 +240,50 @@ document.getElementsByClassName("projects01ImgRight")[0].addEventListener('click
     document.getElementsByClassName("projects01Dot01")[slideIndex].style.color = "#ffd700";
 
 });
+
+document.getElementsByClassName("projects01Dot01")[0].addEventListener('click', function() {
+    document.getElementsByClassName("projects01Img-carousel")[0].style.transform = `translate3d(0, 0, 0)`;
+    document.getElementsByClassName("projects01Dot01")[0].style.color = "#ffd700";
+    document.getElementsByClassName("projects01Dot01")[1].style.color = "grey";
+    document.getElementsByClassName("projects01Dot01")[2].style.color = "grey";
+    document.getElementsByClassName("projects01Dot01")[3].style.color = "grey";
+    document.getElementsByClassName("projects01Dot01")[4].style.color = "grey";
+})
+
+document.getElementsByClassName("projects01Dot01")[1].addEventListener('click', function() {
+    document.getElementsByClassName("projects01Img-carousel")[0].style.transform = `translate3d(-500px, 0, 0)`;
+    document.getElementsByClassName("projects01Dot01")[1].style.color = "#ffd700";
+    document.getElementsByClassName("projects01Dot01")[0].style.color = "grey";
+    document.getElementsByClassName("projects01Dot01")[2].style.color = "grey";
+    document.getElementsByClassName("projects01Dot01")[3].style.color = "grey";
+    document.getElementsByClassName("projects01Dot01")[4].style.color = "grey";
+})
+
+document.getElementsByClassName("projects01Dot01")[2].addEventListener('click', function() {
+    document.getElementsByClassName("projects01Img-carousel")[0].style.transform = `translate3d(-1000px, 0, 0)`;
+    document.getElementsByClassName("projects01Dot01")[2].style.color = "#ffd700";
+    document.getElementsByClassName("projects01Dot01")[0].style.color = "grey";
+    document.getElementsByClassName("projects01Dot01")[1].style.color = "grey";
+    document.getElementsByClassName("projects01Dot01")[3].style.color = "grey";
+    document.getElementsByClassName("projects01Dot01")[4].style.color = "grey";
+})
+
+document.getElementsByClassName("projects01Dot01")[3].addEventListener('click', function() {
+    document.getElementsByClassName("projects01Img-carousel")[0].style.transform = `translate3d(-1500px, 0, 0)`;
+    document.getElementsByClassName("projects01Dot01")[3].style.color = "#ffd700";
+    document.getElementsByClassName("projects01Dot01")[0].style.color = "grey";
+    document.getElementsByClassName("projects01Dot01")[1].style.color = "grey";
+    document.getElementsByClassName("projects01Dot01")[2].style.color = "grey";
+    document.getElementsByClassName("projects01Dot01")[4].style.color = "grey";
+})
+
+document.getElementsByClassName("projects01Dot01")[4].addEventListener('click', function() {
+    document.getElementsByClassName("projects01Img-carousel")[0].style.transform = `translate3d(-2000px, 0, 0)`;
+    document.getElementsByClassName("projects01Dot01")[4].style.color = "#ffd700";
+    document.getElementsByClassName("projects01Dot01")[0].style.color = "grey";
+    document.getElementsByClassName("projects01Dot01")[1].style.color = "grey";
+    document.getElementsByClassName("projects01Dot01")[2].style.color = "grey";
+    document.getElementsByClassName("projects01Dot01")[3].style.color = "grey";
+})
+
+// 시간 간격에 따라 슬라이드 이동
