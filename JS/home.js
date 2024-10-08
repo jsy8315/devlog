@@ -248,6 +248,7 @@ document.getElementsByClassName("projects01Dot01")[0].addEventListener('click', 
     document.getElementsByClassName("projects01Dot01")[2].style.color = "grey";
     document.getElementsByClassName("projects01Dot01")[3].style.color = "grey";
     document.getElementsByClassName("projects01Dot01")[4].style.color = "grey";
+    slideIndex = 0;
 })
 
 document.getElementsByClassName("projects01Dot01")[1].addEventListener('click', function() {
@@ -257,6 +258,8 @@ document.getElementsByClassName("projects01Dot01")[1].addEventListener('click', 
     document.getElementsByClassName("projects01Dot01")[2].style.color = "grey";
     document.getElementsByClassName("projects01Dot01")[3].style.color = "grey";
     document.getElementsByClassName("projects01Dot01")[4].style.color = "grey";
+    slideIndex = 1;
+
 })
 
 document.getElementsByClassName("projects01Dot01")[2].addEventListener('click', function() {
@@ -266,6 +269,8 @@ document.getElementsByClassName("projects01Dot01")[2].addEventListener('click', 
     document.getElementsByClassName("projects01Dot01")[1].style.color = "grey";
     document.getElementsByClassName("projects01Dot01")[3].style.color = "grey";
     document.getElementsByClassName("projects01Dot01")[4].style.color = "grey";
+    slideIndex = 2;
+
 })
 
 document.getElementsByClassName("projects01Dot01")[3].addEventListener('click', function() {
@@ -275,6 +280,8 @@ document.getElementsByClassName("projects01Dot01")[3].addEventListener('click', 
     document.getElementsByClassName("projects01Dot01")[1].style.color = "grey";
     document.getElementsByClassName("projects01Dot01")[2].style.color = "grey";
     document.getElementsByClassName("projects01Dot01")[4].style.color = "grey";
+    slideIndex = 3;
+
 })
 
 document.getElementsByClassName("projects01Dot01")[4].addEventListener('click', function() {
@@ -284,6 +291,30 @@ document.getElementsByClassName("projects01Dot01")[4].addEventListener('click', 
     document.getElementsByClassName("projects01Dot01")[1].style.color = "grey";
     document.getElementsByClassName("projects01Dot01")[2].style.color = "grey";
     document.getElementsByClassName("projects01Dot01")[3].style.color = "grey";
+    slideIndex = 4;
+
 })
 
 // 시간 간격에 따라 슬라이드 이동
+// 점, 화살표 클릭 이후에는 진행되지 않음
+let slideTimer = setInterval(function(){
+    console.log("HI")
+
+    // if (slideIndex == 4) {
+    //     return;
+    // }
+
+    // slideIndex += 1;
+
+    // console.log(slideIndex);
+
+    // document.getElementsByClassName("projects01Img-carousel")[0].style.transform = `translate3d(-${500 * slideIndex}px, 0, 0)`;
+    // document.getElementsByClassName("projects01Dot01")[slideIndex - 1].style.color = "grey";
+    // document.getElementsByClassName("projects01Dot01")[slideIndex].style.color = "#ffd700";
+
+},1000)
+
+// slideTimer;
+
+// 클릭하는 기능 하단에 추가
+// clearInterval(slideTimer);
