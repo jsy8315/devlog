@@ -225,7 +225,7 @@ document.getElementsByClassName("projects01ImgLeft")[0].addEventListener('click'
 
     console.log(slideIndex);
 
-    document.getElementsByClassName("projects01Img-carousel")[0].style.transform = `translate3d(-${500 * slideIndex}px, 0, 0)`;
+    document.getElementsByClassName("projects01Img-carousel")[0].style.transform = `translate3d(-${550 * slideIndex}px, 0, 0)`;
     document.getElementsByClassName("projects01Dot01")[slideIndex + 1].style.color = "grey";
     document.getElementsByClassName("projects01Dot01")[slideIndex].style.color = "#ffd700";
 });
@@ -241,7 +241,7 @@ document.getElementsByClassName("projects01ImgRight")[0].addEventListener('click
 
     console.log(slideIndex);
 
-    document.getElementsByClassName("projects01Img-carousel")[0].style.transform = `translate3d(-${500 * slideIndex}px, 0, 0)`;
+    document.getElementsByClassName("projects01Img-carousel")[0].style.transform = `translate3d(-${550 * slideIndex}px, 0, 0)`;
     document.getElementsByClassName("projects01Dot01")[slideIndex - 1].style.color = "grey";
     document.getElementsByClassName("projects01Dot01")[slideIndex].style.color = "#ffd700";
 
@@ -262,7 +262,7 @@ document.getElementsByClassName("projects01Dot01")[0].addEventListener('click', 
 document.getElementsByClassName("projects01Dot01")[1].addEventListener('click', function() {
     clearInterval(slideTimer);
 
-    document.getElementsByClassName("projects01Img-carousel")[0].style.transform = `translate3d(-500px, 0, 0)`;
+    document.getElementsByClassName("projects01Img-carousel")[0].style.transform = `translate3d(-550px, 0, 0)`;
     document.getElementsByClassName("projects01Dot01")[1].style.color = "#ffd700";
     document.getElementsByClassName("projects01Dot01")[0].style.color = "grey";
     document.getElementsByClassName("projects01Dot01")[2].style.color = "grey";
@@ -275,7 +275,7 @@ document.getElementsByClassName("projects01Dot01")[1].addEventListener('click', 
 document.getElementsByClassName("projects01Dot01")[2].addEventListener('click', function() {
     clearInterval(slideTimer);
 
-    document.getElementsByClassName("projects01Img-carousel")[0].style.transform = `translate3d(-1000px, 0, 0)`;
+    document.getElementsByClassName("projects01Img-carousel")[0].style.transform = `translate3d(-1100px, 0, 0)`;
     document.getElementsByClassName("projects01Dot01")[2].style.color = "#ffd700";
     document.getElementsByClassName("projects01Dot01")[0].style.color = "grey";
     document.getElementsByClassName("projects01Dot01")[1].style.color = "grey";
@@ -288,7 +288,7 @@ document.getElementsByClassName("projects01Dot01")[2].addEventListener('click', 
 document.getElementsByClassName("projects01Dot01")[3].addEventListener('click', function() {
     clearInterval(slideTimer);
 
-    document.getElementsByClassName("projects01Img-carousel")[0].style.transform = `translate3d(-1500px, 0, 0)`;
+    document.getElementsByClassName("projects01Img-carousel")[0].style.transform = `translate3d(-1650px, 0, 0)`;
     document.getElementsByClassName("projects01Dot01")[3].style.color = "#ffd700";
     document.getElementsByClassName("projects01Dot01")[0].style.color = "grey";
     document.getElementsByClassName("projects01Dot01")[1].style.color = "grey";
@@ -301,7 +301,7 @@ document.getElementsByClassName("projects01Dot01")[3].addEventListener('click', 
 document.getElementsByClassName("projects01Dot01")[4].addEventListener('click', function() {
     clearInterval(slideTimer);
     
-    document.getElementsByClassName("projects01Img-carousel")[0].style.transform = `translate3d(-2000px, 0, 0)`;
+    document.getElementsByClassName("projects01Img-carousel")[0].style.transform = `translate3d(-2200px, 0, 0)`;
     document.getElementsByClassName("projects01Dot01")[4].style.color = "#ffd700";
     document.getElementsByClassName("projects01Dot01")[0].style.color = "grey";
     document.getElementsByClassName("projects01Dot01")[1].style.color = "grey";
@@ -328,7 +328,7 @@ let slideTimer = setInterval(function(){
 
     console.log(slideIndex);
 
-    document.getElementsByClassName("projects01Img-carousel")[0].style.transform = `translate3d(-${500 * slideIndex}px, 0, 0)`;
+    document.getElementsByClassName("projects01Img-carousel")[0].style.transform = `translate3d(-${550 * slideIndex}px, 0, 0)`;
     document.getElementsByClassName("projects01Dot01")[slideIndex - 1].style.color = "grey";
     document.getElementsByClassName("projects01Dot01")[slideIndex].style.color = "#ffd700";
 
