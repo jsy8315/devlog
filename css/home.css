@@ -1352,7 +1352,7 @@ body {
     /* align-items: center; */
     justify-content: center; 
 
-    background-color: floralwhite;
+    background-color: white; /* floralwhite; */
     width: 80%;
     border-radius: 10px;
     margin-bottom: 200px;
@@ -1362,13 +1362,13 @@ body {
 .career01-img {
     border-radius: 50%;
     background-color: white;
-    width: 250px;
-    height: 250px;   
+    width: 270px;
+    height: 270px;   
 
     display: flex;
     align-items: center;
     justify-content: center; 
-    border: 1px solid grey;
+    border: 1px solid #00c853;
 }
 
 .career01-img img {
@@ -1376,18 +1376,58 @@ body {
 }
 
 .career01-content {
-    background-color: grey;
+    /* background-color: grey; */
     display: flex;
     flex-direction: column;
 
     width: 70%;
     margin-left: 30px;
+    font-size: 20px;
+
+    border-left: 1px solid lightgray;
 }
 
 .career01-maincontent {
+}
 
+.career01-maincontent-name {
+    font-size: 30px;
+    font-weight: 600;
+    margin: 0px 10px 10px 30px;
+}
+
+.career01-maincontent-peri {
+    font-size: 20px;
+
+    color: grey;
+    margin: 0px 10px 10px 30px;
+}
+
+.career01-maincontent-desc {
+    margin: 0px 10px 10px 30px;
+    border-bottom: 1px solid lightgray;
 }
 
 .career01-subcontent01 {
+    
+}
+
+.career01-subcontent01-task {
+    font-size: 23px;
+    font-weight: 500;
+    margin: 15px 10px 10px 30px;
+    
+}
+
+.career01-subcontent01-peri {
+    font-size: 20px;
+
+    color: grey;
+    margin: 0px 10px 10px 30px;
+
+}
+
+.career01-subcontent01-desc {
+    margin: 0px 10px 10px 30px;
 
 }
