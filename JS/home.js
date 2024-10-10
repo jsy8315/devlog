@@ -326,7 +326,7 @@ let slideTimer = setInterval(function(){
 
     slideIndex += 1;
 
-    console.log(slideIndex);
+    // console.log(slideIndex);
 
     document.getElementsByClassName("projects01Img-carousel")[0].style.transform = `translate3d(-${550 * slideIndex}px, 0, 0)`;
     document.getElementsByClassName("projects01Dot01")[slideIndex - 1].style.color = "grey";
@@ -338,3 +338,23 @@ let slideTimer = setInterval(function(){
 
 // 클릭하는 기능 하단에 추가
 // clearInterval(slideTimer);
+
+// section05 스크롤에 따라 career01 서서히 올라오기
+window.addEventListener('scroll', function() {
+    let currentScrollYsection05 = this.window.scrollY;
+    console.log("currentScrollYsection05 : " + currentScrollYsection05)
+
+    if ( (currentScrollYsection05 >= 4800) ) {
+        document.getElementsByClassName("career01")[0].classList.add("show-career01");
+
+    }
+    // career02 추가시 적용
+    // if ( (currentScrollYsection05 >= 5700) && (currentScrollYsection05 <= 6300) ) {
+    //     document.getElementsByClassName("career01")[0].classList.remove("hide-career01");
+    //     document.getElementsByClassName("career01")[0].classList.add("show-career01");
+
+    // } else {
+    //     document.getElementsByClassName("career01")[0].classList.remove("show-career01");
+    //     document.getElementsByClassName("career01")[0].classList.add("hide-career01");
+    // }
+})

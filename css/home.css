@@ -1357,6 +1357,8 @@ body {
     border-radius: 10px;
     margin-bottom: 200px;
     padding: 40px;
+
+    opacity: 0;
 }
 
 .career01-img {
@@ -1430,4 +1432,14 @@ body {
 .career01-subcontent01-desc {
     margin: 0px 10px 10px 30px;
 
+}
+
+.show-career01 {
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+.hide-career01 {
+    opacity: 0;
+    transition: opacity 1s;
 }
