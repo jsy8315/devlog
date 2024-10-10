@@ -1000,6 +1000,11 @@ body {
     transition: opacity 1s;
 }
 
+.hide-projects01 {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
 .projects01Tilte {
     grid-area: projects01Tilte;
 
@@ -1174,6 +1179,11 @@ body {
 
 .show-projects02 {
     opacity: 1;
+    transition: opacity 1s;
+}
+
+.hide-projects02 {
+    opacity: 0;
     transition: opacity 1s;
 }
 
