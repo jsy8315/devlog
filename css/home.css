@@ -168,29 +168,37 @@ body {
     color: black;
 }
 
+/* 전체를 포함하는 main */
 .main {
     cursor: default;
 }
 
 .bg-video{
-    height: 100vh;
     width: 100%;
+
     display: flex;   
     justify-content: center;
     align-items: center;
     opacity: 1;
     z-index: 1;
+
+
+    position: relative;
+    /* header 높이만큼 아래로 */
+    top: 10vh; 
+    padding: 50px;
+    height: 100vh;
 }
 
 .bg-video-content {
     width: 100%;
     height: 100%;
     object-fit: cover;
+
+    position: absolute
 }
 
 .intro-overlay {
-    position: absolute;
-    bottom: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -201,8 +209,6 @@ body {
 }
 
 .home-hi {
-    position: relative;
-    top: 130px;
     font-size : 200px;
     font-weight: 700;
     transition: all 0.5s;
