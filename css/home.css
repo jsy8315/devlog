@@ -1329,6 +1329,37 @@ body {
 
 .section05 {
     background-color: #00c853;
-    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
+
+.careerSpan {
+    font-size : 90px;
+    font-weight: 700;
+    text-decoration-line: none;
+    color: white;
+    list-style: none;
+    padding: 200px 10px 50px 10px;
+}
+
+.career01 {
+    display: flex;
+    flex-direction: row;
+
+    background-color: white;
+    width: 80%;
+    border-radius: 10px;
+    margin-bottom: 200px;
+}
+
+.career01-maincontent {
+
+}
+
+.career01-subcontent01 {
+
+}
