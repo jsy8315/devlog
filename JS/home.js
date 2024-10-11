@@ -175,7 +175,7 @@ document.getElementsByClassName('Devlog')[0].addEventListener('click', function(
 })
 // Top버튼 스크롤시 나타나는 효과
 window.addEventListener('scroll', function() {
-    if (this.window.scrollY >= 100) {
+    if (this.window.scrollY >= 130) {
         this.document.getElementsByClassName('topBtn-img')[0].classList.add("show-topBtn-img");
         this.document.getElementsByClassName('topBtn-img')[0].classList.remove("hide-topBtn-img");
     } else {
