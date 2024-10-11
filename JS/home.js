@@ -125,10 +125,46 @@ window.addEventListener('scroll', function() {
 })
 
 // Navbar 로고 클릭 시 새로고침
-document.getElementsByClassName('header-logo')[0].addEventListener('click', function() {
+document.getElementsByClassName('header-logo')[0].addEventListener('click', function(e) {
     history.go();
 })
 
+// Navber 요소 클릭시 스크롤
+document.getElementsByClassName('AboutMe')[0].addEventListener('click', function(e) {
+    window.scrollTo({
+        left: 0,
+        top: 785,
+        behavior: "smooth"
+    })
+})
+
+document.getElementsByClassName('Skills')[0].addEventListener('click', function(e) {
+    window.scrollTo({
+        left: 0,
+        top: 785,
+        behavior: "smooth"
+    })
+})
+
+document.getElementsByClassName('Projects')[0].addEventListener('click', function(e) {
+    window.scrollTo({
+        left: 0,
+        top: 785,
+        behavior: "smooth"
+    })
+})
+
+document.getElementsByClassName('Career')[0].addEventListener('click', function(e) {
+    window.scrollTo({
+        left: 0,
+        top: 785,
+        behavior: "smooth"
+    })
+})
+
+document.getElementsByClassName('Devlog')[0].addEventListener('click', function(e) {
+    alert("준비 중입니다!")
+})
 // Top버튼 스크롤시 나타나는 효과
 window.addEventListener('scroll', function() {
     if (this.window.scrollY >= 100) {

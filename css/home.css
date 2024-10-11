@@ -114,6 +114,30 @@ body {
     cursor: pointer;
 }
 
+.AboutMe {
+    cursor: pointer;
+}
+
+.Home {
+    cursor: pointer;
+}
+
+.Skills {
+    cursor: pointer;
+}
+
+.Projects {
+    cursor: pointer;
+}
+
+.Career {
+    cursor: pointer;
+}
+
+.Devlog {
+    cursor: pointer;
+}
+
 .header-logo img {
     width : 50px;
     height: auto;
