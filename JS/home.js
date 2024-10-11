@@ -130,10 +130,18 @@ document.getElementsByClassName('header-logo')[0].addEventListener('click', func
 })
 
 // Navber 요소 클릭시 스크롤
+document.getElementsByClassName('Home')[0].addEventListener('click', function(e) {
+    window.scrollTo({
+        left: 0,
+        top: 0,
+        behavior: "smooth"
+    })
+})
+
 document.getElementsByClassName('AboutMe')[0].addEventListener('click', function(e) {
     window.scrollTo({
         left: 0,
-        top: 785,
+        top: 800,
         behavior: "smooth"
     })
 })
@@ -141,7 +149,7 @@ document.getElementsByClassName('AboutMe')[0].addEventListener('click', function
 document.getElementsByClassName('Skills')[0].addEventListener('click', function(e) {
     window.scrollTo({
         left: 0,
-        top: 785,
+        top: 1850,
         behavior: "smooth"
     })
 })
@@ -149,7 +157,7 @@ document.getElementsByClassName('Skills')[0].addEventListener('click', function(
 document.getElementsByClassName('Projects')[0].addEventListener('click', function(e) {
     window.scrollTo({
         left: 0,
-        top: 785,
+        top: 2750,
         behavior: "smooth"
     })
 })
@@ -157,7 +165,7 @@ document.getElementsByClassName('Projects')[0].addEventListener('click', functio
 document.getElementsByClassName('Career')[0].addEventListener('click', function(e) {
     window.scrollTo({
         left: 0,
-        top: 785,
+        top: 5050,
         behavior: "smooth"
     })
 })
