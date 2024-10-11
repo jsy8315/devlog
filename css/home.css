@@ -110,6 +110,8 @@ body {
     flex-basis: 30%;
     margin: 0;
     padding: 0;
+
+    cursor: pointer;
 }
 
 .header-logo img {
