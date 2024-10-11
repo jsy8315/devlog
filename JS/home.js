@@ -124,6 +124,11 @@ window.addEventListener('scroll', function() {
     }
 })
 
+// Navbar 로고 클릭 시 새로고침
+document.getElementsByClassName('header-logo')[0].addEventListener('click', function() {
+    history.go();
+})
+
 // Top버튼 스크롤시 나타나는 효과
 window.addEventListener('scroll', function() {
     if (this.window.scrollY >= 100) {
