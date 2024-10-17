@@ -237,13 +237,14 @@ body {
     font-size : 200px;
     font-weight: 700;
     transition: all 0.5s;
-
+    margin-top: 400px;
 }
 
 .show-home-hi {
     font-size: 40px;
     top: 1000px;
     transition: all 0.5s;
+    margin-top: 0px;
 }
 
 .home-role {
