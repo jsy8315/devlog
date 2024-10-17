@@ -38,16 +38,17 @@ document.getElementsByClassName("bg-video-pause")[0].addEventListener('click', f
 // home-role, home-name 아래에서 위로 올라오는 효과 > 따로 함수 만들어서 적용
 // sub-intro 
 
+
 setTimeout(function(){
     document.getElementsByClassName("home-hi")[0].classList.add("show-home-hi");
 }, 800);
 
 setTimeout(function(){
-    document.getElementsByClassName("home-role")[0].classList.add("show-home-name");
+    document.getElementsByClassName("home-role")[0].classList.add("show-home-role");
 }, 1500);
 
 setTimeout(function(){
-    document.getElementsByClassName("home-name")[0].classList.add("show-home-role");
+    document.getElementsByClassName("home-name")[0].classList.add("show-home-name");
 }, 1700);
 
 setTimeout(function(){
