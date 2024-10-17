@@ -309,11 +309,12 @@ body {
     background-color: white;
     display: grid;
     grid-template-areas: 
-        ". . . . ."
-        ". header header header ."
-        ". aboutme aboutme aboutme ."
-        ". aboutmeCards aboutmeCards aboutmeCards .";
-    grid-template-columns: repeat(5, 1fr);
+        ". . ."
+        ". aboutmeSpan ."
+        ". aboutmeWapper ."
+        ". . ."
+        ". . .";
+    grid-template-columns: 1fr 50fr 1fr;
     grid-template-rows: 1fr 1fr 2fr 2fr 1fr;
     grid-gap: 50px;
 }
@@ -324,9 +325,10 @@ body {
 } */
 
 .aboutmeSpan {
+    grid-area: aboutmeSpan;
+
     font-size : 90px;
     font-weight: 700;
-    grid-area: header;
     align-self: center;
     justify-self: center;
     text-decoration-line: none;
@@ -334,9 +336,13 @@ body {
     list-style: none;
 }
 
+.aboutmeWrapper {
+    grid-area: aboutmeWapper;
+    background-color: rgba(245, 245, 247, 1);
+}
 
 .aboutmeMain {
-    grid-area: aboutme;
+    grid-area: aboutmeMain;
     background-color: white;
     border-radius: 5px;
     box-shadow: 1px 1px 3px grey;
@@ -346,8 +352,8 @@ body {
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 10px;
 
-    position: relative;
-    right: 1000px;
+    /* position: relative;
+    right: 1000px; */
     transition: right 0.1s linear;
 }
 
@@ -709,7 +715,7 @@ body {
 
 .section03 {
     
-    background-color: #007aff;
+    background-color: rgba(245, 245, 247, 1);
     /* 
     #007aff 파랑
     #ffd700 노랑
@@ -737,7 +743,7 @@ body {
     align-self: center;
     justify-self: center;
     text-decoration-line: none;
-    color: white;
+    color: black;
     list-style: none;
 }
 
@@ -986,7 +992,9 @@ body {
 }
 
 .section04 {
-    background-color: #ffd700;
+    /* background-color: rgba(245, 245, 247, 1); */
+    background-color: black;
+
     display: grid;
     grid-template-areas: 
     ". . ."
@@ -1017,6 +1025,7 @@ body {
 
     background-color: white;
     border-radius: 30px;
+    box-shadow: 2px 4px 12px #00000014;
     padding: 50px;
 
     display: grid;
@@ -1200,6 +1209,7 @@ body {
     grid-area: projects02;
 
     background-color: white;
+    box-shadow: 2px 4px 12px #00000014;
     border-radius: 30px;
     padding: 50px;
 
@@ -1378,7 +1388,8 @@ body {
 }
 
 .section05 {
-    background-color: #00c853;
+    background-color: white;
+
 
     display: flex;
     flex-direction: column;
@@ -1391,7 +1402,7 @@ body {
     font-size : 90px;
     font-weight: 700;
     text-decoration-line: none;
-    color: white;
+    color: black;
     list-style: none;
     padding: 200px 10px 50px 10px;
 }
@@ -1402,11 +1413,14 @@ body {
     /* align-items: center; */
     justify-content: center; 
 
-    background-color: white; /* floralwhite; */
-    width: 80%;
-    border-radius: 10px;
+    background-color: rgba(245, 245, 247, 1);
+    width: 85%;
+    border-radius: 30px;
     margin-bottom: 200px;
     padding: 40px;
+    /* box-shadow: 2px 4px 12px #00000014; */
+    box-shadow: initial;
+
 
     opacity: 0;
 }
@@ -1420,7 +1434,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center; 
-    border: 1px solid #00c853;
+    border: 1px solid #DEDEDE;
 }
 
 .career01-img img {
