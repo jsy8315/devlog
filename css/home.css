@@ -71,7 +71,7 @@ body {
     padding: 0;
     width: 100%;
     height: 100%;
-    font-family: 'SBAggroB';
+    /* font-family: 'SBAggroB'; */
 }
 
 .header {
@@ -102,7 +102,6 @@ body {
 }
 
 .header-logo {
-    /* background-color: yellow; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -213,6 +212,7 @@ body {
     top: 10vh; 
     padding: 50px;
     height: 100vh;
+    
 }
 
 .bg-video-content {
@@ -339,10 +339,13 @@ body {
 .aboutmeWrapper {
     grid-area: aboutmeWapper;
     background-color: rgba(245, 245, 247, 1);
+    padding: 100px;
+    border-radius: 30px;
+
+
 }
 
 .aboutmeMain {
-    grid-area: aboutmeMain;
     background-color: white;
     border-radius: 5px;
     box-shadow: 1px 1px 3px grey;
@@ -1506,4 +1509,37 @@ body {
 .hide-career01 {
     opacity: 0;
     transition: opacity 1s;
+}
+
+/* 태블릿 */
+@media screen and (max-width: 1200px) {
+    .header {
+        display: none;
+    }
+}
+
+/* 스마트폰 화면 */
+@media screen and (max-width: 480px) {
+    .header {
+        display: none;
+    }
+
+    .main {
+        width: 100%;
+    }
+
+    .bg-video{
+        width: 100%;
+    
+        display: flex;   
+        justify-content: center;
+        align-items: center;
+        opacity: 1;
+        z-index: 1;
+    
+    
+        position: relative;
+        padding: 50px;
+        height: 100vh;
+    }
 }
