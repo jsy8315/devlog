@@ -195,6 +195,7 @@ body {
 /* 전체를 포함하는 main */
 .main {
     cursor: default;
+    background-color: black;
 }
 
 .bg-video{
@@ -293,6 +294,8 @@ body {
     height: 6vh;
     font-weight: 700;
     opacity: 0;
+    background-color: black;
+    color: white;
 }
 
 .show-aboutme {
@@ -300,23 +303,15 @@ body {
     transition: opacity 2s;
 }
 
-.testBtn {
-    height: 6vh;
-    background-color: white;
-}
+
 
 .section02 {
     background-color: white;
-    display: grid;
-    grid-template-areas: 
-        ". . ."
-        ". aboutmeSpan ."
-        ". aboutmeWapper ."
-        ". . ."
-        ". . .";
-    grid-template-columns: 1fr 50fr 1fr;
-    grid-template-rows: 1fr 1fr 2fr 2fr 1fr;
-    grid-gap: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10vh; 
+
 }
 
 /* a {
@@ -325,8 +320,6 @@ body {
 } */
 
 .aboutmeSpan {
-    grid-area: aboutmeSpan;
-
     font-size : 90px;
     font-weight: 700;
     align-self: center;
@@ -334,30 +327,38 @@ body {
     text-decoration-line: none;
     text-decoration-color: black;
     list-style: none;
+    margin-top: 100px;
+    margin-bottom: 50px;
 }
 
 .aboutmeWrapper {
-    grid-area: aboutmeWapper;
-    background-color: rgba(245, 245, 247, 1);
-    padding: 100px;
+    background-color: white;
+    padding: 0px;
     border-radius: 30px;
 
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-self: center;
+    width: 80%;
 
 }
 
 .aboutmeMain {
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 1px 1px 3px grey;
-    border: 0.5px solid grey;
+    width: 100%;
+    background-color: black;
+    border-radius: 25px;
 
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 10px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
 
     /* position: relative;
     right: 1000px; */
     transition: right 0.1s linear;
+    padding: 50px 150px 50px 150px;
+
 }
 
 .aboutmeMainName {
@@ -366,6 +367,7 @@ body {
     align-self: center;
     justify-self: center;
     grid-gap: 10px;
+    color: white;
 }
 
 .aboutmeMainNameSpan {
@@ -373,7 +375,7 @@ body {
     justify-self: center;
     font-size : 30px;
     font-weight: 500;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid white;
 }
 .aboutmeMainNameName {
     align-self: center;
@@ -387,6 +389,8 @@ body {
     align-self: center;
     justify-self: center;
     grid-gap: 10px;
+    color: white;
+
 }
 
 .aboutmeMainAddrSpan {
@@ -394,7 +398,7 @@ body {
     justify-self: center;
     font-size : 30px;
     font-weight: 500;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid white;
 }
 
 .aboutmeMainAddrGm {
@@ -410,6 +414,8 @@ body {
     align-self: center;
     justify-self: center;
     grid-gap: 10px;
+    color: white;
+
 }
 
 .aboutmeMainContactSpan {
@@ -417,7 +423,7 @@ body {
     justify-self: center;
     font-size : 30px;
     font-weight: 500;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid white;
 }
 
 .aboutmeMainContactMail {
@@ -428,11 +434,8 @@ body {
 }
 
 .aboutmeCards {
-    grid-area: aboutmeCards;
-    grid-template-columns: 1fr 1fr 1fr; 
-    display: grid;
-    grid-gap: 50px;
-
+    display: flex;
+    flex-direction: column;
     position: relative;
     left: 0px;
 
@@ -440,6 +443,7 @@ body {
 }
 
 .aboutmeGithub {
+    width: 100%;
     background-color: white;
     border-radius: 5px;
     box-shadow: 1px 1px 3px grey;
@@ -1599,6 +1603,15 @@ body {
         opacity: 1;
         transition: opacity 2s;
     }
+
+    .section02 {
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 0vh; 
+    
+    }
 }
 
 /* 스마트폰 화면 */
@@ -1610,6 +1623,7 @@ body {
     .main {
         display: flex;
         flex-wrap: wrap;
+        
     }
 
     .bg-video{
@@ -1661,7 +1675,7 @@ body {
     }
     
     .home-role {
-     font-size : 28px;
+     font-size : 29px;
      font-weight: 700;
     
      transform: translateY(20px);
@@ -1670,7 +1684,7 @@ body {
     }
     
     .home-name {
-     font-size : 28px;
+     font-size : 29px;
      font-weight: 700;
     
      transform: translateY(20px);
@@ -1680,8 +1694,9 @@ body {
 
     .sub-intro {
         padding: 20px;
-        font-size: 12px;
-        margin: 30px;
+        font-size: 15px;
+        margin: 20px 20px 20px 30px;
+        padding: 0px;
         font-weight: 500;
         opacity: 0;
     }
@@ -1712,4 +1727,43 @@ body {
         opacity: 1;
         transition: opacity 2s;
     }
+
+    .section02 {
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 0vh; 
+    
+    }
+
+    .aboutmeSpan {
+        font-size : 40px;
+        font-weight: 700;
+        align-self: center;
+        justify-self: center;
+        text-decoration-line: none;
+        text-decoration-color: black;
+        list-style: none;
+        margin-top: 100px;
+        margin-bottom: 50px;
+    }
+
+    .aboutmeMain {
+        width: 100%;
+        background-color: black;
+        border-radius: 25px;
+    
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+    
+        /* position: relative;
+        right: 1000px; */
+        transition: right 0.1s linear;
+        padding: 50px 30px 50px 30px;
+    
+    }
+
 }

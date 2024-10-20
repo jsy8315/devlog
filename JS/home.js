@@ -406,12 +406,12 @@ let slideTimer = setInterval(function(){
 // 클릭하는 기능 하단에 추가
 // clearInterval(slideTimer);
 
-// section05 스크롤에 따라 career01 서서히 올라오기
+// section05 스크롤에 따라 career01 서서히 올라오기, 4800?
 window.addEventListener('scroll', function() {
     let currentScrollYsection05 = this.window.scrollY;
-    console.log("currentScrollYsection05 : " + currentScrollYsection05)
+    // console.log("currentScrollYsection05 : " + currentScrollYsection05)
 
-    if ( (currentScrollYsection05 >= 4800) ) {
+    if ( (true) ) {
         document.getElementsByClassName("career01")[0].classList.add("show-career01");
 
     }
