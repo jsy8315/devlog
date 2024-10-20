@@ -358,6 +358,7 @@ body {
     right: 1000px; */
     transition: right 0.1s linear;
     padding: 50px 150px 50px 150px;
+    margin-bottom: 20px;
 
 }
 
@@ -445,29 +446,18 @@ body {
 .aboutmeGithub {
     width: 100%;
     background-color: white;
-    border-radius: 5px;
+    border-radius: 25px;
     box-shadow: 1px 1px 3px grey;
     padding: 15px;
     border: 0.5px solid grey;
     align-self: center;
-
-    display: grid;
-    grid-template-areas: 
-    "aboutmeGithub-logo aboutmeGithub-logo aboutmeGithub-logo"
-    "aboutmeGithub-subtitle aboutmeGithub-subtitle aboutmeGithub-subtitle"
-    "aboutmeGithub-content aboutmeGithub-content aboutmeGithub-content";
-
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-gap: 0px;
+    justify-content: center;
+    display: flex;
 
     transition: all 0.2s linear;
-}
+    margin-bottom: 20px;
 
-/* 호버 삭제
-.aboutmeGithub:hover {
-    transform: scale(1.2);
-} */
+}
 
 .aboutmeGithub-logo {
     align-self: center;
@@ -478,11 +468,13 @@ body {
 .aboutmeGithub-subtitle {
     grid-area: aboutmeGithub-subtitle;
     align-self: center;
+    font-size: 20px;
+
     /* border: 1px solid green; */
 }
 
 .aboutmeGithub-content {
-    font-size: 14px;
+    font-size: 20px;
 
     grid-area: aboutmeGithub-content;
     /* border: 1px solid red; */
@@ -493,7 +485,7 @@ body {
     /* width: 80% */
     object-fit: cover; 
     /* border: 1px solid black; */
-    height: 60px;
+    height: 80px;
 }
 
 .aboutmeGithub a {
@@ -512,23 +504,22 @@ body {
 }
 
 .aboutmeBlog {
+    width: 100%;
+
     background-color: white;
-    border-radius: 5px;
+    border-radius: 25px;
     box-shadow: 1px 1px 3px grey;
     padding: 15px;
     border: 0.5px solid grey;
     align-self: center;
 
-    display: grid;
-    grid-template-areas: 
-    "aboutmeBlog-logo aboutmeBlog-title aboutmeBlog-title"
-    "aboutmeBlog-subtitle aboutmeBlog-subtitle aboutmeBlog-subtitle"
-    "aboutmeBlog-content aboutmeBlog-content aboutmeBlog-content";
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-gap: 0px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
 
     transition: all 0.2s linear;
+    margin-bottom: 20px;
+
 }
 
 /* 호버 삭제
@@ -537,29 +528,30 @@ body {
 } */
 
 .aboutmeBlog-logo {
-    align-self: center;
-
+    display: flex;
+    align-content: center;
+    justify-content: center;
     grid-area: aboutmeBlog-logo;
-    /* border: 1px solid red; */
+    padding-right: 0;
+    height: 80px;
+
 }
 
 .aboutmeBlog-title {
-    align-self: center;
-    grid-area: aboutmeBlog-title;
     /* border: 1px solid blue; */
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 600;
 }
 
 .aboutmeBlog-subtitle {
     grid-area: aboutmeBlog-subtitle;
     align-self: center;
-
+    font-size: 20px;
     /* border: 1px solid green; */
 }
 
 .aboutmeBlog-content {
-    font-size: 14px;
+    font-size: 20px;
 
     grid-area: aboutmeBlog-content;
     /* border: 1px solid red; */
@@ -574,23 +566,20 @@ body {
 }
 
 .aboutmeResume {
+    width: 100%;
+
     background-color: white;
-    border-radius: 5px;
+    border-radius: 25px;
     box-shadow: 1px 1px 3px grey;
     padding: 15px;
     border: 0.5px solid grey;
     align-self: center;
-
-    display: grid;
-    grid-template-areas: 
-    "aboutmeResume-logo aboutmeResume-title aboutmeResume-title"
-    "aboutmeResume-subtitle aboutmeResume-subtitle aboutmeResume-subtitle"
-    "aboutmeResume-content aboutmeResume-content aboutmeResume-content";
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-gap: 0px;
+    justify-content: center;
+    display: flex;
 
     transition: all 0.2s linear;
+    margin-bottom: 100px;
+
 }
 
 /* 호버 삭제
@@ -601,12 +590,12 @@ body {
 .aboutmeResume-logo {
     align-self: center;
     grid-area: aboutmeResume-logo;
+    height: 60px;
     /* border: 1px solid red; */
 }
 
 .aboutmeResume-title {
     align-self: center;
-    grid-area: aboutmeResume-title;
     /* border: 1px solid blue; */
     font-size: 25px;
     font-weight: 600;
@@ -620,7 +609,7 @@ body {
 }
 
 .aboutmeResume-content {
-    font-size: 14px;
+    font-size: 20px;
     list-style: square;
     grid-area: aboutmeResume-content;
     /* border: 1px solid red; */
@@ -1766,7 +1755,7 @@ body {
         right: 1000px; */
         transition: right 0.1s linear;
         padding: 50px 30px 50px 30px;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
     
     }
 
@@ -1844,4 +1833,202 @@ body {
         font-weight: 500;
     }
 
+    .aboutmeGithub {
+        width: 100%;
+        background-color: white;
+        border-radius: 25px;
+        box-shadow: 1px 1px 3px grey;
+        padding: 15px;
+        border: 0.5px solid grey;
+        align-self: center;
+    
+        display: grid;
+        grid-template-areas: 
+        "aboutmeGithub-logo aboutmeGithub-logo aboutmeGithub-logo"
+        "aboutmeGithub-subtitle aboutmeGithub-subtitle aboutmeGithub-subtitle"
+        "aboutmeGithub-content aboutmeGithub-content aboutmeGithub-content";
+    
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 0.8fr 1fr;
+        grid-gap: 0px;
+    
+        transition: all 0.2s linear;
+        margin-bottom: 20px;
+    
+    }
+    
+    /* 호버 삭제
+    .aboutmeGithub:hover {
+        transform: scale(1.2);
+    } */
+    
+    .aboutmeGithub-logo {
+        align-self: center;
+        grid-area: aboutmeGithub-logo;
+        /* border: 1px solid red; */
+    }
+    
+    .aboutmeGithub-subtitle {
+        grid-area: aboutmeGithub-subtitle;
+        align-self: center;
+        font-size: 16px;
+        /* border: 1px solid green; */
+    }
+    
+    .aboutmeGithub-content {
+        font-size: 14px;
+    
+        grid-area: aboutmeGithub-content;
+        /* border: 1px solid red; */
+        align-self: center;
+    }
+    
+    .aboutmeGithub img {
+        /* width: 80% */
+        object-fit: cover; 
+        /* border: 1px solid black; */
+        height: 60px;
+    }
+    
+    .aboutmeGithub a {
+        text-decoration-line: none;
+        color: blue; 
+    }
+    
+    .aboutmeBlog a {
+        text-decoration-line: none;
+        /* color: blue;  */
+    }
+    
+    .aboutmeResume a {
+        text-decoration-line: none;
+        /* color: blue;  */
+    }
+    
+    .aboutmeBlog {
+        width: 100%;
+    
+        background-color: white;
+        border-radius: 25px;
+        box-shadow: 1px 1px 3px grey;
+        padding: 15px;
+        border: 0.5px solid grey;
+        align-self: center;
+    
+        display: grid;
+        grid-template-areas: 
+        "aboutmeBlog-logo aboutmeBlog-title aboutmeBlog-title"
+        "aboutmeBlog-subtitle aboutmeBlog-subtitle aboutmeBlog-subtitle"
+        "aboutmeBlog-content aboutmeBlog-content aboutmeBlog-content";
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 1fr 0.5fr 1fr;
+        grid-gap: 0px;
+    
+        transition: all 0.2s linear;
+        margin-bottom: 20px;
+    
+    }
+    
+    /* 호버 삭제
+    .aboutmeBlog:hover {
+        transform: scale(1.2);
+    } */
+    
+    .aboutmeBlog-logo {
+        align-self: center;
+    
+        grid-area: aboutmeBlog-logo;
+        /* border: 1px solid red; */
+    }
+    
+    .aboutmeBlog-title {
+        align-self: center;
+        grid-area: aboutmeBlog-title;
+        /* border: 1px solid blue; */
+        font-size: 25px;
+        font-weight: 600;
+    }
+    
+    .aboutmeBlog-subtitle {
+        grid-area: aboutmeBlog-subtitle;
+        align-self: center;
+        font-size: 16px;
+    
+        /* border: 1px solid green; */
+    }
+    
+    .aboutmeBlog-content {
+        font-size: 14px;
+    
+        grid-area: aboutmeBlog-content;
+        /* border: 1px solid red; */
+        align-self: center;
+    }
+    
+    .aboutmeBlog img {
+        align-self: center;
+        height: 60px;
+        object-fit: cover; 
+        /* border: 1px solid red; */
+    }
+    
+    .aboutmeResume {
+        width: 100%;
+    
+        background-color: white;
+        border-radius: 25px;
+        box-shadow: 1px 1px 3px grey;
+        padding: 15px;
+        border: 0.5px solid grey;
+        align-self: center;
+    
+        display: grid;
+        grid-template-areas: 
+        "aboutmeResume-logo aboutmeResume-title aboutmeResume-title"
+        "aboutmeResume-subtitle aboutmeResume-subtitle aboutmeResume-subtitle"
+        "aboutmeResume-content aboutmeResume-content aboutmeResume-content";
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 0px;
+    
+        transition: all 0.2s linear;
+        margin-bottom: 100px;
+    
+    }
+    
+    .aboutmeResume-logo {
+        align-self: center;
+        grid-area: aboutmeResume-logo;
+        /* border: 1px solid red; */
+    }
+    
+    .aboutmeResume-title {
+        align-self: center;
+        grid-area: aboutmeResume-title;
+        /* border: 1px solid blue; */
+        font-size: 25px;
+        font-weight: 600;
+    }
+    
+    .aboutmeResume-subtitle {
+        grid-area: aboutmeResume-subtitle;
+        align-self: center;
+        font-size: 16px;
+    
+        /* border: 1px solid green; */
+    }
+    
+    .aboutmeResume-content {
+        font-size: 14px;
+        list-style: square;
+        grid-area: aboutmeResume-content;
+        /* border: 1px solid red; */
+        align-self: center;
+    }
+    
+    .aboutmeResume img {
+        height: 60px;
+        object-fit: cover; 
+        /* border: 1px solid red; */
+    }
 }
