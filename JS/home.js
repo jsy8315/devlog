@@ -185,7 +185,7 @@ document.getElementsByClassName('Devlog')[0].addEventListener('click', function(
 })
 // Top버튼 스크롤시 나타나는 효과
 window.addEventListener('scroll', function() {
-    if (this.window.scrollY >= 130) {
+    if (this.window.scrollY >= 200) {
         this.document.getElementsByClassName('topBtn-img')[0].classList.add("show-topBtn-img");
         this.document.getElementsByClassName('topBtn-img')[0].classList.remove("hide-topBtn-img");
     } else {
@@ -201,6 +201,23 @@ document.getElementsByClassName('topBtn')[0].addEventListener('click', function(
         top: 0,
         behavior: "smooth"
     })
+})
+
+// section02 > aboutmeMain 글자 확대 & 색 조정
+window.addEventListener('scroll', function() {
+
+    const aboutmeMain = documnet.getElementsByClassName('aboutmeMain')[0];
+
+    const rectAboutmeMain = aboutmeMain.getBouncingClientRect();
+
+    console.log(rectAboutmeMain);
+    if (this.window.scrollY >= 130) {
+        this.document.getElementsByClassName('topBtn-img')[0].classList.add("show-topBtn-img");
+        this.document.getElementsByClassName('topBtn-img')[0].classList.remove("hide-topBtn-img");
+    } else {
+        this.document.getElementsByClassName('topBtn-img')[0].classList.remove("show-topBtn-img");
+        this.document.getElementsByClassName('topBtn-img')[0].classList.add("hide-topBtn-img");
+    }
 })
 
 // section02 요소 이동, 300부터 효과 시작 900에 종료
