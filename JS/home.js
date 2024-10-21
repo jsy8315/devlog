@@ -205,18 +205,30 @@ document.getElementsByClassName('topBtn')[0].addEventListener('click', function(
 
 // section02 > aboutmeMain 글자 확대 & 색 조정
 window.addEventListener('scroll', function() {
+    const section02Scroll = window.scrollY;
+    const aboutmeMain = document.getElementsByClassName('aboutmeMain')[0]; //aboutmeMain가져오기
 
-    const aboutmeMain = documnet.getElementsByClassName('aboutmeMain')[0];
+    const windowHeight = window.innerHeight;
 
-    const rectAboutmeMain = aboutmeMain.getBouncingClientRect();
+    const aboutmeMainRect = aboutmeMain.getBoundingClientRect();
 
-    console.log(rectAboutmeMain);
-    if (this.window.scrollY >= 130) {
-        this.document.getElementsByClassName('topBtn-img')[0].classList.add("show-topBtn-img");
-        this.document.getElementsByClassName('topBtn-img')[0].classList.remove("hide-topBtn-img");
+    const aboutmeMainCenter = aboutmeMainRect.top + ( aboutmeMainRect.height / 2 );
+
+    const scaleValue =  -1 / ( aboutmeMainRect.height ) * (aboutmeMainCenter  - windowHeight) + 0.5;
+    
+    console.log("windowHeight : " + windowHeight);
+    console.log("aboutmeMainCenter : " + aboutmeMainCenter);
+    console.log("aboutmeMainRect.height : " + aboutmeMainRect.height);
+    console.log("scaleValue : " + scaleValue);
+
+
+    // 87이동시 scale 0.5 -> 1.0 변화
+    // aboutmeMainCenter가 windowsHeight와 같아지는 시점부터 변화 시작해서              scale 0.5
+    // aboutmeMainCenter가 windowsHeight - aboutmeMainRect.height와 같아지는 시점에서 끝남  scale 1.0
+    if (windowHeight >= aboutmeMainCenter ) {
+        console.log("HI");
     } else {
-        this.document.getElementsByClassName('topBtn-img')[0].classList.remove("show-topBtn-img");
-        this.document.getElementsByClassName('topBtn-img')[0].classList.add("hide-topBtn-img");
+        console.log("Bye");
     }
 })
 
