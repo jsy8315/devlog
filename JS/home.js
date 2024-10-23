@@ -226,9 +226,9 @@ window.addEventListener('scroll', function() {
     // aboutmeMainCenter가 windowsHeight와 같아지는 시점부터 변화 시작해서              scale 0.5
     // aboutmeMainCenter가 windowsHeight - aboutmeMainRect.height와 같아지는 시점에서 끝남  scale 1.0
     if (windowHeight >= aboutmeMainCenter ) {
-
+        console.log("HI")
     } else {
-        
+
     }
 })
 
