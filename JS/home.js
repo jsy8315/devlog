@@ -208,8 +208,10 @@ window.addEventListener('scroll', function() {
     const aboutmeMain = document.getElementsByClassName('aboutmeMain')[0]; //aboutmeMain가져오기
     const windowHeight = window.innerHeight; // 네비게이션 창을 제외한 높이
     let scalingAboutmeMain = this.document.getElementsByClassName('aboutmeMain-contents')[0];
+    let colorAboutmeMain = this.document.getElementsByClassName('aboutmeMain-contents')[0];
 
     scrollYBiggerEffect(windowHeight, aboutmeMain, scalingAboutmeMain);
+    scrollYColorEffect(windowHeight, aboutmeMain, colorAboutmeMain);
 })
 
 // 요소 가운데가 화면 밑부분에 도달 : 효과 시작
@@ -223,16 +225,34 @@ function scrollYBiggerEffect(windowHeight, element, scalingElement) {
     let scaleValue =  -1 / ( elementRect.height ) * (elementCenter  - windowHeight) + 0.5;
 
     if (windowHeight <= elementCenter ) {
-        console.log("메인 절반도달 전")
+        // console.log("메인 절반도달 전")
         scalingElement.style.transform = `scale(${scaleValue})`;
     } else if (elementCenter + (elementRect.height / 2) >= windowHeight && elementCenter <= windowHeight) {
-        console.log("메인 절반 ~ 메인 끝 사이");
+        // console.log("메인 절반 ~ 메인 끝 사이");
         scalingElement.style.transform = `scale(${scaleValue})`;
 
     }
     else if ( elementCenter + (elementRect.height / 2) < windowHeight) {
-        console.log("메인 바깥")
+        // console.log("메인 바깥")
         scalingElement.style.transform = `scale(1.0)`;
+
+    }
+}
+
+// 스크롤에 따른 글자 색 변화 효과 함수 opacity 0 -> 1
+function scrollYColorEffect(windowHeight, element, colorElement){
+    const elementRect = element.getBoundingClientRect(); //요소길이 측정
+    const elementCenter = elementRect.top + ( elementRect.height / 2) // 네비게이션 ~ 요소 가운데 거리
+    let colorValue =  -1 / ( elementRect.height ) * (elementCenter  - windowHeight) + 0.5;
+
+    if (windowHeight <= elementCenter ) {
+        colorElement.style.opacity = `${colorValue}`;
+    } else if (elementCenter + (elementRect.height / 2) >= windowHeight && elementCenter <= windowHeight) {
+        colorElement.style.opacity = `${colorValue}`;
+
+    }
+    else if ( elementCenter + (elementRect.height / 2) < windowHeight) {
+        colorElement.style.opacity = `1.0`;
 
     }
 }

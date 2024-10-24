@@ -357,7 +357,7 @@ body {
     /* position: relative;
     right: 1000px; */
     transition: right 0.1s linear;
-    padding: 50px 150px 50px 150px;
+    padding: 100px 150px 100px 150px;
     margin-bottom: 20px;
 
 }
@@ -369,6 +369,7 @@ body {
     align-content: center;
     justify-content: space-between;
     transform: scale(0.5);
+    opacity: 0;
 }
 
 .aboutmeMainName {
