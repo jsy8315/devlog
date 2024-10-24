@@ -731,7 +731,7 @@ body {
 
 .section03 {
     
-    background-color: rgba(245, 245, 247, 1);
+    background-color: rgba(233, 233, 234, 1);
     /* 
     #007aff 파랑
     #ffd700 노랑
@@ -1660,7 +1660,7 @@ body {
         /* position: relative;
         right: 1000px; */
         transition: right 0.1s linear;
-        padding: 50px 150px 50px 150px;
+        padding: 80px 150px 80px 150px;
         margin-bottom: 20px;
     
     }
@@ -1761,7 +1761,7 @@ body {
         place-items: center;
     
         border-radius: 25px;
-        background-color: rgba(245, 245, 247, 1);
+        background-color: rgba(233, 233, 234, 1);
     
         margin-bottom: 100px;
         padding-top: 30px;
