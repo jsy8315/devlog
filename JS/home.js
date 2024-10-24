@@ -205,32 +205,37 @@ document.getElementsByClassName('topBtn')[0].addEventListener('click', function(
 
 // section02 > aboutmeMain 글자 확대 & 색 조정
 window.addEventListener('scroll', function() {
-    const section02Scroll = window.scrollY;
     const aboutmeMain = document.getElementsByClassName('aboutmeMain')[0]; //aboutmeMain가져오기
+    const windowHeight = window.innerHeight; // 네비게이션 창을 제외한 높이
+    let scalingAboutmeMain = this.document.getElementsByClassName('aboutmeMain-contents')[0];
 
-    const windowHeight = window.innerHeight;
+    scrollYBiggerEffect(windowHeight, aboutmeMain, scalingAboutmeMain);
+})
 
-    const aboutmeMainRect = aboutmeMain.getBoundingClientRect();
+// 요소 가운데가 화면 밑부분에 도달 : 효과 시작
+// 요소 border-bottm이 화면 밑부분에 도달 : 효과 종료
+// 87이동시 scale 0.5 -> 1.0 변화
+// aboutmeMainCenter가 windowsHeight와 같아지는 시점부터 변화 시작해서              scale 0.5
+// aboutmeMainCenter가 windowsHeight - aboutmeMainRect.height와 같아지는 시점에서 끝남  scale 1.0
+function scrollYBiggerEffect(windowHeight, element, scalingElement) {
+    const elementRect = element.getBoundingClientRect(); //요소길이 측정
+    const elementCenter = elementRect.top + ( elementRect.height / 2) // 네비게이션 ~ 요소 가운데 거리
+    let scaleValue =  -1 / ( elementRect.height ) * (elementCenter  - windowHeight) + 0.5;
 
-    const aboutmeMainCenter = aboutmeMainRect.top + ( aboutmeMainRect.height / 2 );
-
-    const scaleValue =  -1 / ( aboutmeMainRect.height ) * (aboutmeMainCenter  - windowHeight) + 0.5;
-    
-    console.log("windowHeight : " + windowHeight);
-    console.log("aboutmeMainCenter : " + aboutmeMainCenter);
-    console.log("aboutmeMainRect.height : " + aboutmeMainRect.height);
-    console.log("scaleValue : " + scaleValue);
-
-
-    // 87이동시 scale 0.5 -> 1.0 변화
-    // aboutmeMainCenter가 windowsHeight와 같아지는 시점부터 변화 시작해서              scale 0.5
-    // aboutmeMainCenter가 windowsHeight - aboutmeMainRect.height와 같아지는 시점에서 끝남  scale 1.0
-    if (windowHeight >= aboutmeMainCenter ) {
-        console.log("HI")
-    } else {
+    if (windowHeight <= elementCenter ) {
+        console.log("메인 절반도달 전")
+        scalingElement.style.transform = `scale(${scaleValue})`;
+    } else if (elementCenter + (elementRect.height / 2) >= windowHeight && elementCenter <= windowHeight) {
+        console.log("메인 절반 ~ 메인 끝 사이");
+        scalingElement.style.transform = `scale(${scaleValue})`;
 
     }
-})
+    else if ( elementCenter + (elementRect.height / 2) < windowHeight) {
+        console.log("메인 바깥")
+        scalingElement.style.transform = `scale(1.0)`;
+
+    }
+}
 
 // section02 요소 이동, 300부터 효과 시작 900에 종료
 // aboutmeMain(왼 > 오), aboutmeGithub, aboutmeBlog, aboutmeResume (오 > 왼)
