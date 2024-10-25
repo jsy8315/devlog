@@ -257,6 +257,13 @@ function scrollYColorEffect(windowHeight, element, colorElement){
     }
 }
 
+// 스크롤에 따른 요소 올라오는 효과 && opacity 효과
+// 요소의 몇 퍼센트인지도 파라미터로 넣어보자
+function scrollYEleUpEffect(npercent,element){
+
+}
+
+
 // section02 요소 이동, 300부터 효과 시작 900에 종료
 // aboutmeMain(왼 > 오), aboutmeGithub, aboutmeBlog, aboutmeResume (오 > 왼)
 // 300부터 시작, 800까지 내려오면 완료
