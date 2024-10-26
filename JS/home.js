@@ -327,24 +327,34 @@ function scrollYEleUpEffect(n, elementClass){
 // })
 
 //Section03 스크롤에 따른 카드 뒤집기 효과
-window.addEventListener('scroll', function() {
-    let currentScrollYsection03 = this.window.scrollY;
+// window.addEventListener('scroll', function() {
+//     let currentScrollYsection03 = this.window.scrollY;
     
-    if (currentScrollYsection03 >= 1400) {
-        document.getElementsByClassName("flipSkillsJavascript")[0].style.transform = "rotateY(180deg)"
-        document.getElementsByClassName("flipSkillsReact")[0].style.transform = "rotateY(180deg)"
-    } else {
-        document.getElementsByClassName("flipSkillsJavascript")[0].style.transform = "rotateY(0deg)"
-        document.getElementsByClassName("flipSkillsReact")[0].style.transform = "rotateY(0deg)"
-    }
+//     if (currentScrollYsection03 >= 1400) {
+//         document.getElementsByClassName("flipSkillsJavascript")[0].style.transform = "rotateY(180deg)"
+//         document.getElementsByClassName("flipSkillsReact")[0].style.transform = "rotateY(180deg)"
+//     } else {
+//         document.getElementsByClassName("flipSkillsJavascript")[0].style.transform = "rotateY(0deg)"
+//         document.getElementsByClassName("flipSkillsReact")[0].style.transform = "rotateY(0deg)"
+//     }
 
-    if (currentScrollYsection03 >= 1600) {
-        document.getElementsByClassName("flipSkillsHTML")[0].style.transform = "rotateY(180deg)"
-        document.getElementsByClassName("flipSkillsTypescript")[0].style.transform = "rotateY(180deg)"
-    } else {
-        document.getElementsByClassName("flipSkillsHTML")[0].style.transform = "rotateY(0deg)"
-        document.getElementsByClassName("flipSkillsTypescript")[0].style.transform = "rotateY(0deg)"
-    }
+//     if (currentScrollYsection03 >= 1600) {
+//         document.getElementsByClassName("flipSkillsHTML")[0].style.transform = "rotateY(180deg)"
+//         document.getElementsByClassName("flipSkillsTypescript")[0].style.transform = "rotateY(180deg)"
+//     } else {
+//         document.getElementsByClassName("flipSkillsHTML")[0].style.transform = "rotateY(0deg)"
+//         document.getElementsByClassName("flipSkillsTypescript")[0].style.transform = "rotateY(0deg)"
+//     }
+// })
+
+
+//  section03 배경 이미지 움직이는 효과
+let skillsCardsList = ['htmlImg', 'cssImg', 'jsImg', 'reactImg', 'typescriptImg'];
+let cardsN = skillsCardsList.length // 이미지의 갯수
+
+skillsCardsList.forEach(function(a){
+    document.getElementsByClassName(`${a}`)[0].style.width = (100 / cardsN) + '%';
+
 })
 
 // section04 스크롤에 따라 projects01, projects02 서서히 올라오기
