@@ -209,9 +209,11 @@ window.addEventListener('scroll', function() {
     const windowHeight = window.innerHeight; // 네비게이션 창을 제외한 높이
     let scalingAboutmeMain = this.document.getElementsByClassName('aboutmeMain-contents')[0];
     let colorAboutmeMain = this.document.getElementsByClassName('aboutmeMain-contents')[0];
+    let aboutmeCards = document.getElementsByClassName('aboutmeCards')[0];
 
     scrollYBiggerEffect(windowHeight, aboutmeMain, scalingAboutmeMain);
     scrollYColorEffect(windowHeight, aboutmeMain, colorAboutmeMain);
+    scrollYEleUpEffect(0.1, aboutmeCards);
 })
 
 // 요소 가운데가 화면 밑부분에 도달 : 효과 시작
@@ -258,9 +260,38 @@ function scrollYColorEffect(windowHeight, element, colorElement){
 }
 
 // 스크롤에 따른 요소 올라오는 효과 && opacity 효과
-// 요소의 몇 퍼센트인지도 파라미터로 넣어보자
-function scrollYEleUpEffect(npercent,element){
+function scrollYEleUpEffect(n, elementClass){
+    // n은 요소의 몇퍼센트트가 아래에 있다 위로 올라올 지 정하는 파라미터
+    const windowHeight = window.innerHeight; // 네비게이션 창을 제외한 높이
+    const elementClassRect = elementClass.getBoundingClientRect(); //요소길이 측정
+    const elementCenter = elementClassRect.top + ( elementClassRect.height / 2) // 네비게이션 ~ 요소 가운데 거리
+    // 요소 길이의 10%
+    const elementN = elementClassRect.height  * n;
 
+    let colorValue =  -1 / ( elementClassRect.height ) * (elementCenter  - windowHeight) + 0.5;
+    let topValue = ( elementN / (elementClassRect.height / 2)) * ( elementCenter - windowHeight );
+
+    if (windowHeight <= elementCenter ) { // 요소 절반 도달 전
+        elementClass.style.opacity = `${colorValue}`;
+        elementClass.style.top = topValue + 'px';
+        // console.log("windowHeight : " + windowHeight);
+        // console.log("elementClass.style.top : " + elementClass.style.top);
+        // console.log("elementCenter : " + elementCenter)
+        // console.log("elementClassRect.height : " + elementClassRect.height)
+    } 
+    // 요소 절반 ~ 요소 바깥 전
+    else if (elementCenter + (elementClassRect.height / 2) >= windowHeight && elementCenter <= windowHeight) {
+        elementClass.style.opacity = `${colorValue}`;
+        elementClass.style.top = 0;
+        // console.log(elementClass.style.top);
+
+    }
+    else if ( elementCenter + (elementClassRect.height / 2) < windowHeight) { // 요소 바깥
+        elementClass.style.opacity = `1.0`;
+        elementClass.style.top = 0;
+        // console.log(elementClass.style.top);
+
+    }
 }
 
 
