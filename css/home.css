@@ -773,25 +773,38 @@ body {
 /* .header-logo img */
 
 .htmlImg {
-    background-color: red;
+    background-color: rgba(233, 233, 234, 1);
     width : 20%;
     border-radius: 30px 0px 0px 30px;
+    overflow: hidden;
 }
 
 .htmlImg img {
+    position: relative;
     width: 100%;
+    animation: moveImg 16s linear infinite;
+}
+
+@keyframes moveImg {
+    0% { transform: translateY(-100%); } /* 위쪽 바깥에서 시작 */
+    100% { transform: translateY(200%); } /* 아래쪽 바깥으로 이동 */
 }
 
 .cssImg {
-    background-color: yellow;
+    background-color: rgba(233, 233, 234, 1);
     width : 20%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
+
 }
 
 .cssImg img {
     width: 70%;
+    position: relative;
+    top : 100px;
+    animation: moveImg 16s linear infinite;
 }
 
 .jsImg {
