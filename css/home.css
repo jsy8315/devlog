@@ -782,9 +782,10 @@ body {
 .htmlImg img {
     position: relative;
     width: 100%;
-    animation: moveImg 16s linear infinite;
+    animation: moveImg 4s linear infinite;
 }
 
+/* 수정 필요 */
 @keyframes moveImg {
     0% { transform: translateY(-100%); } /* 위쪽 바깥에서 시작 */
     100% { transform: translateY(200%); } /* 아래쪽 바깥으로 이동 */
@@ -801,7 +802,7 @@ body {
 }
 
 .cssImg img {
-    width: 70%;
+    width: 50%;
     position: relative;
     top : 100px;
     animation: moveImg 16s linear infinite;
