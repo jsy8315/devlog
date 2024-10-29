@@ -368,26 +368,43 @@ console.log(cardHeight);
 skillsCardsImgList.forEach(function(a){
     let aElement = document.getElementsByClassName(`${a}`)[0];
     let aHeight = getComputedStyle(aElement).height;
-    console.log(aHeight);
+    // console.log(aHeight);
 
     let translateHeight = parseFloat(aHeight) + parseFloat(cardHeight) + "px";
-    console.log(translateHeight);
+    // console.log(translateHeight);
 
     //랜덤
-    // let randomTop = Math.random() * (300) + 0 + 'px';
-    let randomTop = 100 + 'px';
-    let sample01After = -parseFloat(aHeight) - parseFloat(cardHeight) + parseFloat(randomTop) + 'px';
-    let sample02Before = parseFloat(aHeight) + parseFloat(cardHeight) + parseFloat(randomTop) + 'px';
+    let randomTop = Math.random() * (300) + 0 + 'px';
+    // let randomTop = 100 + 'px';
+    // let sample01After = -parseFloat(aHeight) - parseFloat(cardHeight) + parseFloat(randomTop) + 'px';
+    // let sample02Before = parseFloat(aHeight) + parseFloat(cardHeight) + parseFloat(randomTop) + 'px';
+
+    // 움직인 전체 길이
+    let fullHeight = parseFloat(cardHeight) + parseFloat(aHeight);
+    console.log("fullHeight : " + fullHeight);
+    // 비율로 나눠서 시간 분배
+    // 1) ~ 2) 시간동안 가는 거리
+    let firstHeight = parseFloat(randomTop) + parseFloat(aHeight);
+    let firstTime = Number((parseFloat(firstHeight / fullHeight)).toFixed(2));
+    console.log("firstTime : " + typeof firstTime);
+    
+    let firstTime001 = firstTime + 0.01;
+    let firstTime002 = firstTime + 0.02;
+    let firstTime003 = firstTime + 0.03;
+    // 5) ~6) 시간동안 가는 거리 // 필요는 없네...
+    let secondHeight = parseFloat(cardHeight) - parseFloat(randomTop);
+    let secondTime = (parseFloat(secondHeight / fullHeight)).toFixed(2);
+    console.log("secondTime : " + secondTime);
 
 
     document.getElementsByClassName(`${a}`)[0].animate(
         [
-            { transform: `translateY(${randomTop})`, opacity: 1, offset: 0 }, // 시작
-            { transform: `translateY(-${aHeight})`, opacity: 1, offset: 0.5}, // 중간1-1
-            { transform: `translateY(-${aHeight})`, opacity: 0, offset: 0.51}, // 중간1-2
-            { transform: `translateY(${cardHeight})`, opacity: 0, offset: 0.52}, // 중간2-1
-            { transform: `translateY(${cardHeight})`, opacity: 1, offset: 0.53}, // 중간2-2
-            { transform: `translateY(${randomTop})`, opacity: 1, offset: 1} // 끝
+            { transform: `translateY(${randomTop})`, opacity: 1, offset: 0 }, // 1) 시작
+            { transform: `translateY(-${aHeight})`, opacity: 1, offset: `${firstTime}`}, // 2) 중간1-1
+            { transform: `translateY(-${aHeight})`, opacity: 0, offset: `${firstTime001}`}, // 3) 중간1-2
+            { transform: `translateY(${cardHeight})`, opacity: 0, offset: `${firstTime002}`}, // 4) 중간2-1
+            { transform: `translateY(${cardHeight})`, opacity: 1, offset: `${firstTime003}`}, // 5) 중간2-2
+            { transform: `translateY(${randomTop})`, opacity: 1, offset: 1} // 6) 끝
         ], 
         {
             duration: 10000,
