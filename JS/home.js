@@ -354,8 +354,48 @@ let cardsN = skillsCardsList.length // 이미지의 갯수
 
 skillsCardsList.forEach(function(a){
     document.getElementsByClassName(`${a}`)[0].style.width = (100 / cardsN) + '%';
+    
 
 })
+let skillsCardsImgList = ['htmlImgImg', 'cssImgImg', 'jsImgImg', 'reactImgImg', 'typescriptImgImg'];
+
+// skillsCard의 높이 구하기
+let cardElement = document.getElementsByClassName('skillsCard')[0];
+let cardHeight = getComputedStyle(cardElement).height;
+console.log(cardHeight);
+
+
+skillsCardsImgList.forEach(function(a){
+    let aElement = document.getElementsByClassName(`${a}`)[0];
+    let aHeight = getComputedStyle(aElement).height;
+    console.log(aHeight);
+
+    let translateHeight = parseFloat(aHeight) + parseFloat(cardHeight) + "px";
+    console.log(translateHeight);
+
+    //랜덤
+    // let randomTop = Math.random() * (300) + 0 + 'px';
+    let randomTop = 100 + 'px';
+    let sample01After = -parseFloat(aHeight) - parseFloat(cardHeight) + parseFloat(randomTop) + 'px';
+    let sample02Before = parseFloat(aHeight) + parseFloat(cardHeight) + parseFloat(randomTop) + 'px';
+
+
+    document.getElementsByClassName(`${a}`)[0].animate(
+        [
+            { transform: `translateY(${randomTop})`, opacity: 1, offset: 0 }, // 시작
+            { transform: `translateY(-${aHeight})`, opacity: 1, offset: 0.5}, // 중간1-1
+            { transform: `translateY(-${aHeight})`, opacity: 0, offset: 0.51}, // 중간1-2
+            { transform: `translateY(${cardHeight})`, opacity: 0, offset: 0.52}, // 중간2-1
+            { transform: `translateY(${cardHeight})`, opacity: 1, offset: 0.53}, // 중간2-2
+            { transform: `translateY(${randomTop})`, opacity: 1, offset: 1} // 끝
+        ], 
+        {
+            duration: 10000,
+            iterations: Infinity,
+        }
+    )
+})
+
 
 // section04 스크롤에 따라 projects01, projects02 서서히 올라오기
 window.addEventListener('scroll', function() {

@@ -774,22 +774,29 @@ body {
 
 .htmlImg {
     background-color: rgba(233, 233, 234, 1);
+    /* background-color: red; */
     width : 20%;
     border-radius: 30px 0px 0px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     overflow: hidden;
 }
 
-.htmlImg img {
+.htmlImgImg {
     position: relative;
-    width: 100%;
-    animation: moveImg 4s linear infinite;
+    top: 0px;
+    width: 70%;
+    height: 110px;
+    /* background-color: white; */
+    /* animation: moveImg 4s linear infinite; */
 }
 
 /* 수정 필요 */
-@keyframes moveImg {
-    0% { transform: translateY(-100%); } /* 위쪽 바깥에서 시작 */
-    100% { transform: translateY(200%); } /* 아래쪽 바깥으로 이동 */
-}
+/* @keyframes moveImg {
+    0% { transform: translateY(0%); } 
+    100% { transform: translateY(-100%); } 
+} */
 
 .cssImg {
     background-color: rgba(233, 233, 234, 1);
@@ -801,47 +808,72 @@ body {
 
 }
 
-.cssImg img {
+.cssImgImg {
     width: 50%;
     position: relative;
-    top : 100px;
-    animation: moveImg 16s linear infinite;
+    top : 0px;
+    height: 110px;
+    /* animation: moveImg 16s linear infinite; */
 }
 
 .jsImg {
-    background-color: green;
-    width : 50%;
-
-}
-
-.jsImg img {
-    width: 100%;
-}
-
-.reactImg {
-    background-color: blue;
+    background-color: rgba(233, 233, 234, 1);
+    /* background-color:red; */
     width : 20%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
+}
+
+.jsImgImg {
+    width: 50%;
+    height: 70px;
+    /* animation: moveImg 16s linear infinite; */
+    position: relative;
+    top : 0px;
+}
+
+
+.reactImg {
+    background-color: rgba(233, 233, 234, 1);
+    width : 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* overflow: hidden; */
+
 
 }
 
-.reactImg img {
-    width:70%;
+.reactImgImg {
+    width: 50%;
+    height: 100px;
+    position: relative;
+    top : 0px;
+
+    /* animation: moveImg 16s linear infinite; */
+
 }
 
 .typescriptImg {
-    background-color: purple;
+    background-color: rgba(233, 233, 234, 1);
     width : 20%;
     border-radius: 0px 30px 30px 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
+
 }
 
-.typescriptImg img {
-    width: 70%;
+.typescriptImgImg {
+    width: 50%;
+    height: 90px;
+    position: relative;
+    top : 0px;
+    /* animation: moveImg 16s linear infinite; */
+
 }
 
 .flipSkillsJavascript {
