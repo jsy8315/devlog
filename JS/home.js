@@ -419,23 +419,32 @@ skillsCardsImgList.forEach(function(a){
     let isPaused = false;
 
     document.getElementsByClassName('skillCards-pause')[0].addEventListener('click', function(){
+        
         console.log("Click")
         if (isPaused) {
             skillsAnimation.play();  // 애니메이션 재생
             isPaused = false;
             // 일시정지 버튼으로 변환
-            document.getElementsByClassName('skillCards-pause-btn')[0].classList.add('show-skillCards-pause-btn');
+            // 일시정지버튼에 hide 지우고
+            // 일시정지버튼에 show 달고
+            // 재생버튼에 hide 달고
+            // 재생버튼에 show 지우고
             document.getElementsByClassName('skillCards-pause-btn')[0].classList.remove('hide-skillCards-pause-btn');
+            document.getElementsByClassName('skillCards-pause-btn')[0].classList.add('show-skillCards-pause-btn');
             document.getElementsByClassName('skillCards-play-btn')[0].classList.add('hide-skillCards-play-btn');
             document.getElementsByClassName('skillCards-play-btn')[0].classList.remove('show-skillCards-play-btn');
         } else {
             skillsAnimation.pause();  // 애니메이션 일시정지
             isPaused = true;
             // 재생 버튼으로 변환
-            document.getElementsByClassName('skillCards-pause-btn')[0].classList.add('show-skillCards-pause-btn');
-            document.getElementsByClassName('skillCards-pause-btn')[0].classList.remove('hide-skillCards-pause-btn');
-            document.getElementsByClassName('skillCards-play-btn')[0].classList.add('hide-skillCards-play-btn');
-            document.getElementsByClassName('skillCards-play-btn')[0].classList.remove('show-skillCards-play-btn');
+            // 재생버튼에 hide 지우고
+            // 재생버튼에 show 달고
+            // 일시정지에 Show 지우고
+            // 일시정지에 Hide 달고
+            document.getElementsByClassName('skillCards-pause-btn')[0].classList.add('hide-skillCards-pause-btn');
+            document.getElementsByClassName('skillCards-pause-btn')[0].classList.remove('show-skillCards-pause-btn');
+            document.getElementsByClassName('skillCards-play-btn')[0].classList.add('show-skillCards-play-btn');
+            document.getElementsByClassName('skillCards-play-btn')[0].classList.remove('hide-skillCards-play-btn');
         }
     })
 })

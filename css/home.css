@@ -910,6 +910,22 @@ body {
     cursor: pointer;
 }
 
+.show-skillCards-pause-btn {
+    display: block;
+}
+
+.show-skillCards-play-btn {
+    display: block;
+}
+
+.hide-skillCards-pause-btn {
+    display: none;
+}
+
+.hide-skillCards-play-btn {
+    display: none;
+}
+
 .skillCards-pause02 {
     background-color: rgba(233, 233, 234, 1);
     border: none;
