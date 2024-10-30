@@ -366,7 +366,7 @@ let skillsCardsImgList = ['htmlImgImg', 'cssImgImg', 'jsImgImg', 'reactImgImg', 
 // skillsCard의 높이 구하기
 let cardElement = document.getElementsByClassName('skillsCard')[0];
 let cardHeight = getComputedStyle(cardElement).height;
-console.log(cardHeight);
+// console.log(cardHeight);
 
 
 skillsCardsImgList.forEach(function(a){
@@ -385,12 +385,12 @@ skillsCardsImgList.forEach(function(a){
 
     // 움직인 전체 길이
     let fullHeight = parseFloat(cardHeight) + parseFloat(aHeight);
-    console.log("fullHeight : " + fullHeight);
+    // console.log("fullHeight : " + fullHeight);
     // 비율로 나눠서 시간 분배
     // 1) ~ 2) 시간동안 가는 거리
     let firstHeight = parseFloat(randomTop) + parseFloat(aHeight);
     let firstTime = Number((parseFloat(firstHeight / fullHeight)).toFixed(2));
-    console.log("firstTime : " + typeof firstTime);
+    // console.log("firstTime : " + typeof firstTime);
     
     let firstTime001 = firstTime + 0.01;
     let firstTime002 = firstTime + 0.02;
@@ -398,10 +398,10 @@ skillsCardsImgList.forEach(function(a){
     // 5) ~6) 시간동안 가는 거리 // 필요는 없네...
     let secondHeight = parseFloat(cardHeight) - parseFloat(randomTop);
     let secondTime = (parseFloat(secondHeight / fullHeight)).toFixed(2);
-    console.log("secondTime : " + secondTime);
+    // console.log("secondTime : " + secondTime);
 
 
-    document.getElementsByClassName(`${a}`)[0].animate(
+    let skillsAnimation = document.getElementsByClassName(`${a}`)[0].animate(
         [
             { transform: `translateY(${randomTop})`, opacity: 1, offset: 0 }, // 1) 시작
             { transform: `translateY(-${aHeight})`, opacity: 1, offset: `${firstTime}`}, // 2) 중간1-1
@@ -415,7 +415,32 @@ skillsCardsImgList.forEach(function(a){
             iterations: Infinity,
         }
     )
+
+    let isPaused = false;
+
+    document.getElementsByClassName('skillCards-pause')[0].addEventListener('click', function(){
+        console.log("Click")
+        if (isPaused) {
+            skillsAnimation.play();  // 애니메이션 재생
+            isPaused = false;
+            // 일시정지 버튼으로 변환
+            document.getElementsByClassName('skillCards-pause-btn')[0].classList.add('show-skillCards-pause-btn');
+            document.getElementsByClassName('skillCards-pause-btn')[0].classList.remove('hide-skillCards-pause-btn');
+            document.getElementsByClassName('skillCards-play-btn')[0].classList.add('hide-skillCards-play-btn');
+            document.getElementsByClassName('skillCards-play-btn')[0].classList.remove('show-skillCards-play-btn');
+        } else {
+            skillsAnimation.pause();  // 애니메이션 일시정지
+            isPaused = true;
+            // 재생 버튼으로 변환
+            document.getElementsByClassName('skillCards-pause-btn')[0].classList.add('show-skillCards-pause-btn');
+            document.getElementsByClassName('skillCards-pause-btn')[0].classList.remove('hide-skillCards-pause-btn');
+            document.getElementsByClassName('skillCards-play-btn')[0].classList.add('hide-skillCards-play-btn');
+            document.getElementsByClassName('skillCards-play-btn')[0].classList.remove('show-skillCards-play-btn');
+        }
+    })
 })
+
+
 
 
 // section04 스크롤에 따라 projects01, projects02 서서히 올라오기

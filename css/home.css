@@ -884,6 +884,59 @@ body {
 
 }
 
+.skillCards-pause {
+    background-color: rgba(233, 233, 234, 1);
+    border: none;
+    border-radius: 50%;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    bottom: 15px;
+    right: 70px;
+    opacity: 0.8;
+}
+
+.skillCards-pause-btn {
+    width: 40px;
+    height: 40px;
+    display: block;
+    cursor: pointer;
+}
+
+.skillCards-play-btn {
+    width: 40px;
+    height: 40px;
+    display: none;
+    cursor: pointer;
+}
+
+.skillCards-pause02 {
+    background-color: rgba(233, 233, 234, 1);
+    border: none;
+    border: none;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    bottom: 15px;
+    right: 20px;
+    opacity: 0.8;
+
+}
+
+.skillCards-pause-btn02 {
+    width: 40px;
+    height: 40px;
+    display: block;
+    cursor: pointer;
+}
+
+.skillCards-play-btn02 {
+    width: 40px;
+    height: 40px;
+    display: none;
+    cursor: pointer;
+}
+
 .flipSkillsJavascript {
     grid-area: flipSkillsJavascript;
 
@@ -2089,7 +2142,7 @@ body {
     
     .jsImgImg {
         width: 70px;
-        height: 100px;
+        height: 80px;
         position: relative;
         top : 0px;
     }
