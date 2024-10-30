@@ -210,10 +210,14 @@ window.addEventListener('scroll', function() {
     let scalingAboutmeMain = this.document.getElementsByClassName('aboutmeMain-contents')[0];
     let colorAboutmeMain = this.document.getElementsByClassName('aboutmeMain-contents')[0];
     let aboutmeCards = document.getElementsByClassName('aboutmeCards')[0];
+    let skillsCard = document.getElementsByClassName('skillsCard')[0];
+
 
     scrollYBiggerEffect(windowHeight, aboutmeMain, scalingAboutmeMain);
     scrollYColorEffect(windowHeight, aboutmeMain, colorAboutmeMain);
     scrollYEleUpEffect(0.1, aboutmeCards);
+    scrollYEleUpEffect(0.1, skillsCard);
+
 })
 
 // 요소 가운데가 화면 밑부분에 도달 : 효과 시작
