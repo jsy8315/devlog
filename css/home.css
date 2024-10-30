@@ -769,6 +769,18 @@ body {
     position: relative;
 }
 
+.skillsCardBack {
+    border-radius: 30px;
+    background-color: black;
+    display: none;
+    flex-direction: row;
+    align-self: center;
+    justify-content: center;
+    width: 80%;
+    height: 60vh;
+    position: relative;
+}
+
 .skillsDesc {
     position: absolute;
     z-index: 1;

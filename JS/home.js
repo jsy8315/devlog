@@ -444,15 +444,19 @@ skillsCardsImgList.forEach(function(a){
 let rotatePlusBtn = false;
 
 document.getElementsByClassName('skillCards-pause02')[0].addEventListener('click', function(){
-    // x표시 -> + 
+    // x표시 -> +, 뒷면 -> 앞면
     if (rotatePlusBtn) {
         rotatePlusBtn = false;
         document.getElementsByClassName('skillCards-pause02')[0].classList.remove('rotate-skillCards-pause02');
+        document.getElementsByClassName('skillsCardBack')[0].style.display = 'none';
+        document.getElementsByClassName('skillsCard')[0].style.display = 'block';
     } 
-    // +표시 -> X 
+    // +표시 -> X , 앞면 -> 뒷면
     else {
         rotatePlusBtn = true;
         document.getElementsByClassName('skillCards-pause02')[0].classList.add('rotate-skillCards-pause02');
+        document.getElementsByClassName('skillsCardBack')[0].style.display = 'block';
+        document.getElementsByClassName('skillsCard')[0].style.display = 'none';
     }
 })
 
