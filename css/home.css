@@ -759,7 +759,6 @@ body {
 }
 
 .skillsCard {
-    background-color: black;
     border-radius: 30px;
     display: flex;
     flex-direction: row;
@@ -767,8 +766,17 @@ body {
     justify-content: center;
     width: 80%;
     height: 60vh;
+    position: relative;
 }
 
+.skillsDesc {
+    position: absolute;
+    z-index: 1;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    bottom: 40%;
+}
 
 /* .header-logo img */
 
@@ -786,8 +794,8 @@ body {
 .htmlImgImg {
     position: relative;
     top: 0px;
-    width: 30%;
-    height: 70px;
+    width: 40%;
+    height: 90px;
     /* background-color: white; */
     /* animation: moveImg 4s linear infinite; */
 }
@@ -809,10 +817,10 @@ body {
 }
 
 .cssImgImg {
-    width: 20%;
+    width: 30%;
     position: relative;
     top : 0px;
-    height: 60px;
+    height: 90px;
     /* animation: moveImg 16s linear infinite; */
 }
 
@@ -827,8 +835,8 @@ body {
 }
 
 .jsImgImg {
-    width: 50%;
-    height: 110px;
+    width: 60%;
+    height: 120px;
     /* animation: moveImg 16s linear infinite; */
     position: relative;
     top : 0px;
@@ -847,8 +855,8 @@ body {
 }
 
 .reactImgImg {
-    width: 30%;
-    height: 90px;
+    width: 40%;
+    height: 120px;
     position: relative;
     top : 0px;
 
@@ -868,8 +876,8 @@ body {
 }
 
 .typescriptImgImg {
-    width: 20%;
-    height: 50px;
+    width: 30%;
+    height: 70px;
     position: relative;
     top : 0px;
     /* animation: moveImg 16s linear infinite; */
@@ -2055,6 +2063,59 @@ body {
         object-fit: cover; 
         /* border: 1px solid red; */
     }
+
+    .skillsDesc {
+        position: absolute;
+        z-index: 1;
+        font-size: 15px;
+        font-weight: 500;
+        text-align: center;
+        bottom: 40%;
+    }
+
+    .htmlImgImg {
+        position: relative;
+        top: 0px;
+        width: 30%;
+        height: 70px;
+        /* background-color: white; */
+        /* animation: moveImg 4s linear infinite; */
+    }
+    
+    .cssImgImg {
+        width: 20%;
+        position: relative;
+        top : 0px;
+        height: 70px;
+        /* animation: moveImg 16s linear infinite; */
+    }
+    
+    .jsImgImg {
+        width: 50%;
+        height: 100px;
+        /* animation: moveImg 16s linear infinite; */
+        position: relative;
+        top : 0px;
+    }
+    
+    .reactImgImg {
+        width: 30%;
+        height: 100px;
+        position: relative;
+        top : 0px;
+    
+        /* animation: moveImg 16s linear infinite; */
+    
+    }
+    
+    .typescriptImgImg {
+        width: 20%;
+        height: 50px;
+        position: relative;
+        top : 0px;
+        /* animation: moveImg 16s linear infinite; */
+    
+    }
 }
 
 /* 스마트폰 화면 */
@@ -2460,5 +2521,59 @@ body {
         width: 100%;
         top: 50%;
         left: 50%;
+    }
+
+    .skillsDesc {
+        position: absolute;
+        z-index: 1;
+        font-size: 10px;
+        font-weight: 400;
+        text-align: center;
+        bottom: 40%;
+        padding: 20px;
+    }
+
+    .htmlImgImg {
+        position: relative;
+        top: 0px;
+        width: 40%;
+        height: 50px;
+        /* background-color: white; */
+        /* animation: moveImg 4s linear infinite; */
+    }
+    
+    .cssImgImg {
+        width: 30%;
+        position: relative;
+        top : 0px;
+        height: 50px;
+        /* animation: moveImg 16s linear infinite; */
+    }
+    
+    .jsImgImg {
+        width: 70%;
+        height: 70px;
+        /* animation: moveImg 16s linear infinite; */
+        position: relative;
+        top : 0px;
+    }
+    
+    .reactImgImg {
+        width: 40%;
+        height: 70px;
+        position: relative;
+        top : 0px;
+    
+        /* animation: moveImg 16s linear infinite; */
+    
+    }
+    
+    .typescriptImgImg {
+        width: 40%;
+        height: 30px;
+        position: relative;
+        top : 0px;
+        /* animation: moveImg 16s linear infinite; */
+    
     }
 }
