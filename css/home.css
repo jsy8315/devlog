@@ -928,6 +928,7 @@ body {
 
 .skillCards-pause02 {
     background-color: rgba(233, 233, 234, 1);
+    border-radius: 50%;
     border: none;
     border: none;
     position: absolute;
@@ -936,20 +937,21 @@ body {
     bottom: 15px;
     right: 20px;
     opacity: 0.8;
+    transition: all 0.1s;
+}
 
+.rotate-skillCards-pause02 {
+    transform: rotate(45deg);
+}
+
+.unrotate-skillCards-pause02 {
+    transform: rotate(-45deg);
 }
 
 .skillCards-pause-btn02 {
     width: 40px;
     height: 40px;
     display: block;
-    cursor: pointer;
-}
-
-.skillCards-play-btn02 {
-    width: 40px;
-    height: 40px;
-    display: none;
     cursor: pointer;
 }
 

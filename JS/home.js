@@ -424,11 +424,6 @@ skillsCardsImgList.forEach(function(a){
         if (isPaused) {
             skillsAnimation.play();  // 애니메이션 재생
             isPaused = false;
-            // 일시정지 버튼으로 변환
-            // 일시정지버튼에 hide 지우고
-            // 일시정지버튼에 show 달고
-            // 재생버튼에 hide 달고
-            // 재생버튼에 show 지우고
             document.getElementsByClassName('skillCards-pause-btn')[0].classList.remove('hide-skillCards-pause-btn');
             document.getElementsByClassName('skillCards-pause-btn')[0].classList.add('show-skillCards-pause-btn');
             document.getElementsByClassName('skillCards-play-btn')[0].classList.add('hide-skillCards-play-btn');
@@ -436,11 +431,6 @@ skillsCardsImgList.forEach(function(a){
         } else {
             skillsAnimation.pause();  // 애니메이션 일시정지
             isPaused = true;
-            // 재생 버튼으로 변환
-            // 재생버튼에 hide 지우고
-            // 재생버튼에 show 달고
-            // 일시정지에 Show 지우고
-            // 일시정지에 Hide 달고
             document.getElementsByClassName('skillCards-pause-btn')[0].classList.add('hide-skillCards-pause-btn');
             document.getElementsByClassName('skillCards-pause-btn')[0].classList.remove('show-skillCards-pause-btn');
             document.getElementsByClassName('skillCards-play-btn')[0].classList.add('show-skillCards-play-btn');
@@ -449,7 +439,22 @@ skillsCardsImgList.forEach(function(a){
     })
 })
 
+// + 버튼 클릭시 모양변화
+// + 버튼 클릭시 화면 전환
+let rotatePlusBtn = false;
 
+document.getElementsByClassName('skillCards-pause02')[0].addEventListener('click', function(){
+    // x표시 -> + 
+    if (rotatePlusBtn) {
+        rotatePlusBtn = false;
+        document.getElementsByClassName('skillCards-pause02')[0].classList.remove('rotate-skillCards-pause02');
+    } 
+    // +표시 -> X 
+    else {
+        rotatePlusBtn = true;
+        document.getElementsByClassName('skillCards-pause02')[0].classList.add('rotate-skillCards-pause02');
+    }
+})
 
 
 // section04 스크롤에 따라 projects01, projects02 서서히 올라오기
