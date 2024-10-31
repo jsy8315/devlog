@@ -533,7 +533,7 @@ body {
 
 .aboutmeGithub a {
     text-decoration-line: none;
-    /* color: blue;  */
+    color: blue; 
 }
 
 .aboutmeBlog a {
@@ -543,7 +543,7 @@ body {
 
 .aboutmeResume a {
     text-decoration-line: none;
-    /* color: blue;  */
+    color: blue; 
 }
 
 /* .aboutmeBlog {
