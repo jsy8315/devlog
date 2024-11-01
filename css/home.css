@@ -495,7 +495,13 @@ body {
 
     padding: 10px 10px 0px 10px;
     position: relative;
+    transition: all 0.3s linear;
 }
+
+.aboutmeGithub:hover {
+    transform: scale(1.02);
+}
+
 
 .aboutmeGithub-logo {
     /* position: absolute; */
@@ -576,6 +582,12 @@ body {
 
     padding: 10px 10px 0px 10px;
     position: relative;
+    transition: all 0.3s linear;
+
+}
+
+.aboutmeBlog:hover {
+    transform: scale(1.02);
 }
 
 .aboutmeBlog-logo {
@@ -639,8 +651,14 @@ body {
     text-align: center;
 
     padding: 10px 10px 0px 10px;
+    transition: all 0.3s linear;
     position: relative;
 }
+
+.aboutmeResume:hover {
+    transform: scale(1.02);
+}
+
 
 .aboutmeResume-logo {
     /* position: absolute; */
