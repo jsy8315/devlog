@@ -493,15 +493,53 @@ body {
     justify-content: center;
     text-align: center;
 
-    padding: 10px 10px 0px 10px;
+    padding: 0px;
+    margin: 0px;
+
     position: relative;
     transition: all 0.3s linear;
+    cursor: pointer;
 }
 
 .aboutmeGithub:hover {
     transform: scale(1.02);
 }
 
+.aboutmeGithubFront {
+    background-color: white;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    width: 100%;
+    height: 100%;
+
+    padding: 10px 10px 0px 10px;
+    position: relative;
+    transition: all 0.3s linear;
+    cursor: pointer;
+}
+
+.aboutmeGithubBack {
+    display: none;
+}
+
+.rotate-skillCards-pause02 {
+    transform: rotate(45deg);
+}
+
+.unrotate-skillCards-pause02 {
+    transform: rotate(-45deg);
+}
+
+.skillCards-pause-btn02 {
+    width: 40px;
+    height: 40px;
+    display: block;
+    cursor: pointer;
+}
 
 .aboutmeGithub-logo {
     /* position: absolute; */
@@ -583,7 +621,7 @@ body {
     padding: 10px 10px 0px 10px;
     position: relative;
     transition: all 0.3s linear;
-
+    
 }
 
 .aboutmeBlog:hover {
@@ -652,7 +690,7 @@ body {
 
     padding: 10px 10px 0px 10px;
     transition: all 0.3s linear;
-    
+
     position: relative;
 }
 
