@@ -309,7 +309,14 @@ function clickToSite(element, siteAddr){
 clickToSite('aboutmeBlog', 'https://blog.naver.com/tdhitbtd2023');
 clickToSite('aboutmeGithub', 'https://github.com/jsy8315');
 
-// 포트폴리오Pdf 만들기 전까지 임시 alert
+// 포트폴리오Pdf 만들기 전까지 임시 alerts
+function temporalClickToSite(){
+    document.getElementsByClassName('aboutmeResume')[0].addEventListener('click', function(){
+        alert('준비 중입니다!')
+    })
+}
+
+temporalClickToSite();
 
 
 // section02 요소 이동, 300부터 효과 시작 900에 종료
