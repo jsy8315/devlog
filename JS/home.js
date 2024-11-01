@@ -298,6 +298,19 @@ function scrollYEleUpEffect(n, elementClass){
     }
 }
 
+// 클릭시 특정 사이로 이동
+function clickToSite(element, siteAddr){
+    let elementClass = document.getElementsByClassName(`${element}`)[0];
+    elementClass.addEventListener('click', function(){
+        window.open(`${siteAddr}`);
+    })
+}
+
+clickToSite('aboutmeBlog', 'https://blog.naver.com/tdhitbtd2023');
+clickToSite('aboutmeGithub', 'https://github.com/jsy8315');
+
+// 포트폴리오Pdf 만들기 전까지 임시 alert
+
 
 // section02 요소 이동, 300부터 효과 시작 900에 종료
 // aboutmeMain(왼 > 오), aboutmeGithub, aboutmeBlog, aboutmeResume (오 > 왼)
