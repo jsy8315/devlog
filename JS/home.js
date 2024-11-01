@@ -459,26 +459,50 @@ skillsCardsImgList.forEach(function(a){
     })
 })
 
+// 함수로 구현
 // + 버튼 클릭시 모양변화
 // + 버튼 클릭시 화면 전환
-let rotatePlusBtn = false;
+clickPlusBtn('skillCards-pause02', 'rotate-skillCards-pause02');
+// let rotatePlusBtn = false;
 
-document.getElementsByClassName('skillCards-pause02')[0].addEventListener('click', function(){
-    // x표시 -> +, 뒷면 -> 앞면
-    if (rotatePlusBtn) {
-        rotatePlusBtn = false;
-        document.getElementsByClassName('skillCards-pause02')[0].classList.remove('rotate-skillCards-pause02');
-        document.getElementsByClassName('skillsCardBack')[0].style.display = 'none';
-        document.getElementsByClassName('skillsCard')[0].style.display = 'block';
-    } 
-    // +표시 -> X , 앞면 -> 뒷면
-    else {
-        rotatePlusBtn = true;
-        document.getElementsByClassName('skillCards-pause02')[0].classList.add('rotate-skillCards-pause02');
-        document.getElementsByClassName('skillsCardBack')[0].style.display = 'block';
-        document.getElementsByClassName('skillsCard')[0].style.display = 'none';
-    }
-})
+// document.getElementsByClassName('skillCards-pause02')[0].addEventListener('click', function(){
+//     // x표시 -> +, 뒷면 -> 앞면
+//     if (rotatePlusBtn) {
+//         rotatePlusBtn = false;
+//         document.getElementsByClassName('skillCards-pause02')[0].classList.remove('rotate-skillCards-pause02');
+//         document.getElementsByClassName('skillsCardBack')[0].style.display = 'none';
+//         document.getElementsByClassName('skillsCard')[0].style.display = 'block';
+//     } 
+//     // +표시 -> X , 앞면 -> 뒷면
+//     else {
+//         rotatePlusBtn = true;
+//         document.getElementsByClassName('skillCards-pause02')[0].classList.add('rotate-skillCards-pause02');
+//         document.getElementsByClassName('skillsCardBack')[0].style.display = 'block';
+//         document.getElementsByClassName('skillsCard')[0].style.display = 'none';
+//     }
+// })
+
+function clickPlusBtn(plusBtn, rotatePlusBtn, front, back){
+    let rotateStatus = false;
+
+    document.getElementsByClassName(plusBtn)[0].addEventListener('click', function(){
+        // x표시 -> +, 뒷면 -> 앞면
+        if (rotateStatus) {
+            rotateStatus = false;
+            document.getElementsByClassName(plusBtn)[0].classList.remove(rotatePlusBtn);
+            // document.getElementsByClassName('skillsCardBack')[0].style.display = 'none';
+            // document.getElementsByClassName('skillsCard')[0].style.display = 'block';
+        } 
+        // +표시 -> X , 앞면 -> 뒷면
+        else {
+            rotateStatus = true;
+            document.getElementsByClassName(plusBtn)[0].classList.add(rotatePlusBtn);
+            // document.getElementsByClassName('skillsCardBack')[0].style.display = 'block';
+            // document.getElementsByClassName('skillsCard')[0].style.display = 'none';
+        }
+    })
+
+}
 
 
 // section04 스크롤에 따라 projects01, projects02 서서히 올라오기

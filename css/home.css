@@ -526,19 +526,32 @@ body {
     display: none;
 }
 
-.rotate-skillCards-pause02 {
+.rotate-aboutmeGithub-plusBtn {
     transform: rotate(45deg);
 }
 
-.unrotate-skillCards-pause02 {
+.unrotate-aboutmeGithub-plusBtn {
     transform: rotate(-45deg);
 }
 
-.skillCards-pause-btn02 {
+.aboutmeGithub-plusBtn-img {
     width: 40px;
     height: 40px;
     display: block;
     cursor: pointer;
+}
+
+.aboutmeGithub-plusBtn {
+    background-color: rgba(233, 233, 234, 1);
+    border-radius: 50%;
+    border: none;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    bottom: 15px;
+    right: 20px;
+    opacity: 0.8;
+    transition: all 0.1s;
 }
 
 .aboutmeGithub-logo {
