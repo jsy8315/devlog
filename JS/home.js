@@ -307,7 +307,7 @@ function clickToSite(element, siteAddr){
 }
 
 clickToSite('aboutmeBlog', 'https://blog.naver.com/tdhitbtd2023');
-clickToSite('aboutmeGithub', 'https://github.com/jsy8315');
+clickToSite('aboutmeGithubFront', 'https://github.com/jsy8315');
 
 // 포트폴리오Pdf 만들기 전까지 임시 alerts
 function temporalClickToSite(){
@@ -317,6 +317,10 @@ function temporalClickToSite(){
 }
 
 temporalClickToSite();
+
+//aboutmeGithub, aboutmeBlog, aboutmeResume clickPlusBtn 기능 추가
+clickPlusBtn('aboutmeGithub-plusBtn', 'rotate-aboutmeGithub-plusBtn', 'aboutmeGithubFront', 'aboutmeGithubBack', 'aboutmeGithub-content');
+
 
 
 // section02 요소 이동, 300부터 효과 시작 900에 종료
@@ -459,46 +463,42 @@ skillsCardsImgList.forEach(function(a){
     })
 })
 
-// 함수로 구현
 // + 버튼 클릭시 모양변화
 // + 버튼 클릭시 화면 전환
 clickPlusBtn('skillCards-pause02', 'rotate-skillCards-pause02');
-// let rotatePlusBtn = false;
 
-// document.getElementsByClassName('skillCards-pause02')[0].addEventListener('click', function(){
-//     // x표시 -> +, 뒷면 -> 앞면
-//     if (rotatePlusBtn) {
-//         rotatePlusBtn = false;
-//         document.getElementsByClassName('skillCards-pause02')[0].classList.remove('rotate-skillCards-pause02');
-//         document.getElementsByClassName('skillsCardBack')[0].style.display = 'none';
-//         document.getElementsByClassName('skillsCard')[0].style.display = 'block';
-//     } 
-//     // +표시 -> X , 앞면 -> 뒷면
-//     else {
-//         rotatePlusBtn = true;
-//         document.getElementsByClassName('skillCards-pause02')[0].classList.add('rotate-skillCards-pause02');
-//         document.getElementsByClassName('skillsCardBack')[0].style.display = 'block';
-//         document.getElementsByClassName('skillsCard')[0].style.display = 'none';
-//     }
-// })
 
-function clickPlusBtn(plusBtn, rotatePlusBtn, front, back){
+function clickPlusBtn(plusBtn, rotatePlusBtn, front, back, backContent){
     let rotateStatus = false;
+    document.getElementsByClassName(back)[0].style.display = 'none';
+    // document.getElementsByClassName(front)[0].style.display = 'flex';
 
     document.getElementsByClassName(plusBtn)[0].addEventListener('click', function(){
         // x표시 -> +, 뒷면 -> 앞면
         if (rotateStatus) {
             rotateStatus = false;
             document.getElementsByClassName(plusBtn)[0].classList.remove(rotatePlusBtn);
-            // document.getElementsByClassName('skillsCardBack')[0].style.display = 'none';
-            // document.getElementsByClassName('skillsCard')[0].style.display = 'block';
-        } 
-        // +표시 -> X , 앞면 -> 뒷면
+
+            document.getElementsByClassName(backContent)[0].style.display = 'none';
+            setTimeout(function(){
+                document.getElementsByClassName(back)[0].style.display = 'none';
+                document.getElementsByClassName(front)[0].style.display = 'flex';
+            }, 500)
+            
+        }
         else {
+            // +표시 -> X
             rotateStatus = true;
             document.getElementsByClassName(plusBtn)[0].classList.add(rotatePlusBtn);
-            // document.getElementsByClassName('skillsCardBack')[0].style.display = 'block';
-            // document.getElementsByClassName('skillsCard')[0].style.display = 'none';
+
+            // 앞면 -> 뒷면
+            document.getElementsByClassName(front)[0].style.display = 'none';
+            setTimeout(function(){
+                document.getElementsByClassName(backContent)[0].style.visibility = 'visible';
+            }, 500)
+            document.getElementsByClassName(back)[0].style.display = 'none';
+            document.getElementsByClassName(back)[0].style.visibility = 'visible';
+
         }
     })
 
