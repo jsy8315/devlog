@@ -509,6 +509,9 @@ body {
     background-color: white;
     border-radius: 25px;
     display: flex;
+
+    opacity: 1;
+
     flex-direction: column;
     justify-content: center;
     text-align: center;
@@ -523,7 +526,7 @@ body {
 }
 
 .aboutmeGithubBack {
-    visibility: hidden;
+    opacity: 1;
     display: flex;
     background-color: black;
     border-radius: 25px;
@@ -541,8 +544,7 @@ body {
 }
 
 .aboutmeGithub-content {
-    visibility: hidden; 
-    /* visibility: visible;  */
+    opacity: 0;
     padding : 20px;
     color : white;
     text-align: left;

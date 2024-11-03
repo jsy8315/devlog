@@ -471,7 +471,6 @@ clickPlusBtn('skillCards-pause02', 'rotate-skillCards-pause02');
 function clickPlusBtn(plusBtn, rotatePlusBtn, front, back, backContent){
     let rotateStatus = false;
     document.getElementsByClassName(back)[0].style.display = 'none';
-    // document.getElementsByClassName(front)[0].style.display = 'flex';
 
     document.getElementsByClassName(plusBtn)[0].addEventListener('click', function(){
         // x표시 -> +, 뒷면 -> 앞면
@@ -492,16 +491,23 @@ function clickPlusBtn(plusBtn, rotatePlusBtn, front, back, backContent){
             document.getElementsByClassName(plusBtn)[0].classList.add(rotatePlusBtn);
 
             // 앞면 -> 뒷면
-            document.getElementsByClassName(front)[0].style.display = 'none';
-            setTimeout(function(){
-                document.getElementsByClassName(backContent)[0].style.visibility = 'visible';
-            }, 500)
-            document.getElementsByClassName(back)[0].style.display = 'none';
-            document.getElementsByClassName(back)[0].style.visibility = 'visible';
+            let displayPromise = new Promise(function(resolve, reject){
+                document.getElementsByClassName(front)[0].style.opacity = 0;
+                setTimeout(function(){
+                    document.getElementsByClassName(front)[0].style.display = 'none';
+                }, 500)
+                resolve(); 
+            }); 
 
+            displayPromise.then(function(){
+                document.getElementsByClassName(back)[0].style.display = 'flex';
+                document.getElementsByClassName(back)[0].style.opacity = 1;
+                setTimeout(function(){
+                    document.getElementsByClassName(backContent)[0].style.opacity = 1;
+                }, 500)
+            })
         }
     })
-
 }
 
 
