@@ -626,38 +626,22 @@ body {
     color: blue; 
 }
 
-/* .aboutmeBlog {
-    width: 100%;
-
-    background-color: rgba(245, 245, 247, 1);
-    border-radius: 25px;
-    padding: 15px;
-    align-self: center;
-
-    display: flex;
-    align-content: center;
-    justify-content: space-between;
-
-
-    transition: all 0.2s linear;
-    margin-bottom: 20px;
-
-} */
-
 .aboutmeBlog {
     width: 30%;
     display: flex;
     flex-direction: column;
-    background-color: black;
+    background-color: white;
     border-radius: 25px;
 
     justify-content: center;
     text-align: center;
 
-    padding: 10px 10px 0px 10px;
+    padding: 0px;
+    margin: 0px;
+
     position: relative;
-    transition: all 0.3s linear;
-    
+    transition: all 0.2s linear;
+    cursor: pointer;
 }
 
 .aboutmeBlog:hover {
@@ -734,7 +718,7 @@ body {
 .aboutmeBlog-content {
     opacity: 0;
     padding : 20px;
-    color : white;
+    color : black;
     text-align: left;
     transition: all 0.2s linear;
 }
@@ -766,12 +750,6 @@ body {
     opacity: 0.8;
     transition: all 0.1s;
 }
-
-/* .aboutmeBlog-content {
-    font-size: 15px;
-    grid-area: aboutmeBlog-content;
-    padding: 10px;
-} */
 
 /* .aboutmeResume {
     width: 100%;

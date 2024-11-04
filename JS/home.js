@@ -306,8 +306,8 @@ function clickToSite(element, siteAddr){
     })
 }
 
-clickToSite('aboutmeBlog', 'https://blog.naver.com/tdhitbtd2023');
 clickToSite('aboutmeGithubFront', 'https://github.com/jsy8315');
+clickToSite('aboutmeBlogFront', 'https://blog.naver.com/tdhitbtd2023');
 
 // 포트폴리오Pdf 만들기 전까지 임시 alerts
 function temporalClickToSite(){
@@ -485,7 +485,7 @@ function clickPlusBtn(plusBtn, rotatePlusBtn, aboutmeEle, front, back, backConte
                 document.getElementsByClassName(front)[0].style.opacity = 1;
             }, 400);
         }
-        
+
         else {
             // +표시 -> X
             rotateStatus = true;
@@ -504,13 +504,49 @@ function clickPlusBtn(plusBtn, rotatePlusBtn, aboutmeEle, front, back, backConte
                 document.getElementsByClassName(back)[0].style.opacity = 1;
                 document.getElementsByClassName(backContent)[0].style.opacity = 1;
             }, 600)
+        }
+    })
+}
+clickPlusBtnWhite('aboutmeBlog-plusBtn', 'rotate-aboutmeBlog-plusBtn', 'aboutmeBlog','aboutmeBlogFront', 'aboutmeBlogBack', 'aboutmeBlog-content');
 
-            // document.getElementsByClassName(front)[0].style.opacity = 0;
-            // document.getElementsByClassName(front)[0].style.display = 'none';
-            // document.getElementsByClassName(aboutmeEle)[0].style.backgroundColor = 'black';
-            // document.getElementsByClassName(back)[0].style.display = 'flex';
-            // document.getElementsByClassName(back)[0].style.opacity = 1;
-            // document.getElementsByClassName(backContent)[0].style.opacity = 1;
+function clickPlusBtnWhite(plusBtn, rotatePlusBtn, aboutmeEle, front, back, backContent){
+    let rotateStatus = false;
+
+    document.getElementsByClassName(plusBtn)[0].addEventListener('click', function(){
+        // x표시 -> +
+        if (rotateStatus) {
+            rotateStatus = false;
+            document.getElementsByClassName(plusBtn)[0].classList.remove(rotatePlusBtn);
+            
+            // 뒷면 -> 앞면
+            document.getElementsByClassName(backContent)[0].style.opacity = 0;
+            setTimeout(function(){
+                document.getElementsByClassName(back)[0].style.display = 'none';
+                document.getElementsByClassName(front)[0].style.display = 'flex';
+            }, 200);
+            setTimeout(function(){
+                document.getElementsByClassName(front)[0].style.opacity = 1;
+            }, 400);
+        }
+
+        else {
+            // +표시 -> X
+            rotateStatus = true;
+            document.getElementsByClassName(plusBtn)[0].classList.add(rotatePlusBtn);
+
+            // 앞면 -> 뒷면
+            document.getElementsByClassName(front)[0].style.opacity = 0;
+            setTimeout(function(){
+                document.getElementsByClassName(front)[0].style.display = 'none';
+                document.getElementsByClassName(aboutmeEle)[0].style.backgroundColor = 'white';
+            }, 200);
+            setTimeout(function(){
+                document.getElementsByClassName(back)[0].style.display = 'flex';
+            }, 400)
+            setTimeout(function(){
+                document.getElementsByClassName(back)[0].style.opacity = 1;
+                document.getElementsByClassName(backContent)[0].style.opacity = 1;
+            }, 600)
         }
     })
 }
