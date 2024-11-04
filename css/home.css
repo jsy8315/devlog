@@ -176,6 +176,10 @@ body {
     padding: 0;
 }
 
+.aboutmeGithubLi li {
+    list-style-position: outside;
+}
+
 .nav-item {
     /* background-color: yellow; */
 }
@@ -497,7 +501,7 @@ body {
     margin: 0px;
 
     position: relative;
-    transition: all 0.3s linear;
+    transition: all 1s linear;
     cursor: pointer;
 }
 
@@ -521,13 +525,13 @@ body {
 
     padding: 10px 10px 0px 10px;
     position: relative;
-    transition: all 0.3s linear;
+    transition: all 0.2s linear;
     cursor: pointer;
 }
 
 .aboutmeGithubBack {
-    opacity: 1;
-    display: flex;
+    opacity: 0;
+    display: none;
     background-color: black;
     border-radius: 25px;
     flex-direction: column;
@@ -539,7 +543,7 @@ body {
 
     padding: 10px 10px 0px 10px;
     position: relative;
-    transition: all 0.3s linear;
+    transition: all 0.2s linear;
     cursor: pointer;
 }
 
@@ -548,8 +552,7 @@ body {
     padding : 20px;
     color : white;
     text-align: left;
-    transition: all 0.3s linear;
-
+    transition: all 0.2s linear;
 }
 
 .rotate-aboutmeGithub-plusBtn {

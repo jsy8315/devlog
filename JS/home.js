@@ -318,11 +318,6 @@ function temporalClickToSite(){
 
 temporalClickToSite();
 
-//aboutmeGithub, aboutmeBlog, aboutmeResume clickPlusBtn 기능 추가
-clickPlusBtn('aboutmeGithub-plusBtn', 'rotate-aboutmeGithub-plusBtn', 'aboutmeGithubFront', 'aboutmeGithubBack', 'aboutmeGithub-content');
-
-
-
 // section02 요소 이동, 300부터 효과 시작 900에 종료
 // aboutmeMain(왼 > 오), aboutmeGithub, aboutmeBlog, aboutmeResume (오 > 왼)
 // 300부터 시작, 800까지 내려오면 완료
@@ -465,47 +460,57 @@ skillsCardsImgList.forEach(function(a){
 
 // + 버튼 클릭시 모양변화
 // + 버튼 클릭시 화면 전환
-clickPlusBtn('skillCards-pause02', 'rotate-skillCards-pause02');
+//skills
+// clickPlusBtnSkills('skillCards-pause02', 'rotate-skillCards-pause02');
 
+//aboutmeGithub, aboutmeBlog, aboutmeResume clickPlusBtn 기능 추가
+clickPlusBtn('aboutmeGithub-plusBtn', 'rotate-aboutmeGithub-plusBtn', 'aboutmeGithub','aboutmeGithubFront', 'aboutmeGithubBack', 'aboutmeGithub-content');
 
-function clickPlusBtn(plusBtn, rotatePlusBtn, front, back, backContent){
+function clickPlusBtn(plusBtn, rotatePlusBtn, aboutmeEle, front, back, backContent){
     let rotateStatus = false;
-    document.getElementsByClassName(back)[0].style.display = 'none';
 
     document.getElementsByClassName(plusBtn)[0].addEventListener('click', function(){
-        // x표시 -> +, 뒷면 -> 앞면
+        // x표시 -> +
         if (rotateStatus) {
             rotateStatus = false;
             document.getElementsByClassName(plusBtn)[0].classList.remove(rotatePlusBtn);
-
-            document.getElementsByClassName(backContent)[0].style.display = 'none';
+            
+            // 뒷면 -> 앞면
+            document.getElementsByClassName(backContent)[0].style.opacity = 0;
             setTimeout(function(){
                 document.getElementsByClassName(back)[0].style.display = 'none';
                 document.getElementsByClassName(front)[0].style.display = 'flex';
-            }, 500)
-            
+            }, 200);
+            setTimeout(function(){
+                document.getElementsByClassName(front)[0].style.opacity = 1;
+            }, 400);
         }
+        
         else {
             // +표시 -> X
             rotateStatus = true;
             document.getElementsByClassName(plusBtn)[0].classList.add(rotatePlusBtn);
 
             // 앞면 -> 뒷면
-            let displayPromise = new Promise(function(resolve, reject){
-                document.getElementsByClassName(front)[0].style.opacity = 0;
-                setTimeout(function(){
-                    document.getElementsByClassName(front)[0].style.display = 'none';
-                }, 500)
-                resolve(); 
-            }); 
-
-            displayPromise.then(function(){
+            document.getElementsByClassName(front)[0].style.opacity = 0;
+            setTimeout(function(){
+                document.getElementsByClassName(front)[0].style.display = 'none';
+                document.getElementsByClassName(aboutmeEle)[0].style.backgroundColor = 'black';
+            }, 200);
+            setTimeout(function(){
                 document.getElementsByClassName(back)[0].style.display = 'flex';
+            }, 400)
+            setTimeout(function(){
                 document.getElementsByClassName(back)[0].style.opacity = 1;
-                setTimeout(function(){
-                    document.getElementsByClassName(backContent)[0].style.opacity = 1;
-                }, 500)
-            })
+                document.getElementsByClassName(backContent)[0].style.opacity = 1;
+            }, 600)
+
+            // document.getElementsByClassName(front)[0].style.opacity = 0;
+            // document.getElementsByClassName(front)[0].style.display = 'none';
+            // document.getElementsByClassName(aboutmeEle)[0].style.backgroundColor = 'black';
+            // document.getElementsByClassName(back)[0].style.display = 'flex';
+            // document.getElementsByClassName(back)[0].style.opacity = 1;
+            // document.getElementsByClassName(backContent)[0].style.opacity = 1;
         }
     })
 }
