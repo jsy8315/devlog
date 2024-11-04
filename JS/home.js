@@ -311,7 +311,7 @@ clickToSite('aboutmeBlogFront', 'https://blog.naver.com/tdhitbtd2023');
 
 // 포트폴리오Pdf 만들기 전까지 임시 alerts
 function temporalClickToSite(){
-    document.getElementsByClassName('aboutmeResume')[0].addEventListener('click', function(){
+    document.getElementsByClassName('aboutmeResumeFront')[0].addEventListener('click', function(){
         alert('준비 중입니다!')
     })
 }
@@ -465,6 +465,8 @@ skillsCardsImgList.forEach(function(a){
 
 //aboutmeGithub, aboutmeBlog, aboutmeResume clickPlusBtn 기능 추가
 clickPlusBtn('aboutmeGithub-plusBtn', 'rotate-aboutmeGithub-plusBtn', 'aboutmeGithub','aboutmeGithubFront', 'aboutmeGithubBack', 'aboutmeGithub-content');
+clickPlusBtn('aboutmeResume-plusBtn', 'rotate-aboutmeResume-plusBtn', 'aboutmeResume','aboutmeResumeFront', 'aboutmeResumeBack', 'aboutmeResume-content');
+
 
 function clickPlusBtn(plusBtn, rotatePlusBtn, aboutmeEle, front, back, backContent){
     let rotateStatus = false;
