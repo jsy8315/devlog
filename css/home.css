@@ -446,47 +446,18 @@ body {
 }
 
 .aboutmeCards {
-
     display: flex;
     flex-direction: rows;
     justify-content: space-between;
     height: 400px;
-    /* display: grid;
-    grid-template-areas: 
-    "aboutmeGithub-logo aboutmeBlog-logo aboutmeResume-logo"
-    "aboutmeGithub-subtitle  aboutmeBlog-subtitle aboutmeResume-subtitle"
-    "aboutmeGithub-content  aboutmeBlog-content  aboutmeResume-content";
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 2fr 2fr 2fr;
-    grid-column-gap: 50px;
-    grid-row-gap: 10px;
-    place-items: center; */
-
     border-radius: 25px;
-
     margin-top :  30px;
     margin-bottom: 100px;
     padding : 0px;
-
-    /* opacity: 0; */
-
     position: relative;
     top: 0px;
-
 }
 
-/* .aboutmeGithub {
-    width: 100%;
-    border-radius: 25px;
-    padding: 15px;
-    align-self: center;
-    justify-content: space-between;
-    display: flex;
-
-    transition: all 0.2s linear;
-    margin-bottom: 20px;
-
-} */
 .aboutmeGithub {
     width: 30%;
     display: flex;
@@ -2067,18 +2038,6 @@ body {
         margin-bottom: 50px;
     }
     
-    .aboutmeWrapper {
-        background-color: white;
-        padding: 0px;
-        border-radius: 30px;
-    
-        display: flex;
-        flex-direction: column;
-        align-self: center;
-        justify-self: center;
-        width: 80%;
-    
-    }
     
     .aboutmeMain {
         width: 100%;
@@ -2180,201 +2139,6 @@ body {
         font-size : 15px;
         font-weight: 500;
     }
-    
-    .aboutmeCards {
-        display: grid;
-        grid-template-areas: 
-        "aboutmeGithub-logo aboutmeBlog-logo aboutmeResume-logo"
-        "aboutmeGithub-subtitle  aboutmeBlog-subtitle aboutmeResume-subtitle"
-        "aboutmeGithub-content  aboutmeBlog-content  aboutmeResume-content";
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 2fr 2fr 2fr;
-        grid-column-gap: 50px;
-        grid-row-gap: 10px;
-        place-items: center;
-    
-        border-radius: 25px;
-        background-color: rgba(233, 233, 234, 1);
-    
-        margin-bottom: 100px;
-        padding-top: 30px;
-        padding-bottom: 30px;
-    
-    }
-    
-    /* .aboutmeGithub {
-        width: 100%;
-        border-radius: 25px;
-        padding: 15px;
-        align-self: center;
-        justify-content: space-between;
-        display: flex;
-    
-        transition: all 0.2s linear;
-        margin-bottom: 20px;
-    
-    } */
-    
-    .aboutmeGithub-logo {
-        display: flex;
-        align-content: center;
-        justify-content: center;
-        grid-area: aboutmeGithub-logo;;
-        padding-right: 0;
-        height: 60px;
-        padding: 10px;
-        padding-left: 30px;
-    }
-    
-    .aboutmeGithub-subtitle {
-        grid-area: aboutmeGithub-subtitle;
-        align-content: center;
-        justify-content: center;
-        font-size: 13px;
-        padding: 10px;
-    }
-    
-    .aboutmeGithub-content {
-        font-size: 10px;
-        grid-area: aboutmeGithub-content;
-        padding: 10px;
-    }
-    
-    .aboutmeGithub img {
-        /* width: 80% */
-        object-fit: cover; 
-        height: 70px;
-    }
-    
-    .aboutmeGithub a {
-        text-decoration-line: none;
-        /* color: blue;  */
-    }
-    
-    .aboutmeBlog a {
-        text-decoration-line: none;
-        /* color: blue;  */
-    }
-    
-    .aboutmeResume a {
-        text-decoration-line: none;
-        /* color: blue;  */
-    }
-    
-    /* .aboutmeBlog {
-        width: 100%;
-    
-        background-color: rgba(245, 245, 247, 1);
-        border-radius: 25px;
-        padding: 15px;
-        align-self: center;
-    
-        display: flex;
-        align-content: center;
-        justify-content: space-between;
-    
-    
-        transition: all 0.2s linear;
-        margin-bottom: 20px;
-    
-    } */
-    
-    .aboutmeBlog-logo {
-        display: flex;
-        align-content: center;
-        justify-content: center;
-        grid-area: aboutmeBlog-logo;
-        padding-right: 0;
-        height: 60px;
-        padding: 10px;
-        padding-left: 30px;
-    
-    }
-    
-    .aboutmeBlog-title {
-        align-content: center;
-        justify-content: center;
-        font-size: 15px;
-        font-weight: 600;
-        padding: 5px;
-    }
-    
-    .aboutmeBlog-subtitle {
-        grid-area: aboutmeBlog-subtitle;
-        align-self: center;
-        justify-self: center;
-        text-align: center;
-        font-size: 13px;
-        padding: 10px;
-    }
-    
-    .aboutmeBlog-content {
-        font-size: 10px;
-        grid-area: aboutmeBlog-content;
-        padding: 10px;
-    
-    }
-    
-    .aboutmeBlog img {
-        align-self: center;
-        height: 60px;
-        object-fit: cover; 
-    }
-    
-    /* .aboutmeResume {
-        width: 100%;
-    
-        background-color: rgba(245, 245, 247, 1);
-        border-radius: 25px;
-        padding: 15px;
-        align-self: center;
-        justify-content: space-between;
-    
-        display: flex;
-    
-        transition: all 0.2s linear;
-    
-    } */
-    
-    .aboutmeResume-logo {
-        grid-area: aboutmeResume-logo;
-        height: 35px;
-        display: flex;
-        align-content: center;
-        justify-content: center;
-    }
-    
-    .aboutmeResume-title {
-        align-self: center;
-        font-size: 15px;
-        font-weight: 600;
-        padding: 5px;
-    }
-    
-    .aboutmeResume-subtitle {
-        grid-area: aboutmeResume-subtitle;
-        justify-content:center;
-        text-align: center;
-    
-        font-size: 13px;
-        padding: 10px;
-    }
-    
-    .aboutmeResume-content {
-        font-size: 10px;
-        list-style: square;
-        grid-area: aboutmeResume-content;
-        /* border: 1px solid red; */
-        align-self: center;
-        padding: 10px;
-    }
-    
-    .aboutmeResume img {
-        padding-left: 35px;
-        height: 60px;
-        object-fit: cover; 
-        /* border: 1px solid red; */
-    }
 
     .skillsDesc {
         position: absolute;
@@ -2418,6 +2182,10 @@ body {
         height: 50px;
         position: relative;
         top : 0px;
+    }
+
+    .aboutmeBlog-subtitle a{
+        display: none;
     }
 }
 
