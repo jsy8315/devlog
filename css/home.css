@@ -1012,6 +1012,7 @@ body {
     color : white;
     text-align: left;
     transition: all 0.2s linear;
+    font-size: 20px;
 }
 
 .skillsDesc {
@@ -2336,39 +2337,4 @@ body {
         bottom: 35%;
         padding: 20px;
     }
-
-    /* .htmlImgImg {
-        position: relative;
-        top: 0px;
-        width: 40px;
-        height: 55px;
-    }
-    
-    .cssImgImg {
-        width: 30px;
-        position: relative;
-        top : 0px;
-        height: 50px;
-    }
-    
-    .jsImgImg {
-        width: 60px;
-        height: 80px;
-        position: relative;
-        top : 0px;
-    }
-    
-    .reactImgImg {
-        width: 55px;
-        height: 80px;
-        position: relative;
-        top : 0px;
-    }
-    
-    .typescriptImgImg {
-        width: 40px;
-        height: 50px;
-        position: relative;
-        top : 0px;
-    } */
 }
