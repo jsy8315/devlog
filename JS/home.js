@@ -309,6 +309,8 @@ function clickToSite(element, siteAddr){
 clickToSite('aboutmeGithubFront', 'https://github.com/jsy8315');
 clickToSite('aboutmeBlogFront', 'https://blog.naver.com/tdhitbtd2023');
 
+
+
 // 포트폴리오Pdf 만들기 전까지 임시 alerts
 function temporalClickToSite(){
     document.getElementsByClassName('aboutmeResumeFront')[0].addEventListener('click', function(){
@@ -461,7 +463,8 @@ skillsCardsImgList.forEach(function(a){
 // + 버튼 클릭시 모양변화
 // + 버튼 클릭시 화면 전환
 //skills
-// clickPlusBtnSkills('skillCards-pause02', 'rotate-skillCards-pause02');
+clickPlusBtn('skillCards-pause02', 'rotate-skillCards-pause02', 'skillsCard', 'skillsCardFront', 'skillsCardBack', 'skillsCardBackContent');
+
 
 //aboutmeGithub, aboutmeBlog, aboutmeResume clickPlusBtn 기능 추가
 clickPlusBtn('aboutmeGithub-plusBtn', 'rotate-aboutmeGithub-plusBtn', 'aboutmeGithub','aboutmeGithubFront', 'aboutmeGithubBack', 'aboutmeGithub-content');
@@ -472,6 +475,8 @@ function clickPlusBtn(plusBtn, rotatePlusBtn, aboutmeEle, front, back, backConte
     let rotateStatus = false;
 
     document.getElementsByClassName(plusBtn)[0].addEventListener('click', function(){
+        console.log(`${plusBtn}`);
+
         // x표시 -> +
         if (rotateStatus) {
             rotateStatus = false;
@@ -509,6 +514,7 @@ function clickPlusBtn(plusBtn, rotatePlusBtn, aboutmeEle, front, back, backConte
         }
     })
 }
+
 clickPlusBtnWhite('aboutmeBlog-plusBtn', 'rotate-aboutmeBlog-plusBtn', 'aboutmeBlog','aboutmeBlogFront', 'aboutmeBlogBack', 'aboutmeBlog-content');
 
 function clickPlusBtnWhite(plusBtn, rotatePlusBtn, aboutmeEle, front, back, backContent){
