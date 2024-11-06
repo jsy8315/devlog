@@ -1007,7 +1007,7 @@ body {
     position: relative;
     top: 0px;
     width: 40%;
-    height: 90px;
+    aspect-ratio: 1/1;
     /* background-color: white; */
     /* animation: moveImg 4s linear infinite; */
 }
@@ -1030,9 +1030,11 @@ body {
 
 .cssImgImg {
     width: 30%;
+    aspect-ratio: 1/1.3;
+
     position: relative;
     top : 0px;
-    height: 90px;
+    
     /* animation: moveImg 16s linear infinite; */
 }
 
@@ -1048,7 +1050,7 @@ body {
 
 .jsImgImg {
     width: 60%;
-    height: 120px;
+    aspect-ratio: 1/1;
     /* animation: moveImg 16s linear infinite; */
     position: relative;
     top : 0px;
@@ -1068,7 +1070,7 @@ body {
 
 .reactImgImg {
     width: 40%;
-    height: 120px;
+    aspect-ratio: 1/1.5;
     position: relative;
     top : 0px;
 
@@ -1089,7 +1091,7 @@ body {
 
 .typescriptImgImg {
     width: 30%;
-    height: 70px;
+    aspect-ratio: 1/1;
     position: relative;
     top : 0px;
     /* animation: moveImg 16s linear infinite; */
@@ -2148,41 +2150,6 @@ body {
         bottom: 40%;
     }
 
-    .htmlImgImg {
-        position: relative;
-        top: 0px;
-        width: 50px;
-        height: 70px;
-    }
-    
-    .cssImgImg {
-        width: 40px;
-        position: relative;
-        top : 0px;
-        height: 60px;
-    }
-    
-    .jsImgImg {
-        width: 70px;
-        height: 80px;
-        position: relative;
-        top : 0px;
-    }
-    
-    .reactImgImg {
-        width: 70px;
-        height: 100px;
-        position: relative;
-        top : 0px;
-    }
-    
-    .typescriptImgImg {
-        width: 40px;
-        height: 50px;
-        position: relative;
-        top : 0px;
-    }
-
     .aboutmeBlog-subtitle a{
         display: none;
     }
@@ -2312,7 +2279,19 @@ body {
     }
 
     .aboutmeSpan {
-        font-size : 60px;
+        font-size : 50px;
+        font-weight: 700;
+        align-self: center;
+        justify-self: center;
+        text-decoration-line: none;
+        text-decoration-color: black;
+        list-style: none;
+        margin-top: 100px;
+        margin-bottom: 50px;
+    }
+
+    .skillsSpan {
+        font-size : 50px;
         font-weight: 700;
         align-self: center;
         justify-self: center;
@@ -2568,7 +2547,7 @@ body {
         padding: 20px;
     }
 
-    .htmlImgImg {
+    /* .htmlImgImg {
         position: relative;
         top: 0px;
         width: 40px;
@@ -2601,5 +2580,5 @@ body {
         height: 50px;
         position: relative;
         top : 0px;
-    }
+    } */
 }
