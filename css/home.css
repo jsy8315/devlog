@@ -944,6 +944,7 @@ body {
 
     background-color: rgba(245, 245, 247, 1);
     padding-bottom: 10vh;
+    margin-bottom: 1px; 
 }
 
 
@@ -1204,99 +1205,83 @@ body {
 }
 
 .section04 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     width: 100%;
-    /* background-color: rgba(245, 245, 247, 1); */
     background-color: black;
+    padding-bottom: 10vh;
 
-    display: grid;
-    grid-template-areas: 
-    ". . ."
-    ". projectsSpan ."
-    ". projects01 ."
-    ". projects02 ."
-    ". . .";
-
-    grid-template-columns: 1fr 50fr 1fr;
-    grid-template-rows: 1fr 1fr 6fr 6fr 1fr;
-    grid-gap: 80px;
 }
 
 .projectsSpan {
-    grid-area: projectsSpan;
-
     font-size : 90px;
     font-weight: 700;
     align-self: center;
-    justify-self: center;
+    justify-content: center;
     text-decoration-line: none;
+    text-decoration-color: white;
     color: white;
     list-style: none;
+    margin-top: 100px;
+    margin-bottom: 50px;
 }
 
 .projects01 {
-    grid-area: projects01;
-
+    width: 80%;
     background-color: white;
     border-radius: 30px;
     box-shadow: 2px 4px 12px #00000014;
     padding: 50px;
 
-    display: grid;
-    grid-template-areas: 
-    "projects01Tilte projects01Tilte"
-    "projects01Subtilte projects01Subtilte"
-    "projects01Img projects01Content"
-    "projects01Img projects01Subcontent";
+    display: flex;
+    flex-direction: column;
 
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.3fr 0.2fr 0.7fr 0.3fr;
-    grid-gap: 20px 40px;
-
-    opacity: 0;
-}
-
-
-
-.show-projects01 {
-    opacity: 1;
-    transition: opacity 1s;
-}
-
-.hide-projects01 {
-    opacity: 0;
-    transition: opacity 1s;
+    margin-bottom: 100px;
 }
 
 .projects01Tilte {
-    grid-area: projects01Tilte;
-
     font-size : 50px;
     font-weight: 700;
-    align-self: end;
-    justify-self: center;
+    align-self: center;
+    justify-content: center;
+    margin: 10px 10px 0px 10px;
 }
 
 .projects01Subtilte {
-    grid-area: projects01Subtilte;
-
     font-size : 20px;
     font-weight: 500;
     color: grey;
-    align-self: start;
-    justify-self: center;
+    align-self: center;
+    justify-content: center;
+    margin: 5px 10px 40px 10px;
+
 }
 
-
+.projects01Main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 
 .projects01Content {
-    grid-area: projects01Content;
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
+
+.projects01Maincontent {
     font-size : 18px;
     font-weight: 500;
+    margin-bottom: 50px;
 
 }
 
 .projects01Subcontent {
-    grid-area: projects01Subcontent;
 
     display: grid;
     grid-template-areas: 
@@ -1347,20 +1332,18 @@ body {
 }
 
 .projects01Img {
-    grid-area: projects01Img;
+    width: 50%;
     background-color: wheat;
     position: relative;
 
-    width: 550px;
-    height: 440px;
-
+    aspect-ratio: 1.6/1;
     overflow: hidden;
 }
 
 .projects01ImgLeft {
     position: absolute;
     font-size: 30px;
-    color: #ffd700;
+    color: white;
     top: 50%;
     left: 1%;
     transform: translateY(-50%);
@@ -1370,7 +1353,7 @@ body {
 .projects01ImgRight {
     position: absolute;
     font-size: 30px;
-    color: #ffd700;
+    color: white;
     left: 96%;
     top: 50%;
     transform: translateY(-50%);
@@ -1403,7 +1386,7 @@ body {
     padding-right: 3px;
     cursor: pointer;
 
-    color: #ffd700;
+    color: white;
 }
 
 .projects01Img-carousel {
@@ -1419,13 +1402,12 @@ body {
 
 /* 프로젝트02 */
 .projects02 {
-    grid-area: projects02;
-
     background-color: white;
     box-shadow: 2px 4px 12px #00000014;
     border-radius: 30px;
     padding: 50px;
 
+    width: 80%;
     display: grid;
     grid-template-areas: 
     "projects02Tilte projects02Tilte"
@@ -1437,17 +1419,9 @@ body {
     grid-template-rows: 0.3fr 0.2fr 0.7fr 0.3fr;
     grid-gap: 20px 40px;
 
-    opacity: 0;
-}
-
-.show-projects02 {
     opacity: 1;
-    transition: opacity 1s;
-}
 
-.hide-projects02 {
-    opacity: 0;
-    transition: opacity 1s;
+    padding-bottom: 0px;
 }
 
 .projects02Tilte {
@@ -1521,11 +1495,13 @@ body {
 
 .projects02Subcontent-stack {
     grid-area: projects02Subcontent-stack;
+    padding-bottom: 0px;
 
 }
 
 .projects02Subcontent-stack-content {
     grid-area: projects02Subcontent-stack-content;
+    padding-bottom: 0px;
 
 }
 
@@ -1944,6 +1920,145 @@ body {
     .aboutmeBlog-subtitle a{
         display: none;
     }
+
+    .projects01 {
+        width: 80%;
+        background-color: white;
+        border-radius: 30px;
+        box-shadow: 2px 4px 12px #00000014;
+        padding: 50px 10px 50px 10px;
+    
+        display: flex;
+        flex-direction: column;
+    
+        margin-bottom: 100px;
+    }
+    
+    .projects01Tilte {
+        font-size : 50px;
+        font-weight: 700;
+        align-self: center;
+        justify-content: center;
+        margin: 10px 10px 0px 10px;
+    }
+    
+    .projects01Subtilte {
+        font-size : 20px;
+        font-weight: 500;
+        color: grey;
+        align-self: center;
+        justify-content: center;
+        margin: 5px 10px 40px 10px;
+    
+    }
+    
+    .projects01Main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .projects01Img {
+        width: 60%;
+        background-color: wheat;
+        position: relative;
+    
+        aspect-ratio: 1.6/1;
+
+
+        overflow: hidden;
+
+        margin-bottom: 50px;
+    }
+    
+    .projects01Content {
+        width: 90%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .projects01Maincontent {
+        font-size : 18px;
+        font-weight: 500;
+        margin-bottom: 50px;
+    
+    }
+    
+    .projects01Subcontent {
+    
+        display: grid;
+        grid-template-areas: 
+        "projects01Subcontent-function  projects01Subcontent-function-content"
+        "projects01Subcontent-url projects01Subcontent-url-content"
+        "projects01Subcontent-stack projects01Subcontent-stack-content";
+    
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 2px;
+    
+        font-size : 17px;
+        font-weight: 400;
+    
+        border-top: 1px solid lightgrey;
+        padding: 10px;
+    }
+
+    .projects02 {
+        width: 80%;
+        background-color: white;
+        border-radius: 30px;
+        box-shadow: 2px 4px 12px #00000014;
+        padding: 50px;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 100px;
+    }
+
+    .projects02Tilte {
+        font-size : 50px;
+        font-weight: 700;
+        align-self: center;
+        justify-self: center;
+    }
+    
+    .projects02Subtilte {
+        font-size : 20px;
+        font-weight: 500;
+        color: grey;
+        align-self: center;
+        justify-self: center;
+    }
+
+    .projects02Content {
+        font-size : 18px;
+        font-weight: 500;
+        margin-top: 15px;
+    }
+    
+    .projects02Subcontent {
+        width: 100%;
+    
+        display: grid;
+        grid-template-areas: 
+        "projects02Subcontent-function  projects02Subcontent-function-content"
+        "projects02Subcontent-url projects02Subcontent-url-content"
+        "projects02Subcontent-stack projects02Subcontent-stack-content";
+    
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 2px;
+    
+        font-size : 17px;
+        font-weight: 400;
+    
+        border-top: 1px solid lightgrey;
+        padding: 10px;
+    }
 }
 
 /* 스마트폰 화면 */
@@ -2336,5 +2451,18 @@ body {
         text-align: center;
         bottom: 35%;
         padding: 20px;
+    }
+
+
+    .projects01Img {
+        width: 90%;
+        background-color: wheat;
+        position: relative;
+    
+        height: 440px;
+    
+        overflow: hidden;
+
+        margin-bottom: 50px;
     }
 }

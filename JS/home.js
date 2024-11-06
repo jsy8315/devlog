@@ -561,26 +561,26 @@ function clickPlusBtnWhite(plusBtn, rotatePlusBtn, aboutmeEle, front, back, back
 
 
 // section04 스크롤에 따라 projects01, projects02 서서히 올라오기
-window.addEventListener('scroll', function() {
-    let currentScrollYsection04 = this.window.scrollY;
+// window.addEventListener('scroll', function() {
+//     let currentScrollYsection04 = this.window.scrollY;
 
-    // 3120에 올라오고, 3600쯤에 사라지기
-    if ( (currentScrollYsection04 >= 2420) && (currentScrollYsection04 <= 3600)) {
-        this.document.getElementsByClassName("projects01")[0].classList.remove("hide-projects01");
-        this.document.getElementsByClassName("projects01")[0].classList.add("show-projects01");
-    } else {
-        this.document.getElementsByClassName("projects01")[0].classList.remove("show-projects01");
-        this.document.getElementsByClassName("projects01")[0].classList.add("hide-projects01");
-    }
+//     // 3120에 올라오고, 3600쯤에 사라지기
+//     if ( (currentScrollYsection04 >= 2420) && (currentScrollYsection04 <= 3600)) {
+//         this.document.getElementsByClassName("projects01")[0].classList.remove("hide-projects01");
+//         this.document.getElementsByClassName("projects01")[0].classList.add("show-projects01");
+//     } else {
+//         this.document.getElementsByClassName("projects01")[0].classList.remove("show-projects01");
+//         this.document.getElementsByClassName("projects01")[0].classList.add("hide-projects01");
+//     }
     
-    if ( (currentScrollYsection04 >= 3220) && (currentScrollYsection04 <= 4220)) {
-        this.document.getElementsByClassName("projects02")[0].classList.remove("hide-projects02");
-        this.document.getElementsByClassName("projects02")[0].classList.add("show-projects02");
-    } else {
-        this.document.getElementsByClassName("projects02")[0].classList.remove("show-projects02");
-        this.document.getElementsByClassName("projects02")[0].classList.add("hide-projects02");
-    }
-})
+//     if ( (currentScrollYsection04 >= 3220) && (currentScrollYsection04 <= 4220)) {
+//         this.document.getElementsByClassName("projects02")[0].classList.remove("hide-projects02");
+//         this.document.getElementsByClassName("projects02")[0].classList.add("show-projects02");
+//     } else {
+//         this.document.getElementsByClassName("projects02")[0].classList.remove("show-projects02");
+//         this.document.getElementsByClassName("projects02")[0].classList.add("hide-projects02");
+//     }
+// })
 
 // section04 캐러셀 슬라이드
 // 좌우측 화살표 클릭시 이동 및 점 클릭 시 이동
