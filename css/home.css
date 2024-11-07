@@ -1278,7 +1278,6 @@ body {
     font-size : 18px;
     font-weight: 500;
     margin-bottom: 50px;
-
 }
 
 .projects01Subcontent {
@@ -1331,18 +1330,11 @@ body {
 
 }
 
-.pinkTest {
-    background-color: pink;
-    height : 100px;
-    width: 300px;
-}
-
 .projects01Img {
     width: 50%;
     background-color: wheat;
     position: relative;
-
-    aspect-ratio: 1.6/1;
+    
     overflow: hidden;
 }
 
@@ -1364,7 +1356,6 @@ body {
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
-
 }
 
 .projects01Dot {
@@ -1413,59 +1404,56 @@ body {
 
 /* 프로젝트02 */
 .projects02 {
+    width: 80%;
     background-color: white;
-    box-shadow: 2px 4px 12px #00000014;
     border-radius: 30px;
+    box-shadow: 2px 4px 12px #00000014;
     padding: 50px;
 
-    width: 80%;
-    display: grid;
-    grid-template-areas: 
-    "projects02Tilte projects02Tilte"
-    "projects02Subtilte projects02Subtilte"
-    "projects02Img projects02Content"
-    "projects02Img projects02Subcontent";
+    display: flex;
+    flex-direction: column;
 
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.3fr 0.2fr 0.7fr 0.3fr;
-    grid-gap: 20px 40px;
-
-    opacity: 1;
-
-    padding-bottom: 0px;
+    margin-bottom: 100px;
 }
 
 .projects02Tilte {
-    grid-area: projects02Tilte;
-
     font-size : 50px;
     font-weight: 700;
-    align-self: end;
-    justify-self: center;
+    align-self: center;
+    justify-content: center;
+    margin: 10px 10px 0px 10px;
 }
 
 .projects02Subtilte {
-    grid-area: projects02Subtilte;
-
     font-size : 20px;
     font-weight: 500;
     color: grey;
-    align-self: start;
-    justify-self: center;
+    align-self: center;
+    justify-content: center;
+    margin: 5px 10px 40px 10px;
 }
 
-
+.projects02Main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 
 .projects02Content {
-    grid-area: projects02Content;
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
+
+.projects02Maincontent {
     font-size : 18px;
     font-weight: 500;
-
+    margin-bottom: 50px;
 }
 
 .projects02Subcontent {
-    grid-area: projects02Subcontent;
-
     display: grid;
     grid-template-areas: 
     "projects02Subcontent-function  projects02Subcontent-function-content"
@@ -1473,7 +1461,7 @@ body {
     "projects02Subcontent-stack projects02Subcontent-stack-content";
 
     grid-template-columns: 1fr 3fr;
-    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     grid-gap: 2px;
 
     font-size : 17px;
@@ -1506,31 +1494,27 @@ body {
 
 .projects02Subcontent-stack {
     grid-area: projects02Subcontent-stack;
-    padding-bottom: 0px;
 
 }
 
 .projects02Subcontent-stack-content {
     grid-area: projects02Subcontent-stack-content;
-    padding-bottom: 0px;
 
 }
 
 .projects02Img {
-    grid-area: projects02Img;
+    width: 50%;
+    padding: 0px;
+    margin: 0px;
     background-color: wheat;
     position: relative;
-
-    width: 550px;
-    height: 440px;
-
     overflow: hidden;
 }
 
 .projects02ImgLeft {
     position: absolute;
     font-size: 30px;
-    color: #ffd700;
+    color: white;
     top: 50%;
     left: 1%;
     transform: translateY(-50%);
@@ -1540,12 +1524,11 @@ body {
 .projects02ImgRight {
     position: absolute;
     font-size: 30px;
-    color: #ffd700;
+    color: white;
     left: 96%;
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
-
 }
 
 .projects02Dot {
@@ -1572,19 +1555,23 @@ body {
     padding-left: 3px;
     padding-right: 3px;
     cursor: pointer;
-
-    color: #ffd700;
+    color: white;
 }
 
 .projects02Img-carousel {
     display: flex;
     transform: translate3d( 0, 0, 0);
     transition: transform 1s;
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
 }
 
 .projects02Img-carousel > img {
-    width: 550px;
-    height: 440px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .section05 {
@@ -1972,7 +1959,6 @@ body {
         align-self: center;
         justify-content: center;
         margin: 5px 10px 40px 10px;
-    
     }
     
     .projects01Main {
@@ -2033,38 +2019,62 @@ body {
         background-color: white;
         border-radius: 30px;
         box-shadow: 2px 4px 12px #00000014;
-        padding: 50px;
+        padding: 50px 10px 50px 10px;
     
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    
         margin-bottom: 100px;
     }
 
     .projects02Tilte {
-        font-size : 50px;
+        font-size : 40px;
         font-weight: 700;
         align-self: center;
-        justify-self: center;
+        justify-content: center;
+        margin: 10px 10px 0px 10px;
     }
     
     .projects02Subtilte {
-        font-size : 20px;
+        font-size : 15px;
         font-weight: 500;
         color: grey;
         align-self: center;
-        justify-self: center;
+        justify-content: center;
+        margin: 5px 10px 40px 10px;
+    }
+
+    .projects02Main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .projects02Img {
+        width: 60%;
+        background-color: wheat;
+        position: relative;
+        aspect-ratio: 1.6/1;
+        overflow: hidden;
+        margin-bottom: 50px;
     }
 
     .projects02Content {
+        width: 90%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .projects02Maincontent {
         font-size : 18px;
         font-weight: 500;
-        margin-top: 15px;
+        margin-bottom: 50px;
+    
     }
     
     .projects02Subcontent {
-        width: 100%;
     
         display: grid;
         grid-template-areas: 
@@ -2546,6 +2556,76 @@ body {
         "projects01Subcontent-function  projects01Subcontent-function-content"
         "projects01Subcontent-url projects01Subcontent-url-content"
         "projects01Subcontent-stack projects01Subcontent-stack-content";
+    
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 2px;
+    
+        font-size : 12px;
+        font-weight: 400;
+    
+        border-top: 1px solid lightgrey;
+        padding: 10px;
+    }
+
+    .projects02Main {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .projects02Img {
+        width: 90%;
+        background-color: wheat;
+        position: relative;
+    
+        aspect-ratio: 1.6/1;
+    
+        overflow: hidden;
+    }
+
+    .projects02Tilte {
+        font-size : 30px;
+        font-weight: 700;
+        align-self: center;
+        justify-content: center;
+        margin: 10px 10px 0px 10px;
+    }
+    
+    .projects02Subtilte {
+        font-size : 10px;
+        font-weight: 500;
+        color: grey;
+        align-self: center;
+        justify-content: center;
+        margin: 5px 10px 40px 10px;
+    
+    }
+
+    .projects02Content {
+        width: 90%;
+        height: 40%;
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
+    }
+
+    .projects02Maincontent {
+        font-size : 15px;
+        font-weight: 500;
+        margin-bottom: 30px;
+    
+    }
+
+    .projects02Subcontent {
+    
+        display: grid;
+        grid-template-areas: 
+        "projects02Subcontent-function  projects02Subcontent-function-content"
+        "projects02Subcontent-url projects02Subcontent-url-content"
+        "projects02Subcontent-stack projects02Subcontent-stack-content";
     
         grid-template-columns: 1fr 3fr;
         grid-template-rows: 1fr 1fr 1fr;

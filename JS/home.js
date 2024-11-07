@@ -211,12 +211,17 @@ window.addEventListener('scroll', function() {
     let colorAboutmeMain = this.document.getElementsByClassName('aboutmeMain-contents')[0];
     let aboutmeCards = document.getElementsByClassName('aboutmeCards')[0];
     let skillsCard = document.getElementsByClassName('skillsCard')[0];
+    let project01 = document.getElementsByClassName('projects01')[0];
+    let project02 = document.getElementsByClassName('projects02')[0];
+
 
 
     scrollYBiggerEffect(windowHeight, aboutmeMain, scalingAboutmeMain);
     scrollYColorEffect(windowHeight, aboutmeMain, colorAboutmeMain);
     scrollYEleUpEffect(0.1, aboutmeCards);
     scrollYEleUpEffect(0.1, skillsCard);
+    scrollYEleUpEffect(0.1, project01);
+    scrollYEleUpEffect(0.1, project02);
 
 })
 
