@@ -560,31 +560,12 @@ function clickPlusBtnWhite(plusBtn, rotatePlusBtn, aboutmeEle, front, back, back
 }
 
 
-// section04 스크롤에 따라 projects01, projects02 서서히 올라오기
-// window.addEventListener('scroll', function() {
-//     let currentScrollYsection04 = this.window.scrollY;
-
-//     // 3120에 올라오고, 3600쯤에 사라지기
-//     if ( (currentScrollYsection04 >= 2420) && (currentScrollYsection04 <= 3600)) {
-//         this.document.getElementsByClassName("projects01")[0].classList.remove("hide-projects01");
-//         this.document.getElementsByClassName("projects01")[0].classList.add("show-projects01");
-//     } else {
-//         this.document.getElementsByClassName("projects01")[0].classList.remove("show-projects01");
-//         this.document.getElementsByClassName("projects01")[0].classList.add("hide-projects01");
-//     }
-    
-//     if ( (currentScrollYsection04 >= 3220) && (currentScrollYsection04 <= 4220)) {
-//         this.document.getElementsByClassName("projects02")[0].classList.remove("hide-projects02");
-//         this.document.getElementsByClassName("projects02")[0].classList.add("show-projects02");
-//     } else {
-//         this.document.getElementsByClassName("projects02")[0].classList.remove("show-projects02");
-//         this.document.getElementsByClassName("projects02")[0].classList.add("hide-projects02");
-//     }
-// })
-
 // section04 캐러셀 슬라이드
 // 좌우측 화살표 클릭시 이동 및 점 클릭 시 이동
 let slideIndex = 0;
+
+let project01Img = document.getElementsByClassName('projects01Img')[0];
+let img01Width = parseInt(getComputedStyle(project01Img).width);
 
 document.getElementsByClassName("projects01ImgLeft")[0].addEventListener('click', function() {
 
@@ -597,9 +578,9 @@ document.getElementsByClassName("projects01ImgLeft")[0].addEventListener('click'
 
     console.log(slideIndex);
 
-    document.getElementsByClassName("projects01Img-carousel")[0].style.transform = `translate3d(-${550 * slideIndex}px, 0, 0)`;
+    document.getElementsByClassName("projects01Img-carousel")[0].style.transform = `translate3d(-${img01Width * slideIndex}px, 0, 0)`;
     document.getElementsByClassName("projects01Dot01")[slideIndex + 1].style.color = "grey";
-    document.getElementsByClassName("projects01Dot01")[slideIndex].style.color = "#ffd700";
+    document.getElementsByClassName("projects01Dot01")[slideIndex].style.color = "white";
 });
 
 document.getElementsByClassName("projects01ImgRight")[0].addEventListener('click', function() {
@@ -613,9 +594,9 @@ document.getElementsByClassName("projects01ImgRight")[0].addEventListener('click
 
     console.log(slideIndex);
 
-    document.getElementsByClassName("projects01Img-carousel")[0].style.transform = `translate3d(-${550 * slideIndex}px, 0, 0)`;
+    document.getElementsByClassName("projects01Img-carousel")[0].style.transform = `translate3d(-${img01Width * slideIndex}px, 0, 0)`;
     document.getElementsByClassName("projects01Dot01")[slideIndex - 1].style.color = "grey";
-    document.getElementsByClassName("projects01Dot01")[slideIndex].style.color = "#ffd700";
+    document.getElementsByClassName("projects01Dot01")[slideIndex].style.color = "white";
 
 });
 
@@ -623,7 +604,7 @@ document.getElementsByClassName("projects01Dot01")[0].addEventListener('click', 
     clearInterval(slideTimer);
 
     document.getElementsByClassName("projects01Img-carousel")[0].style.transform = `translate3d(0, 0, 0)`;
-    document.getElementsByClassName("projects01Dot01")[0].style.color = "#ffd700";
+    document.getElementsByClassName("projects01Dot01")[0].style.color = "white";
     document.getElementsByClassName("projects01Dot01")[1].style.color = "grey";
     document.getElementsByClassName("projects01Dot01")[2].style.color = "grey";
     document.getElementsByClassName("projects01Dot01")[3].style.color = "grey";
@@ -634,8 +615,8 @@ document.getElementsByClassName("projects01Dot01")[0].addEventListener('click', 
 document.getElementsByClassName("projects01Dot01")[1].addEventListener('click', function() {
     clearInterval(slideTimer);
 
-    document.getElementsByClassName("projects01Img-carousel")[0].style.transform = `translate3d(-550px, 0, 0)`;
-    document.getElementsByClassName("projects01Dot01")[1].style.color = "#ffd700";
+    document.getElementsByClassName("projects01Img-carousel")[0].style.transform = `translate3d(-${img01Width}px, 0, 0)`;
+    document.getElementsByClassName("projects01Dot01")[1].style.color = "white";
     document.getElementsByClassName("projects01Dot01")[0].style.color = "grey";
     document.getElementsByClassName("projects01Dot01")[2].style.color = "grey";
     document.getElementsByClassName("projects01Dot01")[3].style.color = "grey";
@@ -647,8 +628,8 @@ document.getElementsByClassName("projects01Dot01")[1].addEventListener('click', 
 document.getElementsByClassName("projects01Dot01")[2].addEventListener('click', function() {
     clearInterval(slideTimer);
 
-    document.getElementsByClassName("projects01Img-carousel")[0].style.transform = `translate3d(-1100px, 0, 0)`;
-    document.getElementsByClassName("projects01Dot01")[2].style.color = "#ffd700";
+    document.getElementsByClassName("projects01Img-carousel")[0].style.transform = `translate3d(-${img01Width * 2}px, 0, 0)`;
+    document.getElementsByClassName("projects01Dot01")[2].style.color = "white";
     document.getElementsByClassName("projects01Dot01")[0].style.color = "grey";
     document.getElementsByClassName("projects01Dot01")[1].style.color = "grey";
     document.getElementsByClassName("projects01Dot01")[3].style.color = "grey";
@@ -660,8 +641,8 @@ document.getElementsByClassName("projects01Dot01")[2].addEventListener('click', 
 document.getElementsByClassName("projects01Dot01")[3].addEventListener('click', function() {
     clearInterval(slideTimer);
 
-    document.getElementsByClassName("projects01Img-carousel")[0].style.transform = `translate3d(-1650px, 0, 0)`;
-    document.getElementsByClassName("projects01Dot01")[3].style.color = "#ffd700";
+    document.getElementsByClassName("projects01Img-carousel")[0].style.transform = `translate3d(-${img01Width * 3}px, 0, 0)`;
+    document.getElementsByClassName("projects01Dot01")[3].style.color = "white";
     document.getElementsByClassName("projects01Dot01")[0].style.color = "grey";
     document.getElementsByClassName("projects01Dot01")[1].style.color = "grey";
     document.getElementsByClassName("projects01Dot01")[2].style.color = "grey";
@@ -673,8 +654,8 @@ document.getElementsByClassName("projects01Dot01")[3].addEventListener('click', 
 document.getElementsByClassName("projects01Dot01")[4].addEventListener('click', function() {
     clearInterval(slideTimer);
     
-    document.getElementsByClassName("projects01Img-carousel")[0].style.transform = `translate3d(-2200px, 0, 0)`;
-    document.getElementsByClassName("projects01Dot01")[4].style.color = "#ffd700";
+    document.getElementsByClassName("projects01Img-carousel")[0].style.transform = `translate3d(-${img01Width * 4}px, 0, 0)`;
+    document.getElementsByClassName("projects01Dot01")[4].style.color = "white";
     document.getElementsByClassName("projects01Dot01")[0].style.color = "grey";
     document.getElementsByClassName("projects01Dot01")[1].style.color = "grey";
     document.getElementsByClassName("projects01Dot01")[2].style.color = "grey";
@@ -689,7 +670,7 @@ let slideTimer = setInterval(function(){
     if (slideIndex == 4) {
         slideIndex = -1;
         document.getElementsByClassName("projects01Img-carousel")[0].style.transform = `translate3d(0, 0, 0)`;
-        document.getElementsByClassName("projects01Dot01")[0].style.color = "#ffd700";
+        document.getElementsByClassName("projects01Dot01")[0].style.color = "white";
         document.getElementsByClassName("projects01Dot01")[1].style.color = "grey";
         document.getElementsByClassName("projects01Dot01")[2].style.color = "grey";
         document.getElementsByClassName("projects01Dot01")[3].style.color = "grey";
@@ -700,9 +681,9 @@ let slideTimer = setInterval(function(){
 
     // console.log(slideIndex);
 
-    document.getElementsByClassName("projects01Img-carousel")[0].style.transform = `translate3d(-${550 * slideIndex}px, 0, 0)`;
+    document.getElementsByClassName("projects01Img-carousel")[0].style.transform = `translate3d(-${img01Width * slideIndex}px, 0, 0)`;
     document.getElementsByClassName("projects01Dot01")[slideIndex - 1].style.color = "grey";
-    document.getElementsByClassName("projects01Dot01")[slideIndex].style.color = "#ffd700";
+    document.getElementsByClassName("projects01Dot01")[slideIndex].style.color = "white";
 
 },2000)
 
