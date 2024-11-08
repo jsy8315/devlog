@@ -1015,7 +1015,7 @@ body {
 
 .skillsCardBackContent {
     opacity: 0;
-    padding : 20px;
+    padding : 20px 60px 20px 60px;
     color : white;
     text-align: left;
     transition: all 0.2s linear;

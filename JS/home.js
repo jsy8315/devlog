@@ -149,35 +149,39 @@ document.getElementsByClassName('Home')[0].addEventListener('click', function(e)
 })
 
 document.getElementsByClassName('AboutMe')[0].addEventListener('click', function(e) {
+    const scrollPosition = window.innerHeight * 1.1;
     window.scrollTo({
         left: 0,
-        top: 800,
+        top: scrollPosition,
         behavior: "smooth"
-    })
+    });
 })
 
 document.getElementsByClassName('Skills')[0].addEventListener('click', function(e) {
+    const scrollPosition = window.innerHeight * 2.5;
     window.scrollTo({
         left: 0,
-        top: 1850,
+        top: scrollPosition,
         behavior: "smooth"
-    })
+    });
 })
 
 document.getElementsByClassName('Projects')[0].addEventListener('click', function(e) {
+    const scrollPosition = window.innerHeight * 3.55;
     window.scrollTo({
         left: 0,
-        top: 2750,
+        top: scrollPosition,
         behavior: "smooth"
-    })
+    });
 })
 
 document.getElementsByClassName('Career')[0].addEventListener('click', function(e) {
+    const scrollPosition = window.innerHeight * 6.55;
     window.scrollTo({
         left: 0,
-        top: 5050,
+        top: scrollPosition,
         behavior: "smooth"
-    })
+    });
 })
 
 document.getElementsByClassName('Devlog')[0].addEventListener('click', function(e) {
