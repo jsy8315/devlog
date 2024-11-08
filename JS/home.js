@@ -572,102 +572,140 @@ let slideIndex = 0;
 let project01Img = document.getElementsByClassName('projects01Img')[0];
 let img01Width = parseInt(getComputedStyle(project01Img).width);
 
-document.getElementsByClassName("projects01ImgLeft")[0].addEventListener('click', function() {
+slideLeft('projects01ImgLeft', 'projects01Img-carousel', 'projects01Dot01', img01Width, 'white');
 
-    clearInterval(slideTimer);
+slideRight('projects01ImgRight', 'projects01Img-carousel', 'projects01Dot01', img01Width, 'white');
 
-    if (slideIndex == 0) {
-        return;
-    }
-    slideIndex -= 1;
+function slideLeft(leftBtn, carousel, dot, imgWidth, color){
+    document.getElementsByClassName(`${leftBtn}`)[0].addEventListener('click', function() {
 
-    console.log(slideIndex);
-
-    document.getElementsByClassName("projects01Img-carousel")[0].style.transform = `translate3d(-${img01Width * slideIndex}px, 0, 0)`;
-    document.getElementsByClassName("projects01Dot01")[slideIndex + 1].style.color = "grey";
-    document.getElementsByClassName("projects01Dot01")[slideIndex].style.color = "white";
-});
-
-document.getElementsByClassName("projects01ImgRight")[0].addEventListener('click', function() {
-
-    clearInterval(slideTimer);
-
-    if (slideIndex == 4) {
-        return;
-    }
-    slideIndex += 1;
-
-    console.log(slideIndex);
-
-    document.getElementsByClassName("projects01Img-carousel")[0].style.transform = `translate3d(-${img01Width * slideIndex}px, 0, 0)`;
-    document.getElementsByClassName("projects01Dot01")[slideIndex - 1].style.color = "grey";
-    document.getElementsByClassName("projects01Dot01")[slideIndex].style.color = "white";
-
-});
-
-document.getElementsByClassName("projects01Dot01")[0].addEventListener('click', function() {
-    clearInterval(slideTimer);
-
-    document.getElementsByClassName("projects01Img-carousel")[0].style.transform = `translate3d(0, 0, 0)`;
-    document.getElementsByClassName("projects01Dot01")[0].style.color = "white";
-    document.getElementsByClassName("projects01Dot01")[1].style.color = "grey";
-    document.getElementsByClassName("projects01Dot01")[2].style.color = "grey";
-    document.getElementsByClassName("projects01Dot01")[3].style.color = "grey";
-    document.getElementsByClassName("projects01Dot01")[4].style.color = "grey";
-    slideIndex = 0;
-})
-
-document.getElementsByClassName("projects01Dot01")[1].addEventListener('click', function() {
-    clearInterval(slideTimer);
-
-    document.getElementsByClassName("projects01Img-carousel")[0].style.transform = `translate3d(-${img01Width}px, 0, 0)`;
-    document.getElementsByClassName("projects01Dot01")[1].style.color = "white";
-    document.getElementsByClassName("projects01Dot01")[0].style.color = "grey";
-    document.getElementsByClassName("projects01Dot01")[2].style.color = "grey";
-    document.getElementsByClassName("projects01Dot01")[3].style.color = "grey";
-    document.getElementsByClassName("projects01Dot01")[4].style.color = "grey";
-    slideIndex = 1;
-
-})
-
-document.getElementsByClassName("projects01Dot01")[2].addEventListener('click', function() {
-    clearInterval(slideTimer);
-
-    document.getElementsByClassName("projects01Img-carousel")[0].style.transform = `translate3d(-${img01Width * 2}px, 0, 0)`;
-    document.getElementsByClassName("projects01Dot01")[2].style.color = "white";
-    document.getElementsByClassName("projects01Dot01")[0].style.color = "grey";
-    document.getElementsByClassName("projects01Dot01")[1].style.color = "grey";
-    document.getElementsByClassName("projects01Dot01")[3].style.color = "grey";
-    document.getElementsByClassName("projects01Dot01")[4].style.color = "grey";
-    slideIndex = 2;
-
-})
-
-document.getElementsByClassName("projects01Dot01")[3].addEventListener('click', function() {
-    clearInterval(slideTimer);
-
-    document.getElementsByClassName("projects01Img-carousel")[0].style.transform = `translate3d(-${img01Width * 3}px, 0, 0)`;
-    document.getElementsByClassName("projects01Dot01")[3].style.color = "white";
-    document.getElementsByClassName("projects01Dot01")[0].style.color = "grey";
-    document.getElementsByClassName("projects01Dot01")[1].style.color = "grey";
-    document.getElementsByClassName("projects01Dot01")[2].style.color = "grey";
-    document.getElementsByClassName("projects01Dot01")[4].style.color = "grey";
-    slideIndex = 3;
-
-})
-
-document.getElementsByClassName("projects01Dot01")[4].addEventListener('click', function() {
-    clearInterval(slideTimer);
+        clearInterval(slideTimer);
     
-    document.getElementsByClassName("projects01Img-carousel")[0].style.transform = `translate3d(-${img01Width * 4}px, 0, 0)`;
-    document.getElementsByClassName("projects01Dot01")[4].style.color = "white";
-    document.getElementsByClassName("projects01Dot01")[0].style.color = "grey";
-    document.getElementsByClassName("projects01Dot01")[1].style.color = "grey";
-    document.getElementsByClassName("projects01Dot01")[2].style.color = "grey";
-    document.getElementsByClassName("projects01Dot01")[3].style.color = "grey";
-    slideIndex = 4;
+        if (slideIndex == 0) {
+            return;
+        }
+        slideIndex -= 1;
+    
+        console.log(slideIndex);
+    
+        document.getElementsByClassName(`${carousel}`)[0].style.transform = `translate3d(-${imgWidth * slideIndex}px, 0, 0)`;
+        document.getElementsByClassName(`${dot}`)[slideIndex + 1].style.color = "grey";
+        document.getElementsByClassName(`${dot}`)[slideIndex].style.color = `${color}`;
+    });
+}
 
-})
+function slideRight(rightBtn, carousel, dot, imgWidth, color){
+    document.getElementsByClassName(`${rightBtn}`)[0].addEventListener('click', function() {
+
+        clearInterval(slideTimer);
+    
+        if (slideIndex == 4) {
+            return;
+        }
+        slideIndex += 1;
+    
+        console.log(slideIndex);
+    
+        document.getElementsByClassName(`${carousel}`)[0].style.transform = `translate3d(-${imgWidth * slideIndex}px, 0, 0)`;
+        document.getElementsByClassName(`${dot}`)[slideIndex - 1].style.color = "grey";
+        document.getElementsByClassName(`${dot}`)[slideIndex].style.color = `${color}`;
+    
+    });
+}
+
+function dotClickEvent(dot, dotsSize, carousel, color){
+    // dotsSize dot이 몇개인지 
+    let dotsSizeArray = [];
+
+    for (let i = 0; i < dotsSize; i++){
+        dotsSizeArray.push(i);
+    }
+
+    dotsSizeArray.forEach(function(i){
+        document.getElementsByClassName(`${dot}`)[i].addEventListener('click', function() {
+            clearInterval(slideTimer);
+        
+            document.getElementsByClassName(`${carousel}`)[0].style.transform = `translate3d(-${img01Width * i}px, 0, 0)`;
+
+            // 이중forEach 돌리면 빅오가 n**2이 되겠지만 dot의 갯수가 5로 고정이 되어있기 떄문에(5도 많은듯) 괜찮을듯
+            dotsSizeArray.forEach(function(j){
+                if(i == j) {
+                    document.getElementsByClassName(`${dot}`)[j].style.color = `${color}`;
+                } else {
+                    document.getElementsByClassName(`${dot}`)[j].style.color = "grey";
+                }
+            })
+            slideIndex = i;
+        })
+    })
+}
+
+dotClickEvent('projects01Dot01', 5, 'projects01Img-carousel', 'white');
+
+// 01번째 Dot을 클릭했을때 이벤트
+// document.getElementsByClassName("projects01Dot01")[0].addEventListener('click', function() {
+//     clearInterval(slideTimer);
+
+//     document.getElementsByClassName("projects01Img-carousel")[0].style.transform = `translate3d(0, 0, 0)`;
+//     document.getElementsByClassName("projects01Dot01")[0].style.color = "white";
+//     document.getElementsByClassName("projects01Dot01")[1].style.color = "grey";
+//     document.getElementsByClassName("projects01Dot01")[2].style.color = "grey";
+//     document.getElementsByClassName("projects01Dot01")[3].style.color = "grey";
+//     document.getElementsByClassName("projects01Dot01")[4].style.color = "grey";
+//     slideIndex = 0;
+// })
+
+// document.getElementsByClassName("projects01Dot01")[1].addEventListener('click', function() {
+//     clearInterval(slideTimer);
+
+//     document.getElementsByClassName("projects01Img-carousel")[0].style.transform = `translate3d(-${img01Width * 1}px, 0, 0)`;
+//     document.getElementsByClassName("projects01Dot01")[1].style.color = "white";
+//     document.getElementsByClassName("projects01Dot01")[0].style.color = "grey";
+//     document.getElementsByClassName("projects01Dot01")[2].style.color = "grey";
+//     document.getElementsByClassName("projects01Dot01")[3].style.color = "grey";
+//     document.getElementsByClassName("projects01Dot01")[4].style.color = "grey";
+//     slideIndex = 1;
+
+// })
+
+// document.getElementsByClassName("projects01Dot01")[2].addEventListener('click', function() {
+//     clearInterval(slideTimer);
+
+//     document.getElementsByClassName("projects01Img-carousel")[0].style.transform = `translate3d(-${img01Width * 2}px, 0, 0)`;
+//     document.getElementsByClassName("projects01Dot01")[2].style.color = "white";
+//     document.getElementsByClassName("projects01Dot01")[0].style.color = "grey";
+//     document.getElementsByClassName("projects01Dot01")[1].style.color = "grey";
+//     document.getElementsByClassName("projects01Dot01")[3].style.color = "grey";
+//     document.getElementsByClassName("projects01Dot01")[4].style.color = "grey";
+//     slideIndex = 2;
+
+// })
+
+// document.getElementsByClassName("projects01Dot01")[3].addEventListener('click', function() {
+//     clearInterval(slideTimer);
+
+//     document.getElementsByClassName("projects01Img-carousel")[0].style.transform = `translate3d(-${img01Width * 3}px, 0, 0)`;
+//     document.getElementsByClassName("projects01Dot01")[3].style.color = "white";
+//     document.getElementsByClassName("projects01Dot01")[0].style.color = "grey";
+//     document.getElementsByClassName("projects01Dot01")[1].style.color = "grey";
+//     document.getElementsByClassName("projects01Dot01")[2].style.color = "grey";
+//     document.getElementsByClassName("projects01Dot01")[4].style.color = "grey";
+//     slideIndex = 3;
+
+// })
+
+// document.getElementsByClassName("projects01Dot01")[4].addEventListener('click', function() {
+//     clearInterval(slideTimer);
+    
+//     document.getElementsByClassName("projects01Img-carousel")[0].style.transform = `translate3d(-${img01Width * 4}px, 0, 0)`;
+//     document.getElementsByClassName("projects01Dot01")[4].style.color = "white";
+//     document.getElementsByClassName("projects01Dot01")[0].style.color = "grey";
+//     document.getElementsByClassName("projects01Dot01")[1].style.color = "grey";
+//     document.getElementsByClassName("projects01Dot01")[2].style.color = "grey";
+//     document.getElementsByClassName("projects01Dot01")[3].style.color = "grey";
+//     slideIndex = 4;
+
+// })
 
 // 시간 간격에 따라 슬라이드 이동
 // 점, 화살표 클릭 이후에는 진행되지 않음
@@ -684,7 +722,6 @@ let slideTimer = setInterval(function(){
 
     slideIndex += 1;
 
-    // console.log(slideIndex);
 
     document.getElementsByClassName("projects01Img-carousel")[0].style.transform = `translate3d(-${img01Width * slideIndex}px, 0, 0)`;
     document.getElementsByClassName("projects01Dot01")[slideIndex - 1].style.color = "grey";
@@ -692,12 +729,7 @@ let slideTimer = setInterval(function(){
 
 },2000)
 
-// slideTimer;
 
-// 클릭하는 기능 하단에 추가
-// clearInterval(slideTimer);
-
-// section05 스크롤에 따라 career01 서서히 올라오기, 4800?
 window.addEventListener('scroll', function() {
     let currentScrollYsection05 = this.window.scrollY;
     // console.log("currentScrollYsection05 : " + currentScrollYsection05)
