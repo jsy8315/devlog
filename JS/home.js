@@ -566,17 +566,21 @@ function clickPlusBtnWhite(plusBtn, rotatePlusBtn, aboutmeEle, front, back, back
 
 
 // section04 캐러셀 슬라이드
-// 좌우측 화살표 클릭시 이동 및 점 클릭 시 이동
-let slideIndex = 0;
+// 좌우측 화살표 클릭시 이동 및 점 클릭 시 이동, 시간 간격에 따라 이미지 자동 이동
 
 let project01Img = document.getElementsByClassName('projects01Img')[0];
 let img01Width = parseInt(getComputedStyle(project01Img).width);
 
-slideLeft('projects01ImgLeft', 'projects01Img-carousel', 'projects01Dot01', img01Width, 'white');
+let project02Img = document.getElementsByClassName('projects02Img')[0];
+let img02Width = parseInt(getComputedStyle(project02Img).width);
 
-slideRight('projects01ImgRight', 'projects01Img-carousel', 'projects01Dot01', img01Width, 'white');
+carouselEvent('projects01ImgLeft', 'projects01ImgRight', 'projects01Img-carousel', 'projects01Dot01', 5, img01Width, 'white');
+carouselEvent('projects02ImgLeft', 'projects02ImgRight', 'projects02Img-carousel', 'projects02Dot01', 5, img02Width, 'white');
 
-function slideLeft(leftBtn, carousel, dot, imgWidth, color){
+function carouselEvent(leftBtn, rightBtn, carousel, dot, dotsSize, imgWidth, color){
+    
+    let slideIndex = 0;
+    // 왼쪽 버튼 클릭 이벤트
     document.getElementsByClassName(`${leftBtn}`)[0].addEventListener('click', function() {
 
         clearInterval(slideTimer);
@@ -592,9 +596,8 @@ function slideLeft(leftBtn, carousel, dot, imgWidth, color){
         document.getElementsByClassName(`${dot}`)[slideIndex + 1].style.color = "grey";
         document.getElementsByClassName(`${dot}`)[slideIndex].style.color = `${color}`;
     });
-}
 
-function slideRight(rightBtn, carousel, dot, imgWidth, color){
+    // 오른쪽 버튼 클릭 이벤트
     document.getElementsByClassName(`${rightBtn}`)[0].addEventListener('click', function() {
 
         clearInterval(slideTimer);
@@ -611,16 +614,12 @@ function slideRight(rightBtn, carousel, dot, imgWidth, color){
         document.getElementsByClassName(`${dot}`)[slideIndex].style.color = `${color}`;
     
     });
-}
 
-function dotClickEvent(dot, dotsSize, carousel, color){
-    // dotsSize dot이 몇개인지 
+    // dot 
     let dotsSizeArray = [];
-
     for (let i = 0; i < dotsSize; i++){
         dotsSizeArray.push(i);
     }
-
     dotsSizeArray.forEach(function(i){
         document.getElementsByClassName(`${dot}`)[i].addEventListener('click', function() {
             clearInterval(slideTimer);
@@ -638,10 +637,126 @@ function dotClickEvent(dot, dotsSize, carousel, color){
             slideIndex = i;
         })
     })
+
+    let slideTimer = setInterval(function(){
+        if (slideIndex == 4) {
+            slideIndex = -1;
+            document.getElementsByClassName(`${carousel}`)[0].style.transform = `translate3d(0, 0, 0)`;
+    
+            [0, 1, 2, 3, 4].forEach(function(a){
+                if (a == 0) {
+                    document.getElementsByClassName(`${dot}`)[a].style.color = `${color}`;
+                } else {
+                    document.getElementsByClassName(`${dot}`)[a].style.color = "grey";    
+                }    
+            })
+        }
+    
+        slideIndex += 1;
+    
+        document.getElementsByClassName(`${carousel}`)[0].style.transform = `translate3d(-${img01Width * slideIndex}px, 0, 0)`;
+        document.getElementsByClassName(`${dot}`)[slideIndex - 1].style.color = "grey";
+        document.getElementsByClassName(`${dot}`)[slideIndex].style.color = `${color}`;
+    
+    },2000)
 }
 
-dotClickEvent('projects01Dot01', 5, 'projects01Img-carousel', 'white');
+// function slideRight(rightBtn, carousel, dot, imgWidth, color){
+//     document.getElementsByClassName(`${rightBtn}`)[0].addEventListener('click', function() {
 
+//         clearInterval(slideTimer01);
+    
+//         if (slideIndex == 4) {
+//             return;
+//         }
+//         slideIndex += 1;
+    
+//         console.log(slideIndex);
+    
+//         document.getElementsByClassName(`${carousel}`)[0].style.transform = `translate3d(-${imgWidth * slideIndex}px, 0, 0)`;
+//         document.getElementsByClassName(`${dot}`)[slideIndex - 1].style.color = "grey";
+//         document.getElementsByClassName(`${dot}`)[slideIndex].style.color = `${color}`;
+    
+//     });
+// }
+
+// function dotClickEvent(dot, dotsSize, carousel, color){
+//     // dotsSize dot이 몇개인지 
+//     let dotsSizeArray = [];
+
+//     for (let i = 0; i < dotsSize; i++){
+//         dotsSizeArray.push(i);
+//     }
+
+//     dotsSizeArray.forEach(function(i){
+//         document.getElementsByClassName(`${dot}`)[i].addEventListener('click', function() {
+//             clearInterval(slideTimer01);
+        
+//             document.getElementsByClassName(`${carousel}`)[0].style.transform = `translate3d(-${img01Width * i}px, 0, 0)`;
+
+//             // 이중forEach 돌리면 빅오가 n**2이 되겠지만 dot의 갯수가 5로 고정이 되어있기 떄문에(5도 많은듯) 괜찮을듯
+//             dotsSizeArray.forEach(function(j){
+//                 if(i == j) {
+//                     document.getElementsByClassName(`${dot}`)[j].style.color = `${color}`;
+//                 } else {
+//                     document.getElementsByClassName(`${dot}`)[j].style.color = "grey";
+//                 }
+//             })
+//             slideIndex = i;
+//         })
+//     })
+// }
+
+// dotClickEvent('projects01Dot01', 5, 'projects01Img-carousel', 'white');
+// dotClickEvent('projects02Dot01', 5, 'projects02Img-carousel', 'white');
+
+// 시간 간격에 따라 슬라이드 이동
+// 점, 화살표 클릭 이후에는 진행되지 않음, 변수 선언 후 다른 함수에서 사용해야함
+// let slideTimer01 = setInterval(function(){
+//     if (slideIndex == 4) {
+//         slideIndex = -1;
+//         document.getElementsByClassName("projects01Img-carousel")[0].style.transform = `translate3d(0, 0, 0)`;
+
+//         [0, 1, 2, 3, 4].forEach(function(a){
+//             if (a == 0) {
+//                 document.getElementsByClassName("projects01Dot01")[a].style.color = "white";
+//             } else {
+//                 document.getElementsByClassName("projects01Dot01")[a].style.color = "grey";    
+//             }    
+//         })
+//     }
+
+//     slideIndex += 1;
+
+//     document.getElementsByClassName("projects01Img-carousel")[0].style.transform = `translate3d(-${img01Width * slideIndex}px, 0, 0)`;
+//     document.getElementsByClassName("projects01Dot01")[slideIndex - 1].style.color = "grey";
+//     document.getElementsByClassName("projects01Dot01")[slideIndex].style.color = "white";
+
+// },2000)
+
+// let slideTimer02 = setInterval(function(){
+//     if (slideIndex == 4) {
+//         slideIndex = -1;
+//         document.getElementsByClassName("projects02Img-carousel")[0].style.transform = `translate3d(0, 0, 0)`;
+
+//         [0, 1, 2, 3, 4].forEach(function(a){
+//             if (a == 0) {
+//                 document.getElementsByClassName("projects02Dot01")[a].style.color = "white";
+//             } else {
+//                 document.getElementsByClassName("projects02Dot01")[a].style.color = "grey";    
+//             }    
+//         })
+//     }
+
+//     slideIndex += 1;
+
+//     document.getElementsByClassName("projects02Img-carousel")[0].style.transform = `translate3d(-${img01Width * slideIndex}px, 0, 0)`;
+//     document.getElementsByClassName("projects02Dot01")[slideIndex - 1].style.color = "grey";
+//     document.getElementsByClassName("projects02Dot01")[slideIndex].style.color = "white";
+
+// },2000)
+
+// 기존 dot이동 하드코딩 코드
 // 01번째 Dot을 클릭했을때 이벤트
 // document.getElementsByClassName("projects01Dot01")[0].addEventListener('click', function() {
 //     clearInterval(slideTimer);
@@ -706,29 +821,6 @@ dotClickEvent('projects01Dot01', 5, 'projects01Img-carousel', 'white');
 //     slideIndex = 4;
 
 // })
-
-// 시간 간격에 따라 슬라이드 이동
-// 점, 화살표 클릭 이후에는 진행되지 않음
-let slideTimer = setInterval(function(){
-    if (slideIndex == 4) {
-        slideIndex = -1;
-        document.getElementsByClassName("projects01Img-carousel")[0].style.transform = `translate3d(0, 0, 0)`;
-        document.getElementsByClassName("projects01Dot01")[0].style.color = "white";
-        document.getElementsByClassName("projects01Dot01")[1].style.color = "grey";
-        document.getElementsByClassName("projects01Dot01")[2].style.color = "grey";
-        document.getElementsByClassName("projects01Dot01")[3].style.color = "grey";
-        document.getElementsByClassName("projects01Dot01")[4].style.color = "grey";
-    }
-
-    slideIndex += 1;
-
-
-    document.getElementsByClassName("projects01Img-carousel")[0].style.transform = `translate3d(-${img01Width * slideIndex}px, 0, 0)`;
-    document.getElementsByClassName("projects01Dot01")[slideIndex - 1].style.color = "grey";
-    document.getElementsByClassName("projects01Dot01")[slideIndex].style.color = "white";
-
-},2000)
-
 
 window.addEventListener('scroll', function() {
     let currentScrollYsection05 = this.window.scrollY;
