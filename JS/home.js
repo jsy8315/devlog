@@ -822,21 +822,21 @@ function carouselEvent(leftBtn, rightBtn, carousel, dot, dotsSize, imgWidth, col
 
 // })
 
-window.addEventListener('scroll', function() {
-    let currentScrollYsection05 = this.window.scrollY;
-    // console.log("currentScrollYsection05 : " + currentScrollYsection05)
+// window.addEventListener('scroll', function() {
+//     let currentScrollYsection05 = this.window.scrollY;
+//     // console.log("currentScrollYsection05 : " + currentScrollYsection05)
 
-    if ( (true) ) {
-        document.getElementsByClassName("career01")[0].classList.add("show-career01");
+//     if ( (true) ) {
+//         document.getElementsByClassName("career01")[0].classList.add("show-career01");
 
-    }
-    // career02 추가시 적용
-    // if ( (currentScrollYsection05 >= 5700) && (currentScrollYsection05 <= 6300) ) {
-    //     document.getElementsByClassName("career01")[0].classList.remove("hide-career01");
-    //     document.getElementsByClassName("career01")[0].classList.add("show-career01");
+//     }
+//     // career02 추가시 적용
+//     // if ( (currentScrollYsection05 >= 5700) && (currentScrollYsection05 <= 6300) ) {
+//     //     document.getElementsByClassName("career01")[0].classList.remove("hide-career01");
+//     //     document.getElementsByClassName("career01")[0].classList.add("show-career01");
 
-    // } else {
-    //     document.getElementsByClassName("career01")[0].classList.remove("show-career01");
-    //     document.getElementsByClassName("career01")[0].classList.add("hide-career01");
-    // }
-})
+//     // } else {
+//     //     document.getElementsByClassName("career01")[0].classList.remove("show-career01");
+//     //     document.getElementsByClassName("career01")[0].classList.add("hide-career01");
+//     // }
+// })

@@ -2135,6 +2135,8 @@ body {
         
     }
 
+
+
     .career01-content {
         width: 100%;
         margin: 0px;
@@ -2191,7 +2193,6 @@ body {
         font-size: 18px;
         margin: 10px;
         border-bottom: 0px solid white;
-
     }
 
     .career01-subcontent01 {
@@ -2752,4 +2753,106 @@ body {
         padding: 10px;
     }
 
+    .careerSpan {
+        font-size : 50px;
+        font-weight: 700;
+        align-self: center;
+        justify-self: center;
+        text-decoration-line: none;
+        text-decoration-color: black;
+        list-style: none;
+        margin-top: 100px;
+        margin-bottom: 50px;
+    }
+
+    .career01 {
+        width: 80%;
+        background-color: white;
+        border-radius: 30px;
+        box-shadow: 2px 4px 12px #00000014;
+        padding: 30px 20px 30px 20px;
+    
+        display: flex;
+        flex-direction: column;
+    
+        align-self: center;
+        justify-content: center;
+        margin-bottom: 100px;
+        
+    }
+
+    .career01-img {
+        display: none;
+    }
+    .career01-img02 {
+        display: none;
+    }
+
+    .career01-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        padding: 0px;
+        border-bottom: 1px solid white;
+
+    }
+
+    .career01-maincontent {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0px;
+        border-bottom: 1px solid lightgrey;
+    }
+
+    .career01-maincontent-name {
+        font-size: 22px;
+        font-weight: 600;
+    } 
+    
+    .career01-maincontent-peri {
+        font-size: 15px;
+        font-weight: 500;
+        color: grey;
+    }
+    
+    .career01-maincontent-desc {
+        font-size: 18px;
+
+    }
+
+    .career01-subcontent01 {
+        display: flex;
+        flex-direction: column;
+
+        padding: 0px;
+        margin-top: 10px;
+        border-bottom: 1px solid white;
+    }
+
+    .career01-subcontent01-task {
+        font-size: 18px;
+        font-weight: 500;
+        margin: 10px;
+    }
+    
+    .career01-subcontent01-peri {
+        font-size: 15px;
+        color: grey;
+        margin: 10px;
+
+    }
+    
+    .career01-subcontent01-desc {
+        font-size: 18px;
+        font-weight: 500;
+        margin: 10px;
+        border-bottom: 1px solid white;
+    }
+
+    .career01-subcontent01-02 {
+        display: none;
+    }
 }
