@@ -2123,7 +2123,7 @@ body {
         background-color: white;
         border-radius: 30px;
         box-shadow: 2px 4px 12px #00000014;
-        padding: 20px;
+        padding: 10px;
     
         display: flex;
         flex-direction: column;
@@ -2137,10 +2137,13 @@ body {
 
     .career01-content {
         width: 100%;
-        background-color: red;
+        margin: 0px;
+        padding: 10px;
+        /* background-color: red; */
         display: flex;
         flex-direction: row;
         border-bottom: 1px solid lightgray;
+        border-left: 0px solid white;
     }
 
     .career01-img {
@@ -2164,19 +2167,43 @@ body {
         width: 70%;
     }
 
+    .career01-maincontent {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 20px;
+    }
+
+    .career01-maincontent-name {
+        font-size: 22px;
+        font-weight: 600;
+        margin: 10px;
+    } 
+    
+    .career01-maincontent-peri {
+        font-size: 15px;
+    
+        color: grey;
+        margin: 10px;
+    }
+    
+    .career01-maincontent-desc {
+        font-size: 18px;
+        margin: 10px;
+        border-bottom: 0px solid white;
+
+    }
+
     .career01-subcontent01 {
         display: none;
     }
 
-    .career01-maincontent-desc {
-        font-size: 18px;
-        margin: 0px 10px 10px 30px;
-        /* border-bottom: 1px solid lightgray; */
-    }
     
     .career01-subcontent01-02 {
         display: block;
-        font-size: 18px;
+        font-size: 17px;
+        margin: 0px;
+        padding: 0px;
     }
     
 }
