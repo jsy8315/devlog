@@ -184,8 +184,9 @@ document.getElementsByClassName('Career')[0].addEventListener('click', function(
     });
 })
 
+
 document.getElementsByClassName('Devlog')[0].addEventListener('click', function(e) {
-    alert("준비 중입니다!")
+    location.href = 'devlogHome.html';
 })
 // Top버튼 스크롤시 나타나는 효과
 window.addEventListener('scroll', function() {
@@ -664,6 +665,9 @@ function carouselEvent(leftBtn, rightBtn, carousel, dot, dotsSize, imgWidth, col
     
     },2000)
 }
+
+
+
 
 // function slideRight(rightBtn, carousel, dot, imgWidth, color){
 //     document.getElementsByClassName(`${rightBtn}`)[0].addEventListener('click', function() {

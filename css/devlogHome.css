@@ -1,0 +1,180 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 59px;
+    border-bottom: 1px solid lightgrey;
+    padding: 0px 50px 0px 50px;
+}
+
+.navbar-logo {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.navbar-main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navbar-main-aboutme {
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+    background-color: black;
+    height: 32px;
+    border: none;
+    padding: 7px 12px 7px 12px;
+    border-radius: 5px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.navbar-main-newletter {
+    font-size: 15px;
+    font-weight: 600;
+    height: 32px;
+    border: none;
+    padding: 7px 12px 7px 12px;
+    color: rgb(78, 89, 104);
+    border-radius: 5px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.navbar-main-list {
+    display: none;
+}
+
+.navbar-main-search {
+    width: 40px;
+    height : 25px;
+    overflow: hidden;
+    border-left: 1px solid lightgrey;
+    padding-left: 5px;
+}
+
+.navbar-main-search > img {
+    height: 100%;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+}
+
+.main-section {
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 75%;
+}
+
+.main-ad {
+    background-color: red;
+    height: 120px;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 768px) {/* 스마트폰 화면 */
+
+.navbar-main-aboutme{
+    display: none;
+}
+.navbar-main-newletter {
+    display: none;
+
+}
+
+.navbar-main-search {
+    width: 35px;
+    height : 25px;
+    overflow: hidden;
+    padding: 0px;
+    border-left: none;
+    margin-right: 10px;
+}
+
+.navbar-main-list {
+    display: block;
+    height: 28px;
+    width: 28px;
+
+}
+
+.navbar-main-list > img {
+    height: 100%;
+    color: grey;
+}
+
+}
