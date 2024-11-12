@@ -66,6 +66,9 @@
     font-style: normal;
 }
 .navbar {
+    position: fixed;
+    width: 100%;
+    background-color: white;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -73,6 +76,7 @@
     height: 59px;
     border-bottom: 1px solid lightgrey;
     padding: 0px 50px 0px 50px;
+    
 }
 
 .navbar-logo {
@@ -133,27 +137,145 @@
 }
 
 .main-section {
-    background-color: grey;
+    margin-top: 59px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 75%;
+    width: 80%;
 }
 
 .main-ad {
-    background-color: red;
-    height: 120px;
-    margin-top: 20px;
+    width: 100%;
+    background-color: black;
+    height: 130px;
+    margin-top: 22px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 600;
+    color: white;
 }
 
-@media screen and (max-width: 768px) {/* 스마트폰 화면 */
+.main-content {
+    margin-top: 40px;
+    height: 2000px;
+    display: flex;
+    flex-direction: row;
+}
+
+.main-content-main {
+    background-color: white;
+    width: 70%;
+    height: 80%;
+    padding-right: 20px;
+    border-right: 1px solid lightgray;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content-main-tab {
+    height: 60px;
+    background-color: yellow;
+}
+
+.main-content-main-list {
+    height: 500px;
+    width: 92%;
+    background-color: green;
+    border-top: 1px solid lightgray;
+}
+
+.main-content-sub {
+    background-color: white;
+    width: 30%;
+    height: 80%;
+    padding-left: 25px;
+}
+
+.main-content-sub-hotcontents {
+    background-color: lightcoral;
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content-sub-hotcontents-title {
+    color: rgb(78, 89, 104);
+    height: 30px;
+    font-size: 13px;
+    background-color: lightskyblue;
+}
+
+.main-content-sub-hotcontents01 {
+    margin-top: 20px;
+    height: 50px;
+    background-color: lightseagreen;
+}
+
+.main-content-sub-hotcontents02 {
+    margin-top: 20px;
+    height: 50px;
+    background-color: lightseagreen;
+}
+
+.main-content-sub-hotcontents03 {
+    margin-top: 20px;
+    height: 50px;
+    background-color: lightseagreen;
+}
+.main-content-sub-recentrepls {
+    background-color: lightgreen;
+    height: 570px
+}
+
+.main-content-sub-recentrepls-title {
+    color: rgb(78, 89, 104);
+    font-size: 13px;
+    height: 30px;
+    background-color: lightskyblue;
+}
+
+.main-content-sub-recentrepls01 {
+    margin-top: 20px;
+    height: 150px;
+    background-color: lightseagreen;
+}
+
+.main-content-sub-recentrepls02 {
+    margin-top: 20px;
+    height: 150px;
+    background-color: lightseagreen;
+}
+
+.main-content-sub-recentrepls03 {
+    margin-top: 20px;
+    height: 150px;
+    background-color: lightseagreen;
+}
+
+
+.main-content-sub-tags {
+    background-color: skyblue;
+    height: 400px
+}
+
+@media screen and (max-width: 900px) {/* 스마트폰 화면 */
 
 .navbar-main-aboutme{
     display: none;
 }
 .navbar-main-newletter {
     display: none;
+}
 
+.main-section {
+    margin-top: 59px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 85%;
 }
 
 .navbar-main-search {
@@ -175,6 +297,40 @@
 .navbar-main-list > img {
     height: 100%;
     color: grey;
+}
+
+.main-ad {
+    width: 100%;
+    background-color: black;
+    height: 90px;
+    margin-top: 22px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-weight: 600;
+    color: white;
+}
+
+.main-content-main {
+    background-color: yellow;
+    width: 100%;
+    height: 80%;
+}
+
+.main-content-main {
+    background-color: white;
+    width: 100%;
+    height: 80%;
+    padding: 0px;
+    border-right: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content-sub {
+    display: none;
 }
 
 }
