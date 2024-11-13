@@ -82,6 +82,7 @@
 .navbar-logo {
     font-size: 22px;
     font-weight: 600;
+    cursor: pointer;
 }
 
 .navbar-main {
@@ -101,9 +102,10 @@
     border-radius: 5px;
     text-align: center;
     margin-right: 10px;
+    cursor: pointer;
 }
 
-.navbar-main-newletter {
+.navbar-main-playground {
     font-size: 15px;
     font-weight: 600;
     height: 32px;
@@ -113,6 +115,7 @@
     border-radius: 5px;
     text-align: center;
     margin-right: 10px;
+    cursor: pointer;
 }
 
 .navbar-main-list {
@@ -266,7 +269,7 @@
 .navbar-main-aboutme{
     display: none;
 }
-.navbar-main-newletter {
+.navbar-main-playground {
     display: none;
 }
 
@@ -331,6 +334,13 @@
 
 .main-content-sub {
     display: none;
+}
+
+.main-content-main-list {
+    height: 500px;
+    width: 100%;
+    background-color: green;
+    border-top: 1px solid lightgray;
 }
 
 }

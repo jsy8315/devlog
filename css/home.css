@@ -2244,6 +2244,10 @@ body {
         pointer-events: none; /* 터치 이벤트 비활성화 */
         position: absolute
     }
+
+    .bg-video-pause {
+        display: none;
+    }
     
     .intro-overlay {
         display: flex;
