@@ -18,23 +18,36 @@ document.getElementsByClassName('navbar-logo')[0].addEventListener('click', func
     location.reload(true);
 })
 
-// 노션에서 받아온 데이터 넘기기
-async function fetchPosts() {
-    const response = await fetch('http://localhost:3002/posts');
-    const posts = await response.json();
+// 노션에서 받아온 데이터 넘기기 -> 추후 리액트, Next.js에서 구현 예정
+// async function fetchPosts() {
+//     try {
+//         const response = await fetch('http://localhost:3002/posts', {
+//             method: 'GET',
+//             headers: {
+//                 'Content-Type': 'application/json'
+//             }
+//         });
 
-    const container = document.getElementsByClassName('main-content-main-list')[0];
-    posts.forEach(post => {
-        const postElement = document.createElement('div');
-        postElement.classList.add('post');
+//         // 응답이 정상적인 JSON인 경우 처리
+//         const posts = await response.json();
 
-        postElement.innerHTML = `
-            <h2>${post.title}</h2>
-            <p>${post.content}</p>
-            <div class="tags">${post.tags.map(tag => `<span>#${tag}</span>`).join(' ')}</div>
-        `;
-        container.appendChild(postElement);
-    });
-}
+//         const container = document.getElementsByClassName('main-content-main-list')[0];
+//         posts.forEach(post => {
+//             const postElement = document.createElement('div');
+//             postElement.classList.add('post');
 
-fetchPosts();
+//             postElement.innerHTML = `
+//                 <div>${post.publishedDate}</div>
+//                 <h2>${post.title}</h2>
+//                 <p>${post.content}</p>
+//                 <div class="tags">${post.tags.map(tag => `<span>#${tag}</span>`).join(' ')}</div>
+//                 <img src="${post.thumbnail}" alt="Thumbnail Image" style="max-width: 100%; height: auto;" />
+//             `;
+//             container.appendChild(postElement);
+//         });
+//     } catch (error) {
+//         console.error('Error fetching posts:', error);
+//     }
+// }
+
+// fetchPosts();
