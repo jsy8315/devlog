@@ -20,12 +20,40 @@ document.getElementsByClassName('navbar-logo')[0].addEventListener('click', func
 
 // mobile Navbar list 버튼 클릭시 목록 보이기
 document.getElementsByClassName('navbar-main-list')[0].addEventListener('click', function(){
-    console.log(1);
+
     // 1. list 버튼이 x로 바뀌고 (x버튼 누르면 다시 돌아옴)
+    let aBtnImgShowStatus = true;
+    switchBtn('navbar-main-list-img', 'navbar-main-list-img-x', aBtnImgShowStatus);
+    console.log(aBtnImgShowStatus);
     // 2. 아래로 펼쳐지고(게시물 자체가 아래로 내려감) 
         // width가 100%인 화면이 나옴 화면 구성 : aboutme, playground 버튼이 나옴
 
 })
+
+// 기능 : A버튼 클릭시 B버튼, B버튼 다시 클릭시 A버튼 (이미지 갈아 끼우기), 파라미터는 이미지 클래스 네임 넣으면 됨
+function switchBtn(aBtn, bBtn, status) {
+    let aBtnImg = document.getElementsByClassName(aBtn)[0];
+    let bBtnImg = document.getElementsByClassName(bBtn)[0];
+
+    // 1. 기본으로 보이는 화면은 aBtn
+    
+
+    // 2. aBtn 클릭 시 aBtn 사라짐, bBtn 보임
+    // bBtn이 보이면 aBtnImgShowStatus = false
+    if (status = true) {
+        aBtnImg.style.display = 'none';
+        bBtnImg.style.display = 'block';
+
+        status = false; // bBtb으로 보이니까 false로 바꾸기
+
+    } else {
+        bBtnImg.style.display = 'none';
+        aBtnImg.style.display = 'block';
+
+        status = true;
+
+    }
+}
 
 // 노션에서 받아온 데이터 넘기기 -> 추후 리액트, Next.js에서 구현 예정
 // async function fetchPosts() {

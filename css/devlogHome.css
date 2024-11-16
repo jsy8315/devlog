@@ -118,7 +118,7 @@
     cursor: pointer;
 }
 
-.navbar-main-list {
+.navbar-main-list, .navbar-main-list-img-x {
     display: none;
 }
 
@@ -297,9 +297,14 @@
 
 }
 
-.navbar-main-list > img {
+.navbar-main-list-img {
+    display: block;
     height: 100%;
-    color: grey;
+}
+
+.navbar-main-list-img-x {
+    display: none;
+    height: 100%;
 }
 
 .main-ad {
@@ -341,10 +346,6 @@
     width: 100%;
     background-color: green;
     border-top: 1px solid lightgray;
-}
-
-.navbar-main-list-img-x {
-    display: none;
 }
 
 }
