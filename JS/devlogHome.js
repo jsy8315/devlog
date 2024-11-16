@@ -18,6 +18,15 @@ document.getElementsByClassName('navbar-logo')[0].addEventListener('click', func
     location.reload(true);
 })
 
+// mobile Navbar list 버튼 클릭시 목록 보이기
+document.getElementsByClassName('navbar-main-list')[0].addEventListener('click', function(){
+    console.log(1);
+    // 1. list 버튼이 x로 바뀌고 (x버튼 누르면 다시 돌아옴)
+    // 2. 아래로 펼쳐지고(게시물 자체가 아래로 내려감) 
+        // width가 100%인 화면이 나옴 화면 구성 : aboutme, playground 버튼이 나옴
+
+})
+
 // 노션에서 받아온 데이터 넘기기 -> 추후 리액트, Next.js에서 구현 예정
 // async function fetchPosts() {
 //     try {

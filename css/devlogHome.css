@@ -343,4 +343,8 @@
     border-top: 1px solid lightgray;
 }
 
+.navbar-main-list-img-x {
+    display: none;
+}
+
 }
