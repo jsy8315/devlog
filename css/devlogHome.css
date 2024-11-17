@@ -348,4 +348,8 @@
     border-top: 1px solid lightgray;
 }
 
+.clicked {
+    display: none;
+}
+
 }
