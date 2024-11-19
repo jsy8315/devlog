@@ -264,6 +264,10 @@
     height: 400px
 }
 
+.navbar-mobile-list {
+    display: none;
+}
+
 @media screen and (max-width: 900px) {/* 스마트폰 화면 */
 
 .navbar-main-aboutme{
@@ -279,6 +283,7 @@
     flex-direction: column;
     justify-content: center;
     width: 85%;
+
 }
 
 .navbar-main-search {
@@ -288,6 +293,13 @@
     padding: 0px;
     border-left: none;
     margin-right: 10px;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .main-ad {
@@ -351,6 +363,52 @@
 
 .clicked {
 
+}
+
+.navbar-mobile-list {
+    width: 100%;
+    height: 170px;
+
+    padding-top: 82px;
+    padding-bottom: 22px;
+
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid white;
+    border-bottom: 1px solid lightgray;
+}
+
+.navbar-main-aboutme-mobile {
+    width: 85%;
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+    background-color: black;
+    height: 40px;
+    border: none;
+    padding: 7px 12px 7px 12px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.navbar-main-playground-mobile {
+    width: 85%;
+    font-size: 15px;
+    font-weight: 600;
+    color: rgb(78, 89, 104);
+
+
+    height: 40px;
+    border: none;
+    padding: 7px 12px 7px 12px;
+    border-radius: 5px;
+    text-align: center;
+
+    cursor: pointer;
 }
 
 }

@@ -21,15 +21,16 @@ document.getElementsByClassName('navbar-logo')[0].addEventListener('click', func
 // mobile Navbar list 버튼 클릭시 목록 보이기
 document.getElementsByClassName('navbar-main-list')[0].addEventListener(
     'click', function(){
-        clickBtnSwitchHandler('navbar-main-list-img', 'navbar-main-list-img-x', 'navbar-main-list')
+        clickBtnSwitchHandler('navbar-main-list', 'navbar-main-list-img', 'navbar-main-list-img-x', 'navbar-mobile-list')
     }
 )
 
 // 기능 : A버튼 클릭시 B버튼, B버튼 다시 클릭시 A버튼 (이미지 갈아 끼우기), 파라미터는 이미지 클래스 네임 넣으면 됨
-function clickBtnSwitchHandler(aBtnImgParam, bBtnImgParam, btn) {
+function clickBtnSwitchHandler(btn, aBtnImgParam, bBtnImgParam, etc01Param) {
     console.log('hi');
     let aBtnImg = document.getElementsByClassName(aBtnImgParam)[0]; // aBtn에는 버튼 이미지 넣기
     let bBtnImg = document.getElementsByClassName(bBtnImgParam)[0]; // bBtn에도 버튼 이미지 넣기
+    let etc01 = document.getElementsByClassName(etc01Param)[0]; // 추가적으로 넣고 싶은 요소
     let btnClass = document.getElementsByClassName(btn)[0];
 
     // 1. 기본으로 보이는 화면은 aBtn
@@ -40,11 +41,15 @@ function clickBtnSwitchHandler(aBtnImgParam, bBtnImgParam, btn) {
         bBtnImg.style.display = 'none';
         aBtnImg.style.display = 'block';
         btnClass.classList.remove('clicked');
+        etc01.style.display = 'none';
+        document.getElementsByClassName('main-section')[0].style.margin = '59px 0px 0px 0px';
         
     } else { // 클릭 안된 경우, a -> b
         aBtnImg.style.display = 'none';
         bBtnImg.style.display = 'block';
         btnClass.classList.add('clicked');
+        etc01.style.display = 'flex';
+        document.getElementsByClassName('main-section')[0].style.margin = '0px';
     }
 }
 
