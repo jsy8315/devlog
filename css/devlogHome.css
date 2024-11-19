@@ -290,23 +290,6 @@
     margin-right: 10px;
 }
 
-.navbar-main-list {
-    display: block;
-    height: 28px;
-    width: 28px;
-
-}
-
-.navbar-main-list-img {
-    display: block;
-    height: 100%;
-}
-
-.navbar-main-list-img-x {
-    display: none;
-    height: 100%;
-}
-
 .main-ad {
     width: 100%;
     background-color: black;
@@ -348,8 +331,26 @@
     border-top: 1px solid lightgray;
 }
 
-.clicked {
+.navbar-main-list {
+    display: block;
+    height: 28px;
+    width: 28px;
+    cursor: pointer;
+
+}
+
+.navbar-main-list-img {
+    display: block;
+    height: 100%;
+}
+
+.navbar-main-list-img-x {
     display: none;
+    height: 100%;
+}
+
+.clicked {
+
 }
 
 }

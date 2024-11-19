@@ -19,39 +19,32 @@ document.getElementsByClassName('navbar-logo')[0].addEventListener('click', func
 })
 
 // mobile Navbar list 버튼 클릭시 목록 보이기
-document.getElementsByClassName('navbar-main-list')[0].addEventListener('click', function(){
-
-    // 1. list 버튼이 x로 바뀌고 (x버튼 누르면 다시 돌아옴)
-    let aBtnImgShowStatus = true;
-    switchBtn('navbar-main-list-img', 'navbar-main-list-img-x', aBtnImgShowStatus);
-    console.log(aBtnImgShowStatus);
-    // 2. 아래로 펼쳐지고(게시물 자체가 아래로 내려감) 
-        // width가 100%인 화면이 나옴 화면 구성 : aboutme, playground 버튼이 나옴
-
-})
+document.getElementsByClassName('navbar-main-list')[0].addEventListener(
+    'click', function(){
+        clickBtnSwitchHandler('navbar-main-list-img', 'navbar-main-list-img-x', 'navbar-main-list')
+    }
+)
 
 // 기능 : A버튼 클릭시 B버튼, B버튼 다시 클릭시 A버튼 (이미지 갈아 끼우기), 파라미터는 이미지 클래스 네임 넣으면 됨
-function switchBtn(aBtn, bBtn, status) {
-    let aBtnImg = document.getElementsByClassName(aBtn)[0];
-    let bBtnImg = document.getElementsByClassName(bBtn)[0];
+function clickBtnSwitchHandler(aBtnImgParam, bBtnImgParam, btn) {
+    console.log('hi');
+    let aBtnImg = document.getElementsByClassName(aBtnImgParam)[0]; // aBtn에는 버튼 이미지 넣기
+    let bBtnImg = document.getElementsByClassName(bBtnImgParam)[0]; // bBtn에도 버튼 이미지 넣기
+    let btnClass = document.getElementsByClassName(btn)[0];
 
     // 1. 기본으로 보이는 화면은 aBtn
-    
-
+        // clicked가 btn요소에 포함되지 않음
     // 2. aBtn 클릭 시 aBtn 사라짐, bBtn 보임
-    // bBtn이 보이면 aBtnImgShowStatus = false
-    if (status = true) {
-        aBtnImg.style.display = 'none';
-        bBtnImg.style.display = 'block';
-
-        status = false; // bBtb으로 보이니까 false로 바꾸기
-
-    } else {
+        // clicked가 btn요소에 포함됨
+    if (btnClass.classList.contains('clicked')) { // 이미 클릭된 경우, b -> a
         bBtnImg.style.display = 'none';
         aBtnImg.style.display = 'block';
-
-        status = true;
-
+        btnClass.classList.remove('clicked');
+        
+    } else { // 클릭 안된 경우, a -> b
+        aBtnImg.style.display = 'none';
+        bBtnImg.style.display = 'block';
+        btnClass.classList.add('clicked');
     }
 }
 
