@@ -348,7 +348,7 @@
     height: 28px;
     width: 28px;
     cursor: pointer;
-    transition: transform 0.7s,
+    transition: transform 0.7s;
 }
 
 .navbar-main-list-img {
