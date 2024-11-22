@@ -318,17 +318,8 @@ function clickToSite(element, siteAddr){
 
 clickToSite('aboutmeGithubFront', 'https://github.com/jsy8315');
 clickToSite('aboutmeBlogFront', 'https://blog.naver.com/tdhitbtd2023');
+clickToSite('aboutmeResumeFront', 'https://drive.google.com/file/d/1t2k7tx2v6ZICrZ7OlTzA9M3xL0_BJtKA/view?usp=sharing');
 
-
-
-// 포트폴리오Pdf 만들기 전까지 임시 alerts
-function temporalClickToSite(){
-    document.getElementsByClassName('aboutmeResumeFront')[0].addEventListener('click', function(){
-        alert('준비 중입니다!')
-    })
-}
-
-temporalClickToSite();
 
 // section02 요소 이동, 300부터 효과 시작 900에 종료
 // aboutmeMain(왼 > 오), aboutmeGithub, aboutmeBlog, aboutmeResume (오 > 왼)
