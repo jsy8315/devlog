@@ -55,7 +55,7 @@ function clickBtnSwitchHandler(btn, aBtnImgParam, bBtnImgParam, etc01Param) {
 
 // 검색기능 구현
 function searchHandler(){
-    
+    document.getElementsByClassName()
 }
 
 // 노션에서 받아온 데이터 넘기기 -> 추후 리액트, Next.js에서 구현 예정
