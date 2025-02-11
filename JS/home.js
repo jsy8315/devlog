@@ -317,8 +317,8 @@ function clickToSite(element, siteAddr){
 }
 
 clickToSite('aboutmeGithubFront', 'https://github.com/jsy8315');
-clickToSite('aboutmeBlogFront', 'https://blog.naver.com/tdhitbtd2023');
-clickToSite('aboutmeResumeFront', 'https://drive.google.com/file/d/1t2k7tx2v6ZICrZ7OlTzA9M3xL0_BJtKA/view?usp=sharing');
+clickToSite('aboutmeBlogFront', 'https://walkersdevlog.vercel.app');
+clickToSite('aboutmeResumeFront', 'https://drive.google.com/file/d/1iOJoKDsvHoP8mJurw3pEcIq66cJShVyw/view?usp=sharing');
 
 
 // section02 요소 이동, 300부터 효과 시작 900에 종료
@@ -570,8 +570,13 @@ let img01Width = parseInt(getComputedStyle(project01Img).width);
 let project02Img = document.getElementsByClassName('projects02Img')[0];
 let img02Width = parseInt(getComputedStyle(project02Img).width);
 
+let project03Img = document.getElementsByClassName('projects03Img')[0];
+let img03Width = parseInt(getComputedStyle(project03Img).width);
+
 carouselEvent('projects01ImgLeft', 'projects01ImgRight', 'projects01Img-carousel', 'projects01Dot01', 5, img01Width, 'white');
 carouselEvent('projects02ImgLeft', 'projects02ImgRight', 'projects02Img-carousel', 'projects02Dot01', 5, img02Width, 'white');
+carouselEvent('projects03ImgLeft', 'projects03ImgRight', 'projects03Img-carousel', 'projects03Dot01', 5, img03Width, 'white');
+
 
 function carouselEvent(leftBtn, rightBtn, carousel, dot, dotsSize, imgWidth, color){
     

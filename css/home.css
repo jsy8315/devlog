@@ -1579,6 +1579,181 @@ body {
     object-fit: cover;
 }
 
+/* 프로젝트03 - 블로그 소개 */
+/* 프로젝트02 */
+.projects03 {
+    width: 80%;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 2px 4px 12px #00000014;
+    padding: 50px;
+
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 100px;
+}
+
+.projects03Tilte {
+    font-size : 50px;
+    font-weight: 700;
+    align-self: center;
+    justify-content: center;
+    margin: 10px 10px 0px 10px;
+}
+
+.projects03Subtilte {
+    font-size : 20px;
+    font-weight: 500;
+    color: grey;
+    align-self: center;
+    justify-content: center;
+    margin: 5px 10px 40px 10px;
+}
+
+.projects03Main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.projects03Content {
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
+
+.projects03Maincontent {
+    font-size : 18px;
+    font-weight: 500;
+    margin-bottom: 50px;
+}
+
+.projects03Subcontent {
+    display: grid;
+    grid-template-areas: 
+    "projects03Subcontent-function  projects03Subcontent-function-content"
+    "projects03Subcontent-url projects03Subcontent-url-content"
+    "projects03Subcontent-stack projects03Subcontent-stack-content";
+
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 2px;
+
+    font-size : 17px;
+    font-weight: 400;
+
+    border-top: 1px solid lightgrey;
+    padding: 10px;
+}
+
+
+.projects03Subcontent-function {
+    grid-area: projects03Subcontent-function;
+
+}
+
+.projects03Subcontent-function-content {
+    grid-area: projects03Subcontent-function-content;
+
+}
+
+.projects03Subcontent-url {
+    grid-area: projects03Subcontent-url;
+
+}
+
+.projects03Subcontent-url-content {
+    grid-area: projects03Subcontent-url-content;
+
+}
+
+.projects03Subcontent-stack {
+    grid-area: projects03Subcontent-stack;
+
+}
+
+.projects03Subcontent-stack-content {
+    grid-area: projects03Subcontent-stack-content;
+
+}
+
+.projects03Img {
+    width: 50%;
+    padding: 0px;
+    margin: 0px;
+    background-color: wheat;
+    position: relative;
+    overflow: hidden;
+}
+
+.projects03ImgLeft {
+    position: absolute;
+    font-size: 30px;
+    color: black;
+    top: 50%;
+    left: 1%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.projects03ImgRight {
+    position: absolute;
+    font-size: 30px;
+    color: black;
+    left: 96%;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.projects03Dot {
+    position: absolute;
+    font-size: 15px;
+    color: grey;
+    bottom: 2%;
+    left: 50%;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+    
+    display: flex;
+}
+
+.projects03Dot01 {
+    padding-left: 3px;
+    padding-right: 3px;
+    cursor: pointer;
+
+    color: grey;
+}
+
+.projects03Dot01:first-child {
+    padding-left: 3px;
+    padding-right: 3px;
+    cursor: pointer;
+    color: white;
+}
+
+.projects03Img-carousel {
+    display: flex;
+    transform: translate3d( 0, 0, 0);
+    transition: transform 1s;
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+.projects03Img-carousel > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* -------------------------------------------------------------------------------- */
+
 .section05 {
     background-color: rgba(245, 245, 247, 1);
     display: flex;
@@ -2104,6 +2279,87 @@ body {
         border-top: 1px solid lightgrey;
         padding: 10px;
     }
+
+    /* 프로젝트03 */
+    .projects03 {
+        width: 80%;
+        background-color: white;
+        border-radius: 30px;
+        box-shadow: 2px 4px 12px #00000014;
+        padding: 50px 10px 50px 10px;
+    
+        display: flex;
+        flex-direction: column;
+    
+        margin-bottom: 100px;
+    }
+
+    .projects03Tilte {
+        font-size : 40px;
+        font-weight: 700;
+        align-self: center;
+        justify-content: center;
+        margin: 10px 10px 0px 10px;
+    }
+    
+    .projects03Subtilte {
+        font-size : 15px;
+        font-weight: 500;
+        color: grey;
+        align-self: center;
+        justify-content: center;
+        margin: 5px 10px 40px 10px;
+    }
+
+    .projects03Main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .projects03Img {
+        width: 60%;
+        background-color: wheat;
+        position: relative;
+        aspect-ratio: 1.6/1;
+        overflow: hidden;
+        margin-bottom: 50px;
+    }
+
+    .projects03Content {
+        width: 90%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .projects03Maincontent {
+        font-size : 18px;
+        font-weight: 500;
+        margin-bottom: 50px;
+    
+    }
+    
+    .projects03Subcontent {
+    
+        display: grid;
+        grid-template-areas: 
+        "projects03Subcontent-function  projects03Subcontent-function-content"
+        "projects03Subcontent-url projects03Subcontent-url-content"
+        "projects03Subcontent-stack projects03Subcontent-stack-content";
+    
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 2px;
+    
+        font-size : 17px;
+        font-weight: 400;
+    
+        border-top: 1px solid lightgrey;
+        padding: 10px;
+    }
+
 
     .careerSpan {
         font-size : 90px;
@@ -2774,6 +3030,77 @@ body {
         "projects02Subcontent-function  projects02Subcontent-function-content"
         "projects02Subcontent-url projects02Subcontent-url-content"
         "projects02Subcontent-stack projects02Subcontent-stack-content";
+    
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 2px;
+    
+        font-size : 12px;
+        font-weight: 400;
+    
+        border-top: 1px solid lightgrey;
+        padding: 10px;
+    }
+
+    /* 프로젝트03 */
+    .projects03Main {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .projects03Img {
+        width: 90%;
+        background-color: wheat;
+        position: relative;
+    
+        aspect-ratio: 1.6/1;
+    
+        overflow: hidden;
+    }
+
+    .projects03Tilte {
+        font-size : 30px;
+        font-weight: 700;
+        align-self: center;
+        justify-content: center;
+        margin: 10px 10px 0px 10px;
+    }
+    
+    .projects03Subtilte {
+        font-size : 10px;
+        font-weight: 500;
+        color: grey;
+        align-self: center;
+        justify-content: center;
+        margin: 5px 10px 40px 10px;
+    
+    }
+
+    .projects03Content {
+        width: 90%;
+        height: 40%;
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
+    }
+
+    .projects03Maincontent {
+        font-size : 15px;
+        font-weight: 500;
+        margin-bottom: 30px;
+    
+    }
+
+    .projects03Subcontent {
+    
+        display: grid;
+        grid-template-areas: 
+        "projects03Subcontent-function  projects03Subcontent-function-content"
+        "projects03Subcontent-url projects03Subcontent-url-content"
+        "projects03Subcontent-stack projects03Subcontent-stack-content";
     
         grid-template-columns: 1fr 3fr;
         grid-template-rows: 1fr 1fr 1fr;
