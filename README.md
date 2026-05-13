@@ -1,6 +1,6 @@
   # Walker's Devlog
 
-  > 프레임워크 없이 Vanilla JavaScript로 직접 구현한 개인 포트폴리오 + 개발 블로그                                         
+  > 프레임워크 없이 Vanilla JavaScript로 직접 구현한 개인 포트폴리오                                       
   
   ## 프로젝트 목적                                                                                                      
                                                                                                                          
