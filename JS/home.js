@@ -186,7 +186,9 @@ document.getElementsByClassName('Career')[0].addEventListener('click', function(
 
 
 document.getElementsByClassName('Devlog')[0].addEventListener('click', function(e) {
-    location.href = 'devlogHome.html';
+    // location.href = 'devlogHome.html';
+    e.preventDefault();
+    alert('리뉴얼 중입니다!');
 })
 // Top버튼 스크롤시 나타나는 효과
 window.addEventListener('scroll', function() {
@@ -317,8 +319,8 @@ function clickToSite(element, siteAddr){
 }
 
 clickToSite('aboutmeGithubFront', 'https://github.com/jsy8315');
-clickToSite('aboutmeBlogFront', 'https://walkersdevlog.vercel.app');
-clickToSite('aboutmeResumeFront', 'https://drive.google.com/file/d/1iOJoKDsvHoP8mJurw3pEcIq66cJShVyw/view?usp=sharing');
+// clickToSite('aboutmeBlogFront', 'https://walkersdevlog.vercel.app');
+clickToSite('aboutmeResumeFront', 'https://drive.google.com/file/d/1xWxDqClojvmvS7a3hZ5nJt42hH4hemZj/view?usp=sharing');
 
 
 // section02 요소 이동, 300부터 효과 시작 900에 종료
