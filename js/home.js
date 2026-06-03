@@ -560,9 +560,17 @@ let img02Width = parseInt(getComputedStyle(project02Img).width);
 let project03Img = document.getElementsByClassName('projects03Img')[0];
 let img03Width = parseInt(getComputedStyle(project03Img).width);
 
+let project04Img = document.getElementsByClassName('projects04Img')[0];
+let img04Width = parseInt(getComputedStyle(project04Img).width);
+
+let project05Img = document.getElementsByClassName('projects05Img')[0];
+let img05Width = parseInt(getComputedStyle(project05Img).width);
+
 carouselEvent('projects01ImgLeft', 'projects01ImgRight', 'projects01Img-carousel', 'projects01Dot01', 5, img01Width, 'white');
 carouselEvent('projects02ImgLeft', 'projects02ImgRight', 'projects02Img-carousel', 'projects02Dot01', 5, img02Width, 'white');
 carouselEvent('projects03ImgLeft', 'projects03ImgRight', 'projects03Img-carousel', 'projects03Dot01', 5, img03Width, 'white');
+carouselEvent('projects04ImgLeft', 'projects04ImgRight', 'projects04Img-carousel', 'projects04Dot01', 5, img04Width, 'white');
+carouselEvent('projects05ImgLeft', 'projects05ImgRight', 'projects05Img-carousel', 'projects05Dot01', 5, img05Width, 'white');
 
 
 function carouselEvent(leftBtn, rightBtn, carousel, dot, dotsSize, imgWidth, color){

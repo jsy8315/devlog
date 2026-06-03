@@ -1582,7 +1582,7 @@ body {
 
 /* 프로젝트03 - 블로그 소개 */
 /* 프로젝트02 */
-.projects03 {
+.projects03, .projects04, .projects05 {
     width: 80%;
     background-color: white;
     border-radius: 30px;
@@ -1595,7 +1595,7 @@ body {
     margin-bottom: 100px;
 }
 
-.projects03Tilte {
+.projects03Tilte, .projects04Tilte, .projects05Tilte {
     font-size : 50px;
     font-weight: 700;
     align-self: center;
@@ -1603,7 +1603,7 @@ body {
     margin: 10px 10px 0px 10px;
 }
 
-.projects03Subtilte {
+.projects03Subtilte, .projects04Subtilte, .projects05Subtilte {
     font-size : 20px;
     font-weight: 500;
     color: grey;
@@ -1612,13 +1612,13 @@ body {
     margin: 5px 10px 40px 10px;
 }
 
-.projects03Main {
+.projects03Main, .projects04Main, .projects05Main {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.projects03Content {
+.projects03Content, .projects04Content, .projects05Content {
     width: 45%;
     height: 100%;
     display: flex;
@@ -1626,13 +1626,13 @@ body {
     align-content: space-between;
 }
 
-.projects03Maincontent {
+.projects03Maincontent, .projects04Maincontent, .projects05Maincontent {
     font-size : 18px;
     font-weight: 500;
     margin-bottom: 50px;
 }
 
-.projects03Subcontent {
+.projects03Subcontent, .projects04Subcontent, .projects05Subcontent {
     display: grid;
     grid-template-areas: 
     "projects03Subcontent-function  projects03Subcontent-function-content"
@@ -1651,37 +1651,37 @@ body {
 }
 
 
-.projects03Subcontent-function {
+.projects03Subcontent-function, .projects04Subcontent-function, .projects05Subcontent-function {
     grid-area: projects03Subcontent-function;
 
 }
 
-.projects03Subcontent-function-content {
+.projects03Subcontent-function-content, .projects04Subcontent-function-content, .projects05Subcontent-function-content {
     grid-area: projects03Subcontent-function-content;
 
 }
 
-.projects03Subcontent-url {
+.projects03Subcontent-url, .projects04Subcontent-url, .projects05Subcontent-url {
     grid-area: projects03Subcontent-url;
 
 }
 
-.projects03Subcontent-url-content {
+.projects03Subcontent-url-content, .projects04Subcontent-url-content, .projects05Subcontent-url-content {
     grid-area: projects03Subcontent-url-content;
 
 }
 
-.projects03Subcontent-stack {
+.projects03Subcontent-stack, .projects04Subcontent-stack, .projects05Subcontent-stack {
     grid-area: projects03Subcontent-stack;
 
 }
 
-.projects03Subcontent-stack-content {
+.projects03Subcontent-stack-content, .projects04Subcontent-stack-content, .projects05Subcontent-stack-content {
     grid-area: projects03Subcontent-stack-content;
 
 }
 
-.projects03Img {
+.projects03Img, .projects04Img, .projects05Img {
     width: 50%;
     aspect-ratio: 1.94 / 1;
     padding: 0px;
@@ -1721,7 +1721,7 @@ body {
     z-index: 1;
 }
 
-.projects03ImgLeft {
+.projects03ImgLeft, .projects04ImgLeft, .projects05ImgLeft {
     position: absolute;
     font-size: 30px;
     color: black;
@@ -1731,7 +1731,7 @@ body {
     cursor: pointer;
 }
 
-.projects03ImgRight {
+.projects03ImgRight, .projects04ImgRight, .projects05ImgRight {
     position: absolute;
     font-size: 30px;
     color: black;
@@ -1741,7 +1741,7 @@ body {
     cursor: pointer;
 }
 
-.projects03Dot {
+.projects03Dot, .projects04Dot, .projects05Dot {
     position: absolute;
     font-size: 15px;
     color: grey;
@@ -1753,7 +1753,7 @@ body {
     display: flex;
 }
 
-.projects03Dot01 {
+.projects03Dot01, .projects04Dot01, .projects05Dot01 {
     padding-left: 3px;
     padding-right: 3px;
     cursor: pointer;
@@ -1761,14 +1761,14 @@ body {
     color: grey;
 }
 
-.projects03Dot01:first-child {
+.projects03Dot01:first-child, .projects04Dot01:first-child, .projects05Dot01:first-child {
     padding-left: 3px;
     padding-right: 3px;
     cursor: pointer;
     color: white;
 }
 
-.projects03Img-carousel {
+.projects03Img-carousel, .projects04Img-carousel, .projects05Img-carousel {
     display: flex;
     transform: translate3d( 0, 0, 0);
     transition: transform 1s;
@@ -1778,7 +1778,7 @@ body {
     margin: 0px;
 }
 
-.projects03Img-carousel > img {
+.projects03Img-carousel > img, .projects04Img-carousel > img, .projects05Img-carousel > img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -2313,7 +2313,7 @@ body {
     }
 
     /* 프로젝트03 */
-    .projects03 {
+    .projects03, .projects04, .projects05 {
         width: 80%;
         background-color: white;
         border-radius: 30px;
@@ -2326,7 +2326,7 @@ body {
         margin-bottom: 100px;
     }
 
-    .projects03Tilte {
+    .projects03Tilte, .projects04Tilte, .projects05Tilte {
         font-size : 40px;
         font-weight: 700;
         align-self: center;
@@ -2334,7 +2334,7 @@ body {
         margin: 10px 10px 0px 10px;
     }
     
-    .projects03Subtilte {
+    .projects03Subtilte, .projects04Subtilte, .projects05Subtilte {
         font-size : 15px;
         font-weight: 500;
         color: grey;
@@ -2343,14 +2343,14 @@ body {
         margin: 5px 10px 40px 10px;
     }
 
-    .projects03Main {
+    .projects03Main, .projects04Main, .projects05Main {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
 
-    .projects03Img {
+    .projects03Img, .projects04Img, .projects05Img {
         width: 60%;
         background-color: white;
         position: relative;
@@ -2359,21 +2359,21 @@ body {
         margin-bottom: 50px;
     }
 
-    .projects03Content {
+    .projects03Content, .projects04Content, .projects05Content {
         width: 90%;
         height: 100%;
         display: flex;
         flex-direction: column;
     }
 
-    .projects03Maincontent {
+    .projects03Maincontent, .projects04Maincontent, .projects05Maincontent {
         font-size : 18px;
         font-weight: 500;
         margin-bottom: 50px;
     
     }
     
-    .projects03Subcontent {
+    .projects03Subcontent, .projects04Subcontent, .projects05Subcontent {
     
         display: grid;
         grid-template-areas: 
@@ -3075,7 +3075,7 @@ body {
     }
 
     /* 프로젝트03 */
-    .projects03Main {
+    .projects03Main, .projects04Main, .projects05Main {
         display: flex;
         height: 100%;
         flex-direction: column;
@@ -3083,7 +3083,7 @@ body {
         align-items: center;
     }
 
-    .projects03Img {
+    .projects03Img, .projects04Img, .projects05Img {
         width: 90%;
         background-color: white;
         position: relative;
@@ -3093,7 +3093,7 @@ body {
         overflow: hidden;
     }
 
-    .projects03Tilte {
+    .projects03Tilte, .projects04Tilte, .projects05Tilte {
         font-size : 30px;
         font-weight: 700;
         align-self: center;
@@ -3101,7 +3101,7 @@ body {
         margin: 10px 10px 0px 10px;
     }
     
-    .projects03Subtilte {
+    .projects03Subtilte, .projects04Subtilte, .projects05Subtilte {
         font-size : 10px;
         font-weight: 500;
         color: grey;
@@ -3111,7 +3111,7 @@ body {
     
     }
 
-    .projects03Content {
+    .projects03Content, .projects04Content, .projects05Content {
         width: 90%;
         height: 40%;
         display: flex;
@@ -3119,14 +3119,14 @@ body {
         align-content: space-between;
     }
 
-    .projects03Maincontent {
+    .projects03Maincontent, .projects04Maincontent, .projects05Maincontent {
         font-size : 15px;
         font-weight: 500;
         margin-bottom: 30px;
     
     }
 
-    .projects03Subcontent {
+    .projects03Subcontent, .projects04Subcontent, .projects05Subcontent {
     
         display: grid;
         grid-template-areas: 
