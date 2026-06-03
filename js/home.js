@@ -140,49 +140,34 @@ document.getElementsByClassName('header-logo')[0].addEventListener('click', func
 })
 
 // Navber 요소 클릭시 스크롤
+// 섹션 위치로 동적 스크롤 (헤더 높이만큼 offset 자동 보정)
+function scrollToSection(sectionClass) {
+    const section = document.getElementsByClassName(sectionClass)[0];
+    if (!section) return;
+    const headerHeight = document.getElementsByClassName('header')[0]?.offsetHeight || 0;
+    const top = section.getBoundingClientRect().top + window.scrollY - headerHeight;
+    window.scrollTo({ left: 0, top, behavior: 'smooth' });
+}
+
 document.getElementsByClassName('Home')[0].addEventListener('click', function(e) {
-    window.scrollTo({
-        left: 0,
-        top: 0,
-        behavior: "smooth"
-    })
-})
+    window.scrollTo({ left: 0, top: 0, behavior: 'smooth' });
+});
 
 document.getElementsByClassName('AboutMe')[0].addEventListener('click', function(e) {
-    const scrollPosition = window.innerHeight * 1.1;
-    window.scrollTo({
-        left: 0,
-        top: scrollPosition,
-        behavior: "smooth"
-    });
-})
-
-document.getElementsByClassName('Skills')[0].addEventListener('click', function(e) {
-    const scrollPosition = window.innerHeight * 2.5;
-    window.scrollTo({
-        left: 0,
-        top: scrollPosition,
-        behavior: "smooth"
-    });
-})
-
-document.getElementsByClassName('Projects')[0].addEventListener('click', function(e) {
-    const scrollPosition = window.innerHeight * 3.55;
-    window.scrollTo({
-        left: 0,
-        top: scrollPosition,
-        behavior: "smooth"
-    });
-})
+    scrollToSection('section02');
+});
 
 document.getElementsByClassName('Career')[0].addEventListener('click', function(e) {
-    const scrollPosition = window.innerHeight * 6.55;
-    window.scrollTo({
-        left: 0,
-        top: scrollPosition,
-        behavior: "smooth"
-    });
-})
+    scrollToSection('section05');
+});
+
+document.getElementsByClassName('Skills')[0].addEventListener('click', function(e) {
+    scrollToSection('section03');
+});
+
+document.getElementsByClassName('Projects')[0].addEventListener('click', function(e) {
+    scrollToSection('section04');
+});
 
 
 document.getElementsByClassName('Devlog')[0].addEventListener('click', function(e) {
@@ -319,12 +304,12 @@ function clickToSite(element, siteAddr){
 }
 
 clickToSite('aboutmeGithubFront', 'https://github.com/jsy8315');
-// clickToSite('aboutmeBlogFront', 'https://walkersdevlog.vercel.app');
+clickToSite('aboutmePortfolioFront', 'https://drive.google.com/file/d/1ShgCkFY3f4U_T1_r_vNEVSjkAgR7XMYl/view?usp=drive_link');
 clickToSite('aboutmeResumeFront', 'https://drive.google.com/file/d/1xWxDqClojvmvS7a3hZ5nJt42hH4hemZj/view?usp=sharing');
 
 
 // section02 요소 이동, 300부터 효과 시작 900에 종료
-// aboutmeMain(왼 > 오), aboutmeGithub, aboutmeBlog, aboutmeResume (오 > 왼)
+// aboutmeMain(왼 > 오), aboutmeGithub, aboutmePortfolio, aboutmeResume (오 > 왼)
 // 300부터 시작, 800까지 내려오면 완료
 // window.addEventListener('scroll', function() {
 //     let currentScrollY = this.window.scrollY;
@@ -469,7 +454,7 @@ skillsCardsImgList.forEach(function(a){
 clickPlusBtn('skillCards-pause02', 'rotate-skillCards-pause02', 'skillsCard', 'skillsCardFront', 'skillsCardBack', 'skillsCardBackContent');
 
 
-//aboutmeGithub, aboutmeBlog, aboutmeResume clickPlusBtn 기능 추가
+//aboutmeGithub, aboutmePortfolio, aboutmeResume clickPlusBtn 기능 추가
 clickPlusBtn('aboutmeGithub-plusBtn', 'rotate-aboutmeGithub-plusBtn', 'aboutmeGithub','aboutmeGithubFront', 'aboutmeGithubBack', 'aboutmeGithub-content');
 clickPlusBtn('aboutmeResume-plusBtn', 'rotate-aboutmeResume-plusBtn', 'aboutmeResume','aboutmeResumeFront', 'aboutmeResumeBack', 'aboutmeResume-content');
 
@@ -518,7 +503,7 @@ function clickPlusBtn(plusBtn, rotatePlusBtn, aboutmeEle, front, back, backConte
     })
 }
 
-clickPlusBtnWhite('aboutmeBlog-plusBtn', 'rotate-aboutmeBlog-plusBtn', 'aboutmeBlog','aboutmeBlogFront', 'aboutmeBlogBack', 'aboutmeBlog-content');
+clickPlusBtnWhite('aboutmePortfolio-plusBtn', 'rotate-aboutmePortfolio-plusBtn', 'aboutmePortfolio','aboutmePortfolioFront', 'aboutmePortfolioBack', 'aboutmePortfolio-content');
 
 function clickPlusBtnWhite(plusBtn, rotatePlusBtn, aboutmeEle, front, back, backContent){
     let rotateStatus = false;

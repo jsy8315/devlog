@@ -588,7 +588,7 @@ body {
     color: blue; 
 }
 
-.aboutmeBlog a {
+.aboutmePortfolio a {
     text-decoration-line: none;
     color: white;
 }
@@ -598,7 +598,7 @@ body {
     color: blue; 
 }
 
-.aboutmeBlog {
+.aboutmePortfolio {
     width: 30%;
     display: flex;
     flex-direction: column;
@@ -616,11 +616,11 @@ body {
     cursor: pointer;
 }
 
-.aboutmeBlog:hover {
+.aboutmePortfolio:hover {
     transform: scale(1.02);
 }
 
-.aboutmeBlog-logo {
+.aboutmePortfolio-logo {
     /* position: absolute; */
     bottom: 0px;
     height: 70%;
@@ -630,15 +630,16 @@ body {
     overflow: hidden;
 }
 
-.aboutmeBlog-logo > img{
+.aboutmePortfolio-logo > img{
     position: absolute;
     width: 80%;
     top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
+    filter: invert(1);
 }
 
-.aboutmeBlog-subtitle {
+.aboutmePortfolio-subtitle {
     margin-left: 50%;
     transform: translate(-50%,0%);
     position: absolute;
@@ -649,7 +650,7 @@ body {
     /* background-color: yellow; */
 }
 
-.aboutmeBlogFront {
+.aboutmePortfolioFront {
     background-color: black;
     border-radius: 25px;
     display: flex;
@@ -669,7 +670,7 @@ body {
     cursor: pointer;
 }
 
-.aboutmeBlogBack {
+.aboutmePortfolioBack {
     opacity: 0;
     display: none;
     background-color: white;
@@ -688,7 +689,7 @@ body {
     cursor: pointer;
 }
 
-.aboutmeBlog-content {
+.aboutmePortfolio-content {
     opacity: 0;
     padding : 20px;
     color : black;
@@ -696,22 +697,22 @@ body {
     transition: all 0.2s linear;
 }
 
-.rotate-aboutmeBlog-plusBtn {
+.rotate-aboutmePortfolio-plusBtn {
     transform: rotate(45deg);
 }
 
-.unrotate-aboutmeBlog-plusBtn {
+.unrotate-aboutmePortfolio-plusBtn {
     transform: rotate(-45deg);
 }
 
-.aboutmeBlog-plusBtn-img {
+.aboutmePortfolio-plusBtn-img {
     width: 40px;
     height: 40px;
     display: block;
     cursor: pointer;
 }
 
-.aboutmeBlog-plusBtn {
+.aboutmePortfolio-plusBtn {
     background-color: rgba(233, 233, 234, 1);
     border-radius: 50%;
     border: none;
@@ -1337,7 +1338,7 @@ body {
 
 .projects01Img {
     width: 50%;
-    background-color: wheat;
+    background-color: white;
     position: relative;
     
     overflow: hidden;
@@ -1511,7 +1512,7 @@ body {
     width: 50%;
     padding: 0px;
     margin: 0px;
-    background-color: wheat;
+    background-color: white;
     position: relative;
     overflow: hidden;
 }
@@ -1682,11 +1683,42 @@ body {
 
 .projects03Img {
     width: 50%;
+    aspect-ratio: 1.94 / 1;
     padding: 0px;
     margin: 0px;
-    background-color: wheat;
+    background-color: white;
     position: relative;
     overflow: hidden;
+}
+
+.prj-slide {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-image: var(--bg);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.prj-slide::before {
+    content: '';
+    position: absolute;
+    inset: -20px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), var(--bg);
+    background-size: cover;
+    background-position: center;
+    filter: blur(20px);
+    z-index: 0;
+}
+
+.prj-slide > img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    z-index: 1;
 }
 
 .projects03ImgLeft {
@@ -2102,7 +2134,7 @@ body {
         bottom: 40%;
     }
 
-    .aboutmeBlog-subtitle a{
+    .aboutmePortfolio-subtitle a{
         display: none;
     }
 
@@ -2157,7 +2189,7 @@ body {
 
     .projects01Img {
         width: 60%;
-        background-color: wheat;
+        background-color: white;
         position: relative;
     
         aspect-ratio: 1.6/1;
@@ -2240,7 +2272,7 @@ body {
 
     .projects02Img {
         width: 60%;
-        background-color: wheat;
+        background-color: white;
         position: relative;
         aspect-ratio: 1.6/1;
         overflow: hidden;
@@ -2320,7 +2352,7 @@ body {
 
     .projects03Img {
         width: 60%;
-        background-color: wheat;
+        background-color: white;
         position: relative;
         aspect-ratio: 1.6/1;
         overflow: hidden;
@@ -2780,7 +2812,7 @@ body {
         display: none;
     }
 
-    .aboutmeBlog {
+    .aboutmePortfolio {
         width: 30%;
         height: 100%;
         display: flex;
@@ -2800,15 +2832,15 @@ body {
         cursor: pointer;
     }
 
-    .aboutmeBlog-plusBtn {
+    .aboutmePortfolio-plusBtn {
         display: none;
     }
 
-    .aboutmeBlog-subtitle {
+    .aboutmePortfolio-subtitle {
         display: none;
     }
 
-    .aboutmeBlog-logo > img{
+    .aboutmePortfolio-logo > img{
         position: absolute;
         width: 80%;
         top: 50%;
@@ -2912,7 +2944,7 @@ body {
 
     .projects01Img {
         width: 90%;
-        background-color: wheat;
+        background-color: white;
         position: relative;
     
         aspect-ratio: 1.6/1;
@@ -2982,7 +3014,7 @@ body {
 
     .projects02Img {
         width: 90%;
-        background-color: wheat;
+        background-color: white;
         position: relative;
     
         aspect-ratio: 1.6/1;
@@ -3053,7 +3085,7 @@ body {
 
     .projects03Img {
         width: 90%;
-        background-color: wheat;
+        background-color: white;
         position: relative;
     
         aspect-ratio: 1.6/1;
